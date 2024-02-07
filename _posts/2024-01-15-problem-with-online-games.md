@@ -1,0 +1,138 @@
+---
+layout: post
+title:  "Problem with online games (as of 2023)"
+categories: games
+---
+
+## Classification
+
+Online games can be categorized based on a few properties:
+
+By enemy:
+- PvE
+- PvP
+
+By game loop:
+- Continuous
+- Session
+
+Lets discuss disadvantages and current problems of every of them and inspect why they are unsocial
+
+### Session PvP games
+
+Examples:
+- Battle Royals (PUBG, Fortnite, Apex Legends)
+- MOBA's (Dota, LoL, HotS, Overwatch)
+- Shooters (CS, Valorant, The Finals)
+
+They are hard. They are competitive. Why would a person want to compete after studying and working, where they did their best to earn acceptable grades, to meet deadlines? Why can't they relax even in a video game? Should everything in life be a competition?
+
+Of course, one can play chilly, don't queue for ranked matches and other stuff, but they will face toxicity even in unranked, as in reality there is a hidden rank even in unranked games and other people are seeking victory and nothing else.
+
+As of social aspect, these games don't prize you for playing with someone for a few times, don't prize you for making friends. It is easier to forget everyone after a match. And if online is high enough, people become more toxic, because they know, that they won't meet you again. The only thing they want is to win, as there is no meaningful progression outside of a match.
+
+It is said, that in ancient times people could communicate in custom lobbies-servers, which is not popular nowadays.
+
+### Session PvE games
+
+Examples:
+- Warframe
+- Raids in MMO's
+
+They have meaningful progression, but this progression is bound to successfully finishing a level, which brings most of cons that Session PvP games have:
+- Toxicity
+- No connections in game
+
+### Continuous PvP games
+
+Examples:
+- Rust
+
+Such games force you to play nearly every day to keep up with others, even with people who may not have as much duties as you do. You are obligated to play even more than in games with daily quests.
+
+### Continuous PvE games
+
+Examples:
+- MMORPG's (WoW, Lost Ark, Black Desert, ...)
+- Minecraft servers
+
+With exception being minecraft, such games have social aspect only in the end-game, so you have to force yourself to play for few tenth of hours by yourself. Then you will get into a problem of no one wanting to accept you into their guild, as you are a newbie. People will be toxic if you ruin them their boss fight.
+
+Such games are usually punishing for dying, you will lose some enhancements (inscriptions/enchantments/...), inventory or even character level, which may be disappointing especially if you want to quickly level up to reach "social" end-game.
+
+As for Minecraft, I never got social interactions with unknown people in there on public servers. You are usually brought into Minecraft by a community and not vice versa.
+
+## Other problems
+
+All games, even cozy offline ones always want you to do work in every aspect of a game, nothing will happen on it's own. For instance, in Stardew Valley you need to make gifts if you want to enhance relationship with them. No one is chasing after you, world is passive and not interested in you being happy.
+
+## Studying other cases
+
+### Genshin
+
+Pros:
+- Has free birthday gifts from characters, fan service
+- Is somewhat cozy (except for artifacts farming)
+- Isn't competitive
+- Has regular events
+- Allows to build in Serenia teapot
+- Is continuous
+
+Cons:
+- No meaningful coop in end-game: no story mode, some facilities in the world disappear (what will happen if someone unlocks a chest in easier way???)
+- No gifts from friends
+- No one will see your teapot
+- Community lives outside of the game itself
+- Awful in-game chat
+
+Though, I must admit, that playing Genshin with a friend who reached endgame while I only started, was fun and one of the best gaming experiences I ever had
+
+### Minecraft
+
+Minecraft public servers do their best to prevent griefing, usually it boils down to two things: TnT doesn't destroy blocks, lava does not spread. Both of this limitations limit creative possibilities: you can't create a cobble stone farm, you can't use TnT even for other purposes.
+
+Creation of interactive content is limited by redstone, which requires massive areas to express needed logic. Pistons and redstone are great for pushing them to their limits, creating RS triggers in a game, but they are not sufficient for serious content development.
+
+### Haven
+
+In this game players have each other for granted (or AI-controlled loved one if playing solo). It is hard to imagine game, where you get social interactions with NPC's or pleasing and comfy prerecorded dialogues, that don't require you to work towards them
+
+## What should a perfect social online game have?
+
+- Be continuous
+- Have no player levels and autoscaling
+  - Games such as Hyper Light Drifter, survival horrors (Signalis, Resident Evil series), Minecraft have progression without auto leveling enemies
+- Be PvE focused and somewhat cozy
+- Be social
+  - Have built-in voice chat
+    - It should be limited by range/or party membership
+  - Have player reputation
+  - Have auction
+- Reward you for cooperation
+  - Have "few friend lists": for close friends and for people you like playing with
+  - Have gifts, so your friend can help you (RMT is still an issue, partly resolved with few friend lists)
+- Allow to play quest and story together with other players, allow ones to replay it
+- Be infinite
+  - Have events
+  - Have a sandbox aspect and provide users with ability to make their own challenges/dungeons/whatever
+    - User created content should reside inside game world, so you can stumble upon it while exploring
+    - User created content should be rewarded
+    - There should be no destructive griefing
+- Have interesting world
+  - There should not be enormous empty areas, as in space-exploration games
+  - It can have auto-generated part of the world
+  - Have a teleport to a random location
+- Prize creativity
+
+It is a bit frightening, that games closest to the described are Minecraft and probably Roblox
+
+## Further research
+
+Few games should be inspected in more detail:
+- Warframe
+- Roblox
+- Minecraft (why it is not social in the end)
+- Space engineers
+
+## Related content
+- [Moon Channel: Why Aren't There Any Good MMORPGs? A Critique of Pure Power](https://www.youtube.com/watch?v=PN1pd3wCRxY)

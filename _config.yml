@@ -1,0 +1,35 @@
+author: kp2pml30
+title: kp2pml30's blog
+email: kp2pml30@gmail.com
+description: |
+  Visionary virtual machines architect's personal blog about programming languages design, implementation, tooling and everything related
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://kp2pml30.github.io"
+# twitter_username: kp2pml30
+github_username:  kp2pml30
+
+permalink: /:year/:month/:title.html
+
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+
+header_pages:
+  - index.md
+  - categories/categories.md
+  - categories/recommended.md
+  - categories/about.md
+  - categories/contact.md
+
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

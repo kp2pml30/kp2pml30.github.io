@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="categories">
+    <small>
+        {% for category in page.categories %}
+        <b><i>#{{ category | escape}}</i></b>
+        {% endfor %}
+    </small>
+</div>
+<h1>{{ page.title }}</h1>
+<section class="block">
+{{ content }}
+</section>
+
+<hr />
+
+<div class="discuss">
+<a href="https://discord.gg/TYjNRpFknx">Discord</a>
+&nbsp;
+<a href="https://github.com/kp2pml30/kp2pml30.github.io/discussions/1">Discuss</a>
+</div>
