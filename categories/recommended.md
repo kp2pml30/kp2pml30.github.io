@@ -13,3 +13,4 @@ permalink: /recommended/
 - [Monitors implementation in OpenJDK](https://wiki.openjdk.org/display/HotSpot/Synchronization)
 - [How dynamic single dispatch can be implemented](https://lukasatkinson.de/2018/interface-dispatch/)
 - [JVM's `invoke.dynamic`](https://www.baeldung.com/java-invoke-dynamic)
+- [GHC architecture](https://aosabook.org/en/v2/ghc.html)
