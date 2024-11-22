@@ -1,0 +1,162 @@
+/* color palette from <https://github.com/vuejs/theme> */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root {
+	--vt-c-white: #ffffff;
+	--vt-c-white-soft: #f8f8f8;
+	--vt-c-white-mute: #f2f2f2;
+
+	--vt-c-black: #181818;
+	--vt-c-black-soft: #222222;
+	--vt-c-black-mute: #282828;
+
+	--vt-c-indigo: #2c3e50;
+
+	--vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+	--vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+	--vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+	--vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+	--vt-c-text-light-1: var(--vt-c-indigo);
+	--vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+	--vt-c-text-dark-1: var(--vt-c-white);
+	--vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* this block belongs to https://github.com/daltonmenezes/aura-theme
+ */
+:root {
+	--black: #15141b;
+	--white: #edecee;
+	--gray: #6d6d6d;
+	--purple: #a277ff;
+	--purple-fading: #3d375e7f;
+	--green: #61ffca;
+	--orange: #ffca85;
+	--pink: #f694ff;
+	--blue: #82e2ff;
+	--red: #ff6767;
+
+	--background-color: var(--black);
+	--foreground-color: var(--white);
+	--muted-color: var(--gray);
+	--selection-color: var(--purple-fading);
+	--primary-color: var(--purple);
+	--secondary-color: var(--green);
+	--tertiary-color: var(--orange);
+	--quaternary-color: var(--pink);
+	--quinary-color: var(--blue);
+	--senary-color: var(--red);
+
+	--warning-color: var(--orange);
+	--success-color: var(--green);
+	--error-color: var(--red);
+
+	--black-soft: #15141b;
+	--white-soft: #bdbdbd;
+	--gray-soft: #6d6d6d;
+	--purple-soft: #8464c6;
+	--purple-fading-soft: #3d375e7f;
+	--green-soft: #54c59f;
+	--orange-soft: #c7a06f;
+	--pink-soft: #c17ac8;
+	--blue-soft: #6cb2c7;
+	--red-soft: #c55858;
+
+	--background-soft-color: var(--black-soft);
+	--foreground-soft-color: var(--white-soft);
+	--muted-soft-color: var(--gray-soft);
+	--selection-soft-color: var(--purple-fading-soft);
+	--primary-soft-color: var(--purple-soft);
+	--secondary-soft-color: var(--green-soft);
+	--tertiary-soft-color: var(--orange-soft);
+	--quaternary-soft-color: var(--pink-soft);
+	--quinary-soft-color: var(--blue-soft);
+	--senary-soft-color: var(--red-soft);
+
+	--warning-soft-color: var(--orange-soft);
+	--success-soft-color: var(--green-soft);
+	--error-soft-color: var(--red-soft);
+}
+
+/* semantic color variables for this project */
+/*
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+  */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: var(--vt-c-black);
+		--color-background-soft: var(--vt-c-black-soft);
+		--color-background-mute: var(--vt-c-black-mute);
+
+		--color-border: var(--vt-c-divider-dark-2);
+		--color-border-hover: var(--vt-c-divider-dark-1);
+
+		--color-heading: var(--vt-c-text-dark-1);
+		--color-text: var(--vt-c-text-dark-2);
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	font-weight: normal;
+}
+
+body {
+	min-height: 100vh;
+	color: var(--foreground-color);
+	background: var(--background-color);
+	transition:
+		color 0.5s,
+		background-color 0.5s;
+	line-height: 1.6;
+
+	font-family: 'Fira Code', monospace, sans-serif;
+	font-size: 15px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.default-font {
+	font-family: 'Fira Code', monospace, sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-background-mute);
+}
+
+audio::-webkit-media-controls-panel {
+	background-color: #56aeff;
+}
+
+.hr-space {
+	margin-top: 1.2em;
+	margin-bottom: 1em;
+}

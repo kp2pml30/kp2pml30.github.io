@@ -1,0 +1,51 @@
+@import './base.css';
+
+#app {
+	max-width: max(65vw, 1024px);
+	min-width: max(65vw, 1024px);
+	margin: 0 auto;
+	padding: 2rem;
+	font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--quaternary-color);
+}
+
+a {
+	color: var(--primary-color);
+	text-decoration: none;
+	transition: 0.4s;
+	padding: 3px;
+}
+
+button {
+	color: var(--color-text);
+	background-color: var(--primary-color);
+	font-size: 15px;
+	border-radius: 5px;
+	border: none;
+}
+
+@media (hover: hover) {
+	a:hover {
+		background-color: var(--selection-color);
+	}
+}
+
+@media (min-width: 1024px) {
+	body {
+		display: flex;
+		place-items: top;
+	}
+
+	#app {
+		display: block;
+		padding: 0 2rem;
+	}
+}

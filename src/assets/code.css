@@ -1,0 +1,78 @@
+@import './base.css';
+
+code[class*='language-'],
+pre[class*='language-'] {
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: normal;
+	font-family: monospace;
+	font-size: 14px;
+	text-shadow: none;
+}
+
+pre > code[class*='language-'] {
+	font-size: 1em;
+}
+
+pre[class*='language-'],
+:not(pre) > code[class*='language-'] {
+	background: var(--background-soft-color);
+}
+
+pre[class*='language-'] {
+	padding: 15px;
+	border-radius: 4px;
+	border: 1px solid #e1e1e8;
+	overflow: auto;
+	position: relative;
+}
+
+pre[class*='language-'] code {
+	white-space: pre;
+	display: block;
+}
+
+:not(pre) > code[class*='language-'] {
+	padding: 0.15em 0.2em 0.05em;
+	border-radius: 0.3em;
+	border: 0.13em solid #7a6652;
+	box-shadow: 1px 1px 0.3em -0.1em #000 inset;
+}
+
+.token.class-name {
+	color: var(--secondary-color);
+}
+
+.token.keyword {
+	color: var(--primary-color);
+}
+
+.token.operator {
+}
+
+.token.string {
+	color: var(--quaternary-color);
+}
+
+.token.punctuation {
+	color: var(--foreground-soft-color);
+}
+
+.token.boolean {
+	color: var(--tertiary-color);
+}
+
+.token.number {
+	color: var(--quinary-color);
+}
+
+.token.comment {
+	color: var(--muted-soft-color);
+}
