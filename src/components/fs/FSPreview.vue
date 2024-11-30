@@ -2,7 +2,6 @@
 import { computed, onMounted, ref, watch, type Ref } from 'vue'
 import { AVWaveform } from 'vue-audio-visual'
 import Player from '@/components/incl/Player.vue'
-import Prism from 'prismjs'
 
 const props = defineProps<{
 	path: string
@@ -21,10 +20,10 @@ async function upd() {
 			kind: 'html',
 			contents: `<img style="max-width: 100%; max-height: 100% object-fit: contain; display: block; margin-left: auto; margin-right: auto;" src="/fs-tree/${props.path}" />`,
 		}
-	} else if (props.path.endsWith('.html')) {
+	} else if (props.path.endsWith('.html') || props.path.endsWith('.blog')) {
 		const contents = await (await fetch('/fs-tree/' + props.path)).text()
 		const doc = new DOMParser().parseFromString(contents, 'text/html')
-		Prism.highlightAllUnder(doc)
+		//Prism.highlightAllUnder(doc)
 		const div = document.createElement('div')
 		for (const el of doc.childNodes) {
 			div.appendChild(el)

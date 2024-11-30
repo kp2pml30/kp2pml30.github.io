@@ -46,33 +46,34 @@ pre[class*='language-'] code {
 	box-shadow: 1px 1px 0.3em -0.1em #000 inset;
 }
 
-.token.class-name {
+.highlight-type {
 	color: var(--secondary-color);
 }
 
-.token.keyword {
+.highlight-kw {
 	color: var(--primary-color);
 }
 
-.token.operator {
-}
-
-.token.string {
+.highlight-str {
 	color: var(--quaternary-color);
 }
 
-.token.punctuation {
+.highlight-punct {
 	color: var(--foreground-soft-color);
 }
 
-.token.boolean {
+.highlight-const {
 	color: var(--tertiary-color);
 }
 
-.token.number {
+.highlight-number {
 	color: var(--quinary-color);
 }
 
-.token.comment {
+.highlight-comment {
 	color: var(--muted-soft-color);
+}
+
+code.inline {
+	white-space: nowrap;
 }

@@ -1,9 +1,13 @@
 #!/usr/bin/env ruby
 
+# frozen_string_literal: true
+
 require 'pathname'
 require 'json'
 
-root = Pathname.new(__FILE__).parent
+require_relative './src/blog.rb'
+
+root = Pathname.new(__FILE__).parent.parent
 tree_root = root.join('public', 'fs-tree')
 trie = {
   "kind" => "dir",
@@ -13,18 +17,23 @@ trie = {
 tree_root.glob('**/*').each { |p|
   next if not p.file?
   next if p.to_s.end_with? '.meta.json'
+  next if p.to_s.end_with? '.blog'
+  meta = {
+    "date": "???? ?? ??"
+  }
+  if p.to_s.end_with? '.blog.haml'
+    p = KP2PML30Blog::generate p, tree_root
+  else
+    meta_path = p.sub_ext('.meta.json')
+    if meta_path.exist?
+      meta = JSON.parse(meta_path.read())
+    end
+  end
   rel_path = p.relative_path_from tree_root
   cur_trie = trie
   path_comps = rel_path.to_s.split('/')
   path_comps.each_with_index { |cur, idx|
     if idx + 1 == path_comps.size
-      meta = {
-        "date": "???? ?? ??"
-      }
-      meta_path = p.sub_ext('.meta.json')
-      if meta_path.exist?
-        meta = JSON.parse(meta_path.read())
-      end
       cur_trie["sub"][cur] = {
         "kind" => "file",
         "name" => cur,

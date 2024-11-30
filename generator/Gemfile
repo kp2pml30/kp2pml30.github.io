@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+
+gem "haml", "~> 6.3"
+
+gem "plurimath", "~> 0.8.17"
+
+gem "unitsml", "~> 0.2.6"
