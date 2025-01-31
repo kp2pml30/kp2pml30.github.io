@@ -1,1 +1,242 @@
-{"kind":"dir","name":"","sub":[{"kind":"dir","name":"kp2pml30","sub":[{"kind":"dir","name":"best-practices","sub":[{"kind":"file","name":"publishing-a-game.blog","meta":{"date":"???? ?? ??"}}]},{"kind":"dir","name":"blog-posts","sub":[{"kind":"file","name":"any-methods.blog","meta":{"date":"???? ?? ??"}}]},{"kind":"dir","name":"recommendations","sub":[{"kind":"file","name":"blogs.html","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"posts.html","meta":{"date":"???? ?? ??"}}]}]},{"kind":"dir","name":"r3vdy-2-b10vv","sub":[{"kind":"dir","name":"blog-posts","sub":[{"kind":"file","name":"problem-with-online-games.html","meta":{"date":"2024 01 15"}}]},{"kind":"dir","name":"media","sub":[{"kind":"dir","name":"art","sub":[{"kind":"dir","name":"digital","sub":[{"kind":"dir","name":"krita","sub":[{"kind":"dir","name":"2019","sub":[{"kind":"file","name":"imaginary.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"jump.png","meta":{"date":"???? ?? ??"}}]},{"kind":"dir","name":"2020","sub":[{"kind":"file","name":"avaredraw.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"fairymaid.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"mask.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"meaxin.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"rope.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"scythe.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"starz.jpg","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"tablettest.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"teeth.png","meta":{"date":"???? ?? ??"}}]},{"kind":"dir","name":"2021","sub":[{"kind":"file","name":"knight.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"kris.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"kris2.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"lion.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"micro.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"ozoi_guitar.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"sumire.png","meta":{"date":"???? ?? ??"}}]},{"kind":"dir","name":"2022","sub":[{"kind":"file","name":"neon.png","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"overkeep.png","meta":{"date":"???? ?? ??"}}]}]},{"kind":"dir","name":"paint","sub":[{"kind":"file","name":"sadboi.jpg","meta":{"date":"???? ?? ??"}}]}]}]},{"kind":"dir","name":"music","sub":[{"kind":"file","name":"2018.wav","meta":{"date":"???? ?? ??"}},{"kind":"file","name":"NOTE.html","meta":{"date":"???? ?? ??"}}]}]}]}]}
+{
+	"kind": "dir",
+	"name": "",
+	"sub": [
+		{
+			"kind": "dir",
+			"name": "kp2pml30",
+			"sub": [
+				{
+					"kind": "dir",
+					"name": "best-practices",
+					"sub": [
+						{
+							"kind": "file",
+							"name": "publishing-a-game.blog",
+							"meta": { "date": "???? ?? ??" }
+						}
+					]
+				},
+				{
+					"kind": "dir",
+					"name": "blog-posts",
+					"sub": [
+						{
+							"kind": "file",
+							"name": "any-methods.blog",
+							"meta": { "date": "???? ?? ??" }
+						}
+					]
+				},
+				{
+					"kind": "dir",
+					"name": "recommendations",
+					"sub": [
+						{
+							"kind": "file",
+							"name": "blogs.html",
+							"meta": { "date": "???? ?? ??" }
+						},
+						{
+							"kind": "file",
+							"name": "posts.html",
+							"meta": { "date": "???? ?? ??" }
+						}
+					]
+				}
+			]
+		},
+		{
+			"kind": "dir",
+			"name": "r3vdy-2-b10vv",
+			"sub": [
+				{
+					"kind": "dir",
+					"name": "blog-posts",
+					"sub": [
+						{
+							"kind": "file",
+							"name": "problem-with-online-games.html",
+							"meta": { "date": "2024 01 15" }
+						}
+					]
+				},
+				{
+					"kind": "dir",
+					"name": "media",
+					"sub": [
+						{
+							"kind": "dir",
+							"name": "art",
+							"sub": [
+								{
+									"kind": "dir",
+									"name": "digital",
+									"sub": [
+										{
+											"kind": "dir",
+											"name": "krita",
+											"sub": [
+												{
+													"kind": "dir",
+													"name": "2019",
+													"sub": [
+														{
+															"kind": "file",
+															"name": "imaginary.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "jump.png",
+															"meta": { "date": "???? ?? ??" }
+														}
+													]
+												},
+												{
+													"kind": "dir",
+													"name": "2020",
+													"sub": [
+														{
+															"kind": "file",
+															"name": "avaredraw.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "fairymaid.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "mask.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "meaxin.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "rope.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "scythe.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "starz.jpg",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "tablettest.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "teeth.png",
+															"meta": { "date": "???? ?? ??" }
+														}
+													]
+												},
+												{
+													"kind": "dir",
+													"name": "2021",
+													"sub": [
+														{
+															"kind": "file",
+															"name": "knight.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "kris.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "kris2.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "lion.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "micro.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "ozoi_guitar.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "sumire.png",
+															"meta": { "date": "???? ?? ??" }
+														}
+													]
+												},
+												{
+													"kind": "dir",
+													"name": "2022",
+													"sub": [
+														{
+															"kind": "file",
+															"name": "neon.png",
+															"meta": { "date": "???? ?? ??" }
+														},
+														{
+															"kind": "file",
+															"name": "overkeep.png",
+															"meta": { "date": "???? ?? ??" }
+														}
+													]
+												}
+											]
+										},
+										{
+											"kind": "dir",
+											"name": "paint",
+											"sub": [
+												{
+													"kind": "file",
+													"name": "sadboi.jpg",
+													"meta": { "date": "???? ?? ??" }
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"kind": "dir",
+							"name": "music",
+							"sub": [
+								{
+									"kind": "file",
+									"name": "2018.wav",
+									"meta": { "date": "???? ?? ??" }
+								},
+								{
+									"kind": "file",
+									"name": "NOTE.html",
+									"meta": { "date": "???? ?? ??" }
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

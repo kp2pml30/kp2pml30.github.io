@@ -9,6 +9,7 @@ import ABOUT from './components/main/ABOUT.vue'
 import HOME from './components/main/HOME.vue'
 import VIEW from './components/main/VIEW.vue'
 import LICENSES from './components/main/LICENSES.vue'
+import LNK from './components/main/lnk.vue'
 import { AVPlugin } from 'vue-audio-visual'
 
 const router = createRouter({
@@ -18,6 +19,7 @@ const router = createRouter({
 		{ path: '/ABOUT', component: ABOUT },
 		{ path: '/VIEW', component: VIEW },
 		{ path: '/FS', component: FS },
+		{ path: '/lnk', component: LNK },
 		{ path: '/', component: HOME },
 	],
 })

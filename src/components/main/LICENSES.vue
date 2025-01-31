@@ -18,6 +18,14 @@
 			<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a>
 		</li>
 	</ul>
+	Third-party licenses:
+	<ul>
+		<li>
+			Theme is based on
+			<a href="https://github.com/daltonmenezes/aura-theme">aura-theme</a>, MIT
+			License
+		</li>
+	</ul>
 </template>
 
 <style scoped></style>

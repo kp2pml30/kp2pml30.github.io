@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-	My name is Kira ><> Prokopenko. I completed bachelor’s degree at ITMO
-	university, and my thesis was focused on language interoperability and it’s
-	optimization and support in JIT, GC and runtime. I’m also interested in game
+	My name is Kira ><> Prokopenko. I completed bachelor's degree at ITMO
+	university, and my thesis was focused on language interoperability and it's
+	optimization and support in JIT, GC and runtime. I'm also interested in game
 	development and visual art. This blog is an outlet for me to talk about my
 	research, technological interests, hobbies and ideas.
 	<hr class="hr-space" />
