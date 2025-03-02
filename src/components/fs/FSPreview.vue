@@ -18,7 +18,7 @@ async function upd() {
 	if (props.path.endsWith('.png') || props.path.endsWith('.jpg')) {
 		data.value = {
 			kind: 'html',
-			contents: `<img style="max-width: 100%; max-height: 100% object-fit: contain; display: block; margin-left: auto; margin-right: auto;" src="/fs-tree/${props.path}" />`,
+			contents: `<img style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin-left: auto; margin-right: auto;" src="/fs-tree/${props.path}" />`,
 		}
 	} else if (props.path.endsWith('.html') || props.path.endsWith('.blog')) {
 		const contents = await (await fetch('/fs-tree/' + props.path)).text()

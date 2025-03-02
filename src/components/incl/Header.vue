@@ -3,17 +3,21 @@ defineProps<{}>()
 </script>
 
 <template>
-	<div class="header">
-		<span class="id"
-			><span style="color: var(--quaternary-color)">kp2pml30</span>'s personal
-			blog</span
-		>
-		<span class="item"
-			><router-link to="/">HOME</router-link>
-			<router-link to="/FS">ROFS</router-link>
-			<router-link to="/ABOUT">ABOUT</router-link></span
-		>
-		<br />
+	<div class="header-all">
+		<div class="header">
+			<span class="id"
+				><router-link to="/"
+					><span style="color: var(--quaternary-color); padding: 0px"
+						>kp2pml30</span
+					></router-link
+				>'s personal blog</span
+			>
+			<span class="item"
+				><router-link to="/">HOME</router-link>
+				<router-link to="/fs">ROFS</router-link>
+				<router-link to="/about">ABOUT</router-link></span
+			>
+		</div>
 		<hr />
 	</div>
 </template>
@@ -24,6 +28,10 @@ defineProps<{}>()
 	width: 100%;
 	display: block;
 	font-size: large;
+}
+.header-all {
+	width: 100%;
+	display: grid;
 	margin-bottom: 1em;
 }
 .id {

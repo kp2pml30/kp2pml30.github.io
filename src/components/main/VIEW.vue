@@ -2,7 +2,9 @@
 import { ref } from 'vue'
 import FSPreview from '../fs/FSPreview.vue'
 
-const path = ref(new URL(window.location.href).hash.replace(/^#/, ''))
+const path = ref(
+	new URL(window.location.href).pathname.replace(/^\/view\//, '')
+)
 console.log(path.value)
 </script>
 

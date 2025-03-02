@@ -26,9 +26,10 @@ const cur_chain: Ref<ChainItem> = ref(
 			dir: tree_json,
 			prev: undefined,
 		}
-		let savedPath = new URL(window.location.href).hash
-		if (savedPath.startsWith('#')) {
-			savedPath = savedPath.substring(1)
+		const url = new URL(window.location.href)
+		let savedPath = url.pathname
+		if (savedPath.startsWith('/fs/')) {
+			savedPath = savedPath.substring(4)
 		}
 		for (const part of savedPath.split('/')) {
 			const idx = init_chain.dir.sub.findIndex((v) => v.name == part)
@@ -46,6 +47,13 @@ const cur_chain: Ref<ChainItem> = ref(
 				dir: next,
 				prev: init_chain,
 			}
+		}
+		if (url.hash != '') {
+			const hash = url.hash.replace(/^#/, '')
+			init_chain.selected = Math.max(
+				0,
+				init_chain.dir.sub.findIndex((v) => v.name == hash)
+			)
 		}
 		cur_index.value = init_chain.selected
 		return init_chain
@@ -74,7 +82,6 @@ function pressedPrev(self: types.FSButtonMethods, data: types.ButtonData) {
 }
 
 function pressedNext(self: types.FSButtonMethods, data: types.ButtonData) {
-	console.log(data)
 	if (data.item.kind !== 'dir') {
 		return
 	}
@@ -82,7 +89,6 @@ function pressedNext(self: types.FSButtonMethods, data: types.ButtonData) {
 	cur_chain.value.selected = idx
 	cur_index.value = 0
 	const old_val = cur_chain.value
-	console.log(old_val.selected)
 	cur_chain.value = {
 		name: data.name,
 		selected: 0,
@@ -111,18 +117,23 @@ const is_dir = computed(() => {
 })
 
 watch([cur_path, cur_chain, cur_index], ([cp, cc, ci]) => {
-	let res = '#'
+	let res = '/fs/'
 	if (cp != '') {
 		res += cp
-		res += '/'
+		if (cur_chain.value.dir.sub[cur_index.value].kind == 'dir') {
+			res += '#'
+		} else {
+			res += '/'
+		}
 	}
-	window.location.href = res + cc.dir.sub[ci].name
+
+	history.pushState({}, '', res + cc.dir.sub[ci].name)
 })
 </script>
 
 <template>
-	<span style="color: var(--quaternary-color)">user</span
-	><span style="color: var(--tertiary-color)">@kp2pml30-blog</span>
+	<span style="color: var(--quaternary-color)">guest</span
+	><span style="color: var(--tertiary-color)">@kp2pml30-blog</span>&nbsp;
 	<span style="color: var(--secondary-color)">/{{ cur_path }}</span>
 
 	<div class="fs-columns">

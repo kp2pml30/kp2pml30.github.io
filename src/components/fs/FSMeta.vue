@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-	<router-link :to="'/VIEW#' + path">VIEW</router-link> {{ props.meta.date }}
+	<router-link :to="'/view/' + path">VIEW</router-link> {{ props.meta.date }}
 </template>
 
 <style scoped></style>

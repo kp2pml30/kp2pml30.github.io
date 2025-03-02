@@ -17,6 +17,10 @@ h6 {
 	color: var(--quaternary-color);
 }
 
+div.paragraph {
+	margin-bottom: 5px;
+}
+
 a {
 	color: var(--primary-color);
 	text-decoration: none;
