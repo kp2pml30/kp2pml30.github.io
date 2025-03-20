@@ -1,64 +1,4 @@
-<h1>Which methods an <code class="inline"><span class="highlight-type">Any</span></code> type should have?</h1>
-<hr/>Raw source: <a href="/fs-tree/kp2pml30/blog-posts/any-methods.blog.haml">link</a><hr/>
-<p>
-Here under <code class="inline"><span class="highlight-type">Any</span></code> root of objects hierarchy is meant
-
-</p>
-<h2>
-Why there should be no <code class="inline">hashCode</code>, <code class="inline">equals</code> in <code class="inline"><span class="highlight-type">Any</span></code> and <code class="inline"><span class="highlight-type">Comparable</span></code> as a type
-
-</h2>
-<p>
-These methods look like a Java legacy, as they prohibit modifications, that make collections work different for different types. For instance, <code class="inline"><span class="highlight-type">Map</span></code> can be implemented via <code class="inline"><span class="highlight-type">Set</span></code>, if pair comparator compares only first elements (same with <code class="inline">hashCode</code> and <code class="inline">equals</code>). Instead of all this methods, their users must accept a <code class="inline"><span class="highlight-type">Comparator</span></code> and so on, where there may be a &quot;default&quot; that does language-specific things
-
-</p>
-<h2>
-Why there should be no <code class="inline">equals</code>?
-
-</h2>
-<p>
-<code class="inline">equals</code> semantics may be different:
-
-</p>
-<ul>
-<li>It may compare pointers</li>
-<li>It may compare values</li>
-<li>
-It may compare values in a special way (<math><mstyle displaystyle='true'><mrow>
-  <mo>&#x2212;</mo>
-  <mn>0</mn>
-  <mo>&#x2260;</mo>
-  <mo>+</mo>
-  <mn>0</mn>
-</mrow>
-</mstyle></math>)
-
-</li>
-</ul>
-<p>
-There is also an issue with "pointers comparison", as single dispatch can't correctly handle all <code class="inline"><span class="highlight-const">null</span></code>/<code class="inline"><span class="highlight-const">undefined</span></code> cases
-
-</p>
-<h2>
-Should there be a <code class="inline">toString</code>?
-
-</h2>
-<p:kp2md>Well, there are two issues with `toString`:</p:kp2md>
-<ul>
-<li>
-I am pretty sure that default <code class="inline">toString</code> signature is incorrect. Why is it <code class="inline"><span class="highlight-const">this</span>.toString<span class="highlight-punct">(</span><span class="highlight-punct">)</span><span class="highlight-punct">:</span> <span class="highlight-type">String</span></code> and not <code class="inline"><span class="highlight-const">this</span>.toString<span class="highlight-punct">(</span>sb<span class="highlight-punct">:</span> <span class="highlight-type">StringBuilder</span><span class="highlight-punct">)</span><span class="highlight-punct">:</span> void</code>? First variant has extremely degraded performance, while second variant allows just making a stub
-
-</li>
-<li>
-Why is it called <code class="inline">toString</code>? It should be called <code class="inline">toDebugString</code>. And should it be possible to override such method? That is probably a philosophical question, I would tend to answer &quot;no&quot;, but who knows
-
-</li>
-</ul>
-<h2>
-Proposed <code class="inline"><span class="highlight-type">Any</span></code> type
-
-</h2>
-<pre><code><span class="highlight-kw">class</span> <span class="highlight-type">Any</span> <span class="highlight-punct">{</span>
+</br><h1>Which methods an <code><span class="highlight-type">Any</span></code> type should have?</br></h1>Here under <code><span class="highlight-type">Any</span></code> root of objects hierarchy is meant</br><h2>Why there should be no <code>hashCode</code>, <code>equals</code> in <code><span class="highlight-type">Any</span></code> (and entire <code><span class="highlight-type">Comparable</span></code> as a type)</br></h2>These methods look like a Java legacy, as they prohibit modifications, that make collections work different for different types. For instance, <code><span class="highlight-type">Map</span></code> can be implemented via <code><span class="highlight-type">Set</span></code>, if pair comparator compares only first elements (same with <code>hashCode</code> and <code>equals</code>). Instead of all this methods, their users must accept a <code><span class="highlight-type">Comparator</span></code> and so on, where there may be a &quot;default&quot; that does language-specific things</br><h2>Why there should be no <code>equals</code>?</br></h2><code>equals</code> semantics may be different:<ul><li> It may compare pointers</li><li> It may compare values</li><li> It may compare values in a special way (<math><mo>&#x2212;</mo><mn>0</mn><mo>&#x2260;</mo><mo>+</mo><mn>0</mn></math>)</br></li></ul>There is also an issue with &quot;pointers comparison&quot;, as single dispatch can&#39;t correctly handle all <code><span class="highlight-const">null</span></code>/<code><span class="highlight-const">undefined</span></code> cases</br><h2>Should there be a <code>toString</code>?</br></h2>Well, there are two issues with <code>toString</code>:<ol type="1"><li> I am pretty sure that default <code>toString</code> signature is incorrect. Why is it <code><span class="highlight-const">this</span>.toString<span class="highlight-punct">(</span><span class="highlight-punct">)</span><span class="highlight-punct">:</span> <span class="highlight-type">String</span></code> and not <code><span class="highlight-const">this</span>.toString<span class="highlight-punct">(</span>sb<span class="highlight-punct">:</span> <span class="highlight-type">StringBuilder</span><span class="highlight-punct">)</span><span class="highlight-punct">:</span> void</code>? First variant has extremely degraded performance, while second variant allows just making a stub</li><li> Why is it called <code>toString</code>? It should be called <code>toDebugString</code>. And should it be possible to override such method? That is probably a philosophical question, I would tend to answer &quot;no&quot;, but who knows</br></li></ol><h2>Proposed <code><span class="highlight-type">Any</span></code> type</br></h2><pre class="language-any"><code class="language-any"><span class="highlight-kw">class</span> <span class="highlight-type">Any</span> <span class="highlight-punct">{</span>
 	<span class="highlight-kw">final</span> <span class="highlight-kw">fn</span> toDebugString<span class="highlight-punct">(</span><span class="highlight-punct">)</span><span class="highlight-punct">:</span> <span class="highlight-type">String</span> <span class="highlight-punct">{</span>
 		<span class="highlight-kw">let</span> sb = <span class="highlight-kw">new</span> <span class="highlight-type">StringBuilder</span><span class="highlight-punct">(</span><span class="highlight-punct">)</span>
 		<span class="highlight-const">this</span>.toDebugString<span class="highlight-punct">(</span>sb<span class="highlight-punct">)</span>
@@ -73,6 +13,4 @@ Proposed <code class="inline"><span class="highlight-type">Any</span></code> typ
 <span class="highlight-kw">namespace</span> <span class="highlight-type">Runtime</span> <span class="highlight-punct">{</span>
 	<span class="highlight-kw">fn</span> isSameReference<span class="highlight-punct">(</span>l<span class="highlight-punct">:</span> <span class="highlight-type">Any</span><span class="highlight-punct">,</span> r<span class="highlight-punct">:</span> <span class="highlight-type">Any</span><span class="highlight-punct">)</span><span class="highlight-punct">:</span> <span class="highlight-type">Boolean</span>
 	<span class="highlight-kw">fn</span> getSystemHashCode<span class="highlight-punct">(</span>a<span class="highlight-punct">:</span> <span class="highlight-type">Any</span><span class="highlight-punct">)</span><span class="highlight-punct">:</span> <span class="highlight-type">USize</span>
-<span class="highlight-punct">}</span>
-
-</code></pre>
+<span class="highlight-punct">}</span></code></pre>

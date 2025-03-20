@@ -3,10 +3,25 @@ import Callout from '@/components/incl/Callout.vue'
 </script>
 
 <template>
-	<div class="paragraph">I am Kira, visionary virtual machines architect!</div>
+	<div class="paragraph">I am Kira<sub><small>she</small></sub>, visionary virtual machines architect</div>
+
+	<iframe
+		width="180"
+		height="180"
+		style="border: none; float: right"
+		src="https://dimden.neocities.org/navlink/"
+		name="neolink"
+	></iframe>
 
 	<div class="paragraph">
-		And this is my personal website. It consists of two main parts:
+		I completed bachelor's degree at ITMO university, and my thesis was focused
+		on language interoperability and it's optimization of its support in JIT, GC
+		and runtime. I'm also interested in game development and visual art.
+	</div>
+
+	<div class="paragraph">
+		This blog is an outlet for me to talk about my research, technological
+		interests, hobbies and ideas. It consists of two main parts:
 		<ol>
 			<li>
 				<router-link to="/fs/kp2pml30">kp2pml30</router-link> — blog about

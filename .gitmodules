@@ -1,0 +1,3 @@
+[submodule "generator/yamd"]
+	path = generator/yamd
+	url = https://git.kp2pml30.moe/ya/yamd.git

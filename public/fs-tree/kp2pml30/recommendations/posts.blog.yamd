@@ -1,0 +1,10 @@
+#! tag("h1")
+	Recommended blogs
+
+#! list('-')
+	#. #link("https://thume.ca/2019/07/14/a-tour-of-metaprogramming-models-for-generics/")#{ Models of Generics and Metaprogramming }#
+	#. #link("https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/shared-generics.md")#{ Shared generics design }#
+	#. #link("https://wiki.openjdk.org/display/HotSpot/Synchronization")#{ Monitors implementation in OpenJDK }#
+	#. #link("https://lukasatkinson.de/2018/interface-dispatch/")#{ How dynamic single dispatch can be implemented }#
+	#. #link("https://www.baeldung.com/java-invoke-dynamic")#{ JVM's #`invoke.dynamic` }#
+	#. #link("https://aosabook.org/en/v2/ghc.html")#{ GHC architecture }#

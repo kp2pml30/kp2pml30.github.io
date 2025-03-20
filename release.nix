@@ -16,6 +16,10 @@ in pkgs.buildNpmPackage {
 
 	inherit npmBuildHook npmInstallHook;
 
+	nativeBuildInputs = with pkgs; [
+		bundler
+	];
+
 	src = ./.;
 
 	npmDepsHash = "sha256-mIFp1nmQsHVRTuE77wLDyOONSSfOdcrXq5bH7ukxORU=";

@@ -15,7 +15,8 @@ defineProps<{}>()
 			<span class="item"
 				><router-link to="/">HOME</router-link>
 				<router-link to="/fs">ROFS</router-link>
-				<router-link to="/about">ABOUT</router-link></span
+				<router-link to="/about">ABOUT</router-link>
+				<router-link to="/lnk">LNK</router-link></span
 			>
 		</div>
 		<hr />

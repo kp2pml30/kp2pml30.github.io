@@ -28,25 +28,18 @@ setNow()
 
 	<hr class="hr-space" />
 
+	<h2>Pronouns</h2>
+	<ul>
+		<li>she</li>
+		<li>they</li>
+	</ul>
+
 	<h2>Contacts</h2>
 
 	<ul>
 		<li><a href="mailto:kp2pml30@gmail.com">kp2pml30@gmail.com</a></li>
 		<li><a href="https://t.me/kp2pml30">@kp2pml30</a> (telegram)</li>
-		<li><a href="https://linkedin.com/in/kp2pml30">linkedin</a></li>
 		<li>Timezone: UTC+4 ({{ now }})</li>
-	</ul>
-
-	<h2>Code examples</h2>
-	<ul>
-		<li>
-			<a href="https://github.com/kp2pml30">github</a> (Yeager AI and open
-			source contributions)
-		</li>
-		<li>
-			<a href="https://gitee.com/kprokopenko">gitee</a> (Huawei (Open Harmony)
-			contributions)
-		</li>
 	</ul>
 
 	<h2>Other socials</h2>
@@ -66,5 +59,43 @@ setNow()
 	<ul>
 		<li><a href="https://ko-fi.com/r3vdy2b10vv">ko-fi</a></li>
 		<li>eth 0x2D50eDE32E32481E06B261E5c9C2224B2A271add</li>
+	</ul>
+
+	<hr class="hr-space" />
+	<h2>Identities</h2>
+	<ul>
+		<li>pgp keys: TBA</li>
+		<li>
+			ssh keys (current): see on
+			<a href="https://github.com/kp2pml30.keys">github</a>
+		</li>
+		<li>eth 0x2D50eDE32E32481E06B261E5c9C2224B2A271add</li>
+	</ul>
+
+	<h2>Git profiles</h2>
+	<ul>
+		<li>
+			<a href="https://github.com/kp2pml30">github</a> (Yeager AI and open
+			source contributions)
+		</li>
+		<li>
+			<a href="https://gitee.com/kprokopenko">gitee</a> (Huawei (Open Harmony)
+			contributions)
+		</li>
+		<li>
+			<a href="https://git.kp2pml30.moe">personal git</a>
+		</li>
+	</ul>
+
+	<h2>Work</h2>
+	<ul>
+		<li><a href="https://linkedin.com/in/kp2pml30">linkedin</a></li>
+		<li>
+			<a
+				href="https://github.com/kp2pml30/cv/blob/artifacts/cv.pdf"
+				target="_blank"
+				>cv (note: if I am not looking for a job it may be outdated)</a
+			>
+		</li>
 	</ul>
 </template>

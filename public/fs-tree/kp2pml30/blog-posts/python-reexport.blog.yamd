@@ -1,0 +1,54 @@
+#! tag('h1')
+	How to do a re-export in python properly?
+
+I stumbled upon this problem while compiling numpy for wasm32-wasip1. Dynamic linking isn't supported out of the box there,
+so all modules must be statically linked into CPython. However, numpy uses relative imports, while native modules can't have dots in name
+
+#! tag('h2')
+	V0 (naive)
+
+#$ code
+	from _native_module import *
+
+Well, this obviously won't work because of... Cyclic imports!
+
+However, #link("https://peps.python.org/pep-0562/")#{ pep-0562 }# comes for rescue.
+It allows to override #`__getattr__` on module level, though usage is not that straight forward
+
+#! tag('h2')
+	V1
+
+#$ code
+	import _native_module as _imp
+	def __getattr__(name):
+		return getattr(_imp, name)
+
+Or:
+
+#$ code
+	def __getattr__(name):
+		return getattr(_imp, name)
+	import _native_module as _imp
+
+Neither of them works, because of the cyclic import (again)
+
+#! tag('h2')
+	V2 (correct)
+
+#$ code
+	def __getattr__(name):
+		import _native_module as _imp
+		return getattr(_imp, name)
+
+This one finally worked. Why so?
+#! list('-')
+	#. Python executes bytecode sequentially, so #`__getattr__` has to be defined before importing a circular module
+	#. #`import _common as _imp` appears to assign to #`_imp` after initializing the module, so it's more like the following
+		#$ code
+			mod = new_mod()
+			init_mod(mod, 'common')
+			_imp = mod
+		And not with the last two lines swapped
+
+Moreover, assignment should work just fine.
+However, I think #`from ... import *` won't. because #`__all__` is missing
