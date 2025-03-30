@@ -1,0 +1,21 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Gustavo Calonico <gustavo.calonico@tutanota.com>
+Date: Tue, 11 Feb 2025 19:02:35 +0000
+Subject: [PATCH] fix: bump crate version
+
+---
+ Cargo.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Cargo.toml b/Cargo.toml
+index cad9830..9ae9c6a 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -1,6 +1,6 @@
+ [package]
+ name = "altcha-lib-rs"
+-version = "0.1.1"
++version = "0.1.2"
+ edition = "2021"
+ authors = ["jmic <jmic@users.noreply.github.com>"]
+ description = "Community implementation of the Altcha library in Rust for your own server application to create and validate challenges and responses."

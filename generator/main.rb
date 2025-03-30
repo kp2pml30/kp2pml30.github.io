@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 # frozen_string_literal: true
 
 require 'pathname'
@@ -7,7 +6,7 @@ require 'json'
 require 'open3'
 
 root = Pathname.new(__FILE__).parent.parent
-tree_root = root.join('public', 'fs-tree')
+tree_root = root.join('frontend', 'public', 'fs-tree')
 trie = {
 	"kind" => "dir",
 	"name" => "",
