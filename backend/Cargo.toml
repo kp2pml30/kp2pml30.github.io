@@ -1,0 +1,17 @@
+[package]
+name = "exe"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+altcha-lib-rs = { path = "third-party/altcha-lib-rs" }
+anyhow = { version = "1.0.22", default-features = false }
+chrono = "0.4.40"
+clap = { version = "4.5.16", features = ["derive"] }
+dashmap = "6.1.0"
+getrandom = "0.3.2"
+log = "0.4.26"
+serde_json = "1.0.140"
+structured-logger = "1.0.3"
+tokio = { version = "1.43.0", features = ["rt", "rt-multi-thread", "time", "macros", "sync"], default-features = false}
+warp = "0.3.7"

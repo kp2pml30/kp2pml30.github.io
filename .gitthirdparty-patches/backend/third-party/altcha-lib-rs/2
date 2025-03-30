@@ -1,0 +1,26 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: kp2pml30 <kp2pml30@gmail.com>
+Date: Fri, 21 Mar 2025 21:06:26 +0400
+Subject: [PATCH] feat: implement std::error:Error for custom Error (anyhow
+ compatibility)
+
+---
+ src/error.rs | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/src/error.rs b/src/error.rs
+index f3cbe50..df48e89 100644
+--- a/src/error.rs
++++ b/src/error.rs
+@@ -24,3 +24,11 @@ impl From<std::num::ParseIntError> for Error {
+         Self::ParseInteger(other)
+     }
+ }
++
++impl std::fmt::Display for Error {
++    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
++        std::fmt::Debug::fmt(self, f)
++    }
++}
++
++impl std::error::Error for Error {}

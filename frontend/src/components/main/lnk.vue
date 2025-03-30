@@ -94,8 +94,9 @@ setNow()
 			<a
 				href="https://github.com/kp2pml30/cv/blob/artifacts/cv.pdf"
 				target="_blank"
-				>cv (note: if I am not looking for a job it may be outdated)</a
+				>cv</a
 			>
+			(note: if I am not looking for a job it may be outdated)
 		</li>
 	</ul>
 </template>

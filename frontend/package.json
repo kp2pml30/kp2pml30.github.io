@@ -13,6 +13,7 @@
     "format": "prettier --write src/ index.html vite.config.ts"
   },
   "dependencies": {
+    "altcha": "^1.4.0",
     "vue": "^3.5.12",
     "vue-audio-visual": "^3.0.8",
     "vue-router": "^4.4.5"
