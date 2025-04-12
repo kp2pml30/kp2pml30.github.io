@@ -2,8 +2,8 @@
 	"repos": {
 		"backend/third-party/altcha-lib-rs": {
 			"url": "https://github.com/jmic/altcha-lib-rs.git",
-			"commit": "a45e894bf2e3d0c275d9cdbf8268fa7e80ac871c",
-			"patches": 3
+			"commit": "62b458dfd653b3d193ad18c412a0a4998712eb94",
+			"patches": 2
 		}
 	}
 }

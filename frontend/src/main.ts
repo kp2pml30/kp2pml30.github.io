@@ -4,6 +4,8 @@ import './assets/code.css'
 import { createApp } from 'vue'
 import 'altcha'
 import { AVPlugin } from 'vue-audio-visual'
+import Toast from 'vue-toastification'
+import 'vue-toastification/dist/index.css'
 
 import FS from './components/main/FS.vue'
 import App from './App.vue'
@@ -29,6 +31,7 @@ const router = createRouter({
 const app = createApp(App)
 
 app.use(AVPlugin)
+app.use(Toast)
 app.use(router)
 
 app.mount('#app')

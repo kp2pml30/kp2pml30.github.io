@@ -1,17 +1,21 @@
 [package]
-name = "exe"
+name = "kp2pml30-moe-backend"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
 altcha-lib-rs = { path = "third-party/altcha-lib-rs" }
 anyhow = { version = "1.0.22", default-features = false }
+base64 = "0.22.1"
 chrono = "0.4.40"
 clap = { version = "4.5.16", features = ["derive"] }
 dashmap = "6.1.0"
 getrandom = "0.3.2"
 log = "0.4.26"
+serde = { version = "1.0.219", features = ["derive"] }
 serde_json = "1.0.140"
 structured-logger = "1.0.3"
+teloxide = { version = "0.15.0", features = ["rustls", "ctrlc_handler"], default-features = false }
 tokio = { version = "1.43.0", features = ["rt", "rt-multi-thread", "time", "macros", "sync"], default-features = false}
 warp = "0.3.7"
+signal-hook = "0.3.17"

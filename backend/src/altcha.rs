@@ -1,4 +1,7 @@
+use core::str;
 use std::sync::Arc;
+
+use base64::Engine;
 
 struct ChallengeData {
     expires: chrono::DateTime<chrono::Utc>,
@@ -10,11 +13,12 @@ pub struct Altcha {
     challenges: dashmap::DashMap<Arc<str>, ChallengeData>,
 }
 
-const ALLOWED_BYTES: &[u8] = b"1234567890!@#$%^&*()_+-=qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOPASDFGHJKLZXCVBNMN";
+const ALLOWED_BYTES: &[u8] =
+    b"1234567890!@#$%^&*()_+-=qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOPASDFGHJKLZXCVBNMN";
 
 impl Altcha {
     pub fn new() -> anyhow::Result<Self> {
-        let mut buf = [0;64];
+        let mut buf = [0; 64];
         getrandom::fill(&mut buf).map_err(|_e| anyhow::anyhow!("can't get random"))?;
 
         for i in &mut buf {
@@ -43,7 +47,13 @@ pub async fn challenge(zelf: Arc<Altcha>) -> anyhow::Result<String> {
 
     let uid: Arc<str> = Arc::from(challenge.salt.as_str());
 
-    if let Some(_) = zelf.challenges.insert(uid.clone(), ChallengeData { expires: expires, challenge: challenge }) {
+    if let Some(_) = zelf.challenges.insert(
+        uid.clone(),
+        ChallengeData {
+            expires: expires,
+            challenge: challenge,
+        },
+    ) {
         anyhow::bail!("duplicate salt");
     }
 
@@ -55,27 +65,34 @@ pub async fn challenge(zelf: Arc<Altcha>) -> anyhow::Result<String> {
     Ok(challenge_string)
 }
 
-pub async fn verify(zelf: Arc<Altcha>, data: String) -> anyhow::Result<()> {
-    let payload: altcha_lib_rs::Payload = serde_json::from_str(&data)?;
+impl Altcha {
+    pub async fn verify(&self, data: String) -> anyhow::Result<()> {
+        let data = base64::prelude::BASE64_STANDARD.decode(&data)?;
+        let data = str::from_utf8(&data)?;
 
-    let uid = &payload.salt;
+        let payload: altcha_lib_rs::Payload = serde_json::from_str(data)?;
 
-    let data = match zelf.challenges.remove::<str>(uid) {
-        None => {
-            anyhow::bail!("no such challenge")
+        let uid = &payload.salt;
+
+        let data = match self.challenges.remove::<str>(uid) {
+            None => {
+                anyhow::bail!("no such challenge")
+            }
+            Some(data) => data.1,
+        };
+
+        if format!("{}", payload.algorithm) != format!("{}", data.challenge.algorithm)
+            || payload.challenge != data.challenge.challenge
+        {
+            anyhow::bail!("data mismatch {:?} vs {:?}", payload, data.challenge);
         }
-        Some(data) => data.1,
-    };
 
-    if format!("{}", payload.algorithm) != format!("{}", data.challenge.algorithm) || payload.challenge != data.challenge.challenge {
-        anyhow::bail!("data mismatch {:?} vs {:?}", payload, data.challenge);
+        if data.expires < chrono::Utc::now() {
+            anyhow::bail!("expired {}", data.expires);
+        }
+
+        altcha_lib_rs::verify_solution(&payload, &self.hmac_key, true)?;
+
+        Ok(())
     }
-
-    if data.expires > chrono::Utc::now() {
-        anyhow::bail!("expired");
-    }
-
-    altcha_lib_rs::verify_solution(&payload, &zelf.hmac_key, true)?;
-
-    Ok(())
 }

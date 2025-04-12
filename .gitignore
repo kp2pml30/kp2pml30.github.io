@@ -30,6 +30,8 @@ coverage
 
 *.tsbuildinfo
 
+/.direnv
 /.private
 
 target
+/result

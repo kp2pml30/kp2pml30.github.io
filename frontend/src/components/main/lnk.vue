@@ -64,7 +64,10 @@ setNow()
 	<hr class="hr-space" />
 	<h2>Identities</h2>
 	<ul>
-		<li>pgp fingerprint: <code>1ADB 14DE 7C1E 022B 95D5  AC86 8ABC 3800 D390 8C86</code></li>
+		<li>
+			pgp fingerprint:
+			<code>1ADB 14DE 7C1E 022B 95D5 AC86 8ABC 3800 D390 8C86</code>
+		</li>
 		<li>
 			ssh keys (current): see on
 			<a href="https://github.com/kp2pml30.keys">github</a>

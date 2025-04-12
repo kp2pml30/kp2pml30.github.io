@@ -16,7 +16,8 @@
     "altcha": "^1.4.0",
     "vue": "^3.5.12",
     "vue-audio-visual": "^3.0.8",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.4.5",
+    "vue-toastification": "^2.0.0-rc.5"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
