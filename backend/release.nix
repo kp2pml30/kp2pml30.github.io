@@ -4,25 +4,6 @@
 , ...
 }:
 let
-	#git-third-party = pkgs.stdenvNoCC.mkDerivation {
-	#	name = "git-third-party";
-	#	version = "0.0.1";
-#
-	#	src = builtins.fetchGit {
-	#		url = "https://github.com/kp2pml30/git-third-party";
-	#		rev = "49cacfdb5e1a4c84b2d66055f492abccf37d11a7";
-	#	};
-	#	buildInputs = [pkgs.python312 pkgs.git];
-#
-	#	dontConfigure = true;
-	#	dontBuild = true;
-#
-	#	installPhase = ''
-	#		mkdir -p "$out/bin"
-	#		cp ./git-third-party "$out/bin"
-	#	'';
-	#};
-
 	altcha-lib-rs = pkgs.stdenvNoCC.mkDerivation {
 		name = "altcha-lib-rs";
 		version = "0.0.1";
@@ -67,9 +48,9 @@ let
 			cp -r ./* "$out"
 		'';
 	};
-
-	rustPkgs = pkgs.rustBuilder.makePackageSet {
-		rustVersion = "1.85.1";
-		packageFun = import "${base}/Cargo.nix";
-	};
-in (rustPkgs.workspace.kp2pml30-moe-backend {})
+in pkgs.rustPlatform.buildRustPackage {
+	pname = "kp2pml30-moe-backend";
+	version = "0.0.1";
+	cargoLock.lockFile = ./Cargo.lock;
+	src = base;
+}

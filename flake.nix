@@ -2,11 +2,6 @@
 	inputs = {
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
 		rust-overlay.url = "github:oxalica/rust-overlay/stable";
-		cargo2nix = {
-			url = "github:cargo2nix/cargo2nix/f7b2c744b1e6ee39c7b4528ea34f06db598266a6";
-			inputs.nixpkgs.follows = "nixpkgs";
-			inputs.rust-overlay.follows = "rust-overlay";
-		};
 		systems = {
 			url = "github:nix-systems/default";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -18,11 +13,11 @@
 		};
 	};
 
-	outputs = inputs@{ self, nixpkgs, flake-utils, cargo2nix, ... }:
+	outputs = inputs@{ self, nixpkgs, flake-utils, ... }:
 		flake-utils.lib.eachDefaultSystem
 			(system:
 				let
-					pkgs = import nixpkgs { inherit system; overlays = [cargo2nix.overlays.default]; };
+					pkgs = import nixpkgs { inherit system; };
 					lib = pkgs.lib;
 				in
 				{
@@ -35,7 +30,6 @@
 						let pkgs = import nixpkgs {
 							inherit system;
 							config.allowUnfree = true;
-							overlays = [cargo2nix.overlays.default];
 						};
 					in pkgs.mkShell {
 						packages = with pkgs; [
@@ -50,7 +44,6 @@
 							nodePackages.npm
 
 							vscode
-							cargo2nix.packages.${system}.cargo2nix
 						];
 
 						shellHook = ''
