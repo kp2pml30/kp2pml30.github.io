@@ -12,7 +12,7 @@ pre[class*='language-'] {
 	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: normal;
-	font-family: monospace;
+	font-family: 'Fira Code', monospace;
 	font-size: 14px;
 	text-shadow: none;
 }
@@ -23,7 +23,11 @@ pre > code[class*='language-'] {
 
 pre[class*='language-'],
 :not(pre) > code[class*='language-'] {
-	background: var(--background-soft-color);
+	background: var(--background-darker-color);
+}
+
+code[class='code-inline'] {
+	background: var(--background-darker-color);
 }
 
 pre[class*='language-'] {

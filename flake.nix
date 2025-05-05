@@ -53,7 +53,7 @@
 							target="$alias_dir/code"
 							CODE_ORIGINAL="$(which code)"
 							echo "#!/usr/bin/env bash" > "$target"
-							echo "'${toString pkgs.vscode}/bin/code' '--extensions-dir=$PWD/.direnv/vscode-exts'" >> "$target"
+							echo "'${toString pkgs.vscode}/bin/code' '--extensions-dir=$PWD/.direnv/vscode-exts'" '"$@"' >> "$target"
 							chmod +x "$target"
 						'';
 					};

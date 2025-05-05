@@ -65,6 +65,7 @@
 
 	--background-soft-color: var(--black-soft);
 	--foreground-soft-color: var(--white-soft);
+	--background-darker-color: #141414;
 	--muted-soft-color: var(--gray-soft);
 	--selection-soft-color: var(--purple-fading-soft);
 	--primary-soft-color: var(--purple-soft);

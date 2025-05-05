@@ -95,7 +95,7 @@ readMessages()
 	</div>
 
 	<Callout emoji="🏗️">
-		Site is under construction. More contents is coming soon
+		Site is under construction. More content is coming soon
 	</Callout>
 
 	<div

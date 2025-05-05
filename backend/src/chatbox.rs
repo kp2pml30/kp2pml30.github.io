@@ -29,6 +29,7 @@ impl Chatbox {
             .open(&*db_path)?;
 
         serde_json::to_writer(&file, &data)?;
+        file.write_all(b"\n")?;
 
         file.flush()?;
 

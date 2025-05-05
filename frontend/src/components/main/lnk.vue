@@ -26,13 +26,9 @@ setNow()
 <template>
 	I am Kira ><> Prokopenko, visionary virtual machines architect
 
-	<hr class="hr-space" />
+	<a href="https://en.pronouns.page/@r3vdy2b10vv">Pronouns:</a> she/her
 
-	<h2>Pronouns</h2>
-	<ul>
-		<li>she</li>
-		<li>they</li>
-	</ul>
+	<hr class="hr-space" />
 
 	<h2>Contacts</h2>
 

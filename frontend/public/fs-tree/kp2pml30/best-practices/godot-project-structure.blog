@@ -1,0 +1,29 @@
+<h1>Godot Project Structure</br></h1>It is my opinion, and is by no means &quot;objective&quot;</br><h2>Godot conventions</br></h2>Godot by default uses following conventions:<ul><li> if directory contains file <code class="code-inline">.gdignore</code> godot won&#39;t look into it and won&#39;t import files from there</li><li> directory <code class="code-inline">/addons</code> contains <a href="https://docs.godotengine.org/en/stable/tutorials/plugins/editor/installing_plugins.html">&quot;addons&quot;</a></br></li></ul><h2>Proposed file structure</br></h2><pre class="language-any"><code class="language-any">├── _export/ <span class="highlight-comment"># &lt;- here you will export your game when time comes</span>
+│   └── .gdignore
+├── addons/
+├── assets-src/ <span class="highlight-comment"># &lt;- assets that don&#39;t get imported by default, useful for original textures and .blend</span>
+│   └── .gdignore
+├── core/ <span class="highlight-comment"># &lt;- no-assets &quot;core&quot; functionality without which your game can&#39;t function</span>
+│   └── <span class="highlight-type">PROJECT</span>.gd <span class="highlight-comment"># &lt;- autoload, see below</span>
+├── demo/ <span class="highlight-comment"># &lt;- everything that will be included in demo on par with `/core` and `/addons`</span>
+├── full/
+├── scripts/ <span class="highlight-comment"># &lt;- contains different automation scripts, such as exporters</span>
+│   └── .gdignore
+└── test/ <span class="highlight-comment"># &lt;- directory for temporary stuff and experimenting</span></code></pre>This separation is proposed to allow splitting exported project into different packs. Godot has some complications with moving files, so you probably want it from the start.</br><code class="code-inline">core</code> is separated so that you can open source it in case you want to help modders/whatever</br>For <code class="code-inline">demo/</code> directory I would propose layout akin to</br><pre class="language-any"><code class="language-any">├── assets/
+│   ├── meshes/
+│   ├── music/
+│   ├── sounds/
+│   └── textures/
+└── scenes/
+    ├── levels/
+    └── ...</code></pre>Such a layout can make it easier to find what you need</br><h2><code class="code-inline"><span class="highlight-type">PROJECT</span>.gd</code></br></h2>I suggest introducing this autoload (singleton) to keep project global data, such as layer names (they must be synced with project settings, so that both godot UI and gdscript use the same)</br><pre class="language-any"><code class="language-any"><span class="highlight-kw">extends</span> <span class="highlight-type">Node</span>
+
+<span class="highlight-kw">enum</span> <span class="highlight-type">LayerPhys3D</span> <span class="highlight-punct">{</span>
+	<span class="highlight-const">ENVIRON</span> = <span class="highlight-number">1</span><span class="highlight-punct">,</span>
+	<span class="highlight-const">HAS_HP</span> = <span class="highlight-number">2</span><span class="highlight-punct">,</span>
+<span class="highlight-punct">}</span>
+
+<span class="highlight-kw">enum</span> <span class="highlight-type">Nav3D</span> <span class="highlight-punct">{</span>
+	<span class="highlight-const">WALK</span> = <span class="highlight-number">1</span><span class="highlight-punct">,</span>
+	<span class="highlight-const">SMART</span> = <span class="highlight-number">2</span><span class="highlight-punct">,</span> <span class="highlight-comment"># &lt;- can open doors/etc</span>
+<span class="highlight-punct">}</span></code></pre>

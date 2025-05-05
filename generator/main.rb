@@ -76,4 +76,4 @@ end
 
 trie = rec trie
 
-root.join('src', 'tree.json').write(JSON.dump(trie))
+root.join('frontend', 'src', 'tree.json').write(JSON.dump(trie))
