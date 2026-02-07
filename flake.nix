@@ -44,6 +44,7 @@
 
 							nodejs
 							nodePackages.npm
+							prefetch-npm-deps
 						];
 
 						shellHook = ''

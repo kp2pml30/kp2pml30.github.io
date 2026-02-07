@@ -95,7 +95,7 @@ readMessages()
 	</div>
 
 	<div class="paragraph">
-		You can subscribe to RSS <a href="/feed.xml"><img src="/a/rss.svg" style="height: 1em; vertical-align: middle"></a>
+		You can subscribe to RSS <a href="/a/generated/feed.xml"><img src="/a/rss.svg" style="height: 1em; vertical-align: middle"></a>
 	</div>
 
 	<Callout emoji="🏗️">
@@ -145,6 +145,20 @@ readMessages()
 			</div>
 		</form>
 	</div>
+	<div style="display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; margin-top: 1em">
+		<a href="/a/generated/feed.xml"><img class="banner-img" src="/a/88x31/rss.gif"></a>
+		<a href="https://www.goldfingerparty.com/bar/"><img class="banner-img" src="/a/88x31/goldfinger.gif"></a>
+		<a href="https://lit.link/en/tokyotransmarch"><img class="banner-img" src="/a/88x31/tmarsh.gif"></a>
+		<a href="https://etherscan.io/address/0x2D50eDE32E32481E06B261E5c9C2224B2A271add"><img class="banner-img" src="/a/88x31/donate.gif"></a>
+		<a href="https://zh.wikipedia.org/"><img class="banner-img" src="/a/88x31/Zhwikipedialogo.gif"></a>
+		<a href="https://github.com/kp2pml30"><img class="banner-img" src="/a/88x31/open_source.png"></a>
+		<a href="https://discord.gg/TYjNRpFknx"><img class="banner-img" src="/a/88x31/discord.gif"></a>
+	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.banner-img {
+	height: 62px;
+	image-rendering: pixelated;
+}
+</style>

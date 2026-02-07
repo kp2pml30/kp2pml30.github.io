@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kp2pml30.moe/a/generated/sitemap.xml

@@ -133,4 +133,22 @@ rss.rss(version: "2.0") {
 	}
 }
 
-root.join('frontend', 'public', 'feed.xml').write(rss.target!)
+root.join('frontend', 'public', 'a', 'generated', 'feed.xml').write(rss.target!)
+
+sitemap = Builder::XmlMarkup.new(:indent => nil)
+sitemap.instruct! :xml, version: "1.0", encoding: "UTF-8"
+sitemap.urlset(xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9") {
+	%w[/ /about /fs /lnk].each { |path|
+		sitemap.url { sitemap.loc "#{site_url}#{path}" }
+	}
+	blog_items.each { |item|
+		sitemap.url {
+			sitemap.loc "#{site_url}/view/#{item[:path]}"
+			if item[:date] != "???? ?? ??"
+				sitemap.lastmod item[:date].gsub(' ', '-')
+			end
+		}
+	}
+}
+
+root.join('frontend', 'public', 'a', 'generated', 'sitemap.xml').write(sitemap.target!)
