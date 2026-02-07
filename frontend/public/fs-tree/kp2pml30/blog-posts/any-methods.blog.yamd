@@ -1,4 +1,4 @@
-# date: "2023 ?? ??"
+#% meta "date", "2023 11 30"
 
 #! tag("h1")
 	Which methods an #`Any` type should have?

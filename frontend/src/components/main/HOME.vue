@@ -94,6 +94,10 @@ readMessages()
 		<router-link to="/fs">filesystem</router-link>
 	</div>
 
+	<div class="paragraph">
+		You can subscribe to RSS <a href="/feed.xml"><img src="/a/rss.svg" style="height: 1em; vertical-align: middle"></a>
+	</div>
+
 	<Callout emoji="🏗️">
 		Site is under construction. More content is coming soon
 	</Callout>

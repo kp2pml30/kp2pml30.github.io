@@ -1,3 +1,5 @@
+#% meta "date", "2025 09 01"
+
 #! tag('h1')
 	How to do a re-export in python properly?
 
