@@ -1,0 +1,28 @@
+#% meta "date", "2026 02 11"
+
+#! tag('h1')
+	Hidden Cost Of AI Tools
+
+At my work, we are pushed to use AI for anything. I understand the point and desire to speed up production. However, it's impossible to ignore the downsides
+
+#! tag('h2')
+	"Sleep Deprivation"
+
+While using AI speeds me up, as I work on critical infrastructure I need to review all of their code, which drains my resources extremely fast as well. Moreover, because it takes some time for them to research or write code, I usually simultaneously work on two independent parts and need to keep them both in my mind. But because 95% of the typing is done by AI, no routines are left for your humble meat servant
+
+I feel that removing all routine is somewhat comparable to removing sleep because "it is a waste of time". But the brain uses that time to sort all the information and come up with new ideas
+
+#! tag('h2')
+	Scary Stories from a Savannah of Vibe Coded Projects
+
+#! list('1')
+	#. Once I received a two-screen message with "questions", which were more of an AI poem, with a question on the level of "do you agree?" in the end. I barely overcame the urge to respond with an 'OK' emoji reaction
+	#. Imagine your boss sending you a big message that implies that you don't know and haven't used stuff on a level of #(2 + 2 = 4), clearly written by AI. It happened to me and it was extremely frustrating. It not only made me upset but also made me press the power off button right after disproving every single claim in it
+	#. "I created three bots with their own emails and Twitter accounts" quote.
+
+In all of these cases, AI makes it trivial to produce confident-sounding, voluminous text, but it shifts the cost from the writer to the reader. My colleague from Huawei always said that a programming language must be "reader-first". But AI-generated text is definitely creator-first
+
+#! tag('h2')
+	Final Words
+
+I feel like there will be major negative consequences for the programming industry as a whole. Also, recently it has finally started to feel to me like we are cooked...

@@ -111,7 +111,13 @@ trie = rec trie
 root.join('frontend', 'src', 'tree.json').write(JSON.dump(trie))
 
 site_url = 'https://kp2pml30.moe'
-blog_items.sort_by! { |item| item[:date] }.reverse!
+blog_items.sort_by! { |item|
+	if item[:date] == "???? ?? ??"
+		[1, ""]
+	else
+		[0, item[:date]]
+	end
+}.reverse!
 
 rss.instruct! :xml, version: "1.0", encoding: "UTF-8"
 rss.rss(version: "2.0") {

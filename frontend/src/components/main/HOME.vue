@@ -95,7 +95,7 @@ readMessages()
 	</div>
 
 	<div class="paragraph">
-		You can subscribe to RSS <a href="/a/generated/feed.xml"><img src="/a/rss.svg" style="height: 1em; vertical-align: middle"></a>
+		You can subscribe to <a href="/a/generated/feed.xml">RSS <img src="/a/rss.svg" style="height: 1em; vertical-align: middle"></a>
 	</div>
 
 	<Callout emoji="🏗️">
@@ -145,6 +145,16 @@ readMessages()
 			</div>
 		</form>
 	</div>
+
+	<div class="paragraph">
+	My titles include but are not limited to:
+	<ol>
+		<li>Visionary Virtual Machines Architect</li>
+		<li>Tech Lead of Chat Bots Squad</li>
+		<li>(ex) Milf In Early 20s</li>
+	</ol>
+	</div>
+
 	<div style="display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; margin-top: 1em">
 		<a href="/a/generated/feed.xml"><img class="banner-img" src="/a/88x31/rss.gif"></a>
 		<a href="https://www.goldfingerparty.com/bar/"><img class="banner-img" src="/a/88x31/goldfinger.gif"></a>
