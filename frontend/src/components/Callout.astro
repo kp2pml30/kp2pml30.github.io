@@ -1,0 +1,25 @@
+---
+interface Props {
+	emoji?: string
+}
+
+const { emoji = 'ℹ️' } = Astro.props
+---
+
+<div class="callout">
+	<div>{emoji}</div>
+	<div><slot /></div>
+</div>
+
+<style>
+	.callout {
+		border: solid 1px;
+		border-radius: 5px;
+		margin: 1em;
+		padding: 1em;
+		display: grid;
+		grid-template-columns: 5% 95%;
+		background-color: var(--selection-soft-color);
+		border-color: var(--primary-color);
+	}
+</style>

@@ -1,0 +1,12 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import FS from '@/components/main/FS.vue'
+
+export function getStaticPaths() {
+	return [{ params: { path: undefined } }]
+}
+---
+
+<BaseLayout title="fs — kp2pml30's blog">
+	<FS client:only="vue" />
+</BaseLayout>

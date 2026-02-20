@@ -1,6 +1,8 @@
-<script setup lang="ts"></script>
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+---
 
-<template>
+<BaseLayout title="about — kp2pml30's blog">
 	My name is Kira ><> Prokopenko. I completed bachelor's degree at ITMO
 	university, and my thesis was focused on language interoperability and it's
 	optimization and support in JIT, GC and runtime. I'm also interested in game
@@ -43,11 +45,11 @@
 		src="https://github.com/kp2pml30/cv/raw/artifacts/cv.svg"
 		alt="cv"
 	/>
-</template>
+</BaseLayout>
 
-<style scoped>
-#cv {
-	width: 100%;
-	filter: invert(1);
-}
+<style>
+	#cv {
+		width: 100%;
+		filter: invert(1);
+	}
 </style>

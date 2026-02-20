@@ -1,0 +1,83 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import Player from '@/components/incl/Player.vue'
+import type { FSItem, FSItemDir } from '@/types'
+import fs from 'node:fs'
+import path from 'node:path'
+
+export function getStaticPaths() {
+	const treeRaw = fs.readFileSync(
+		path.join(process.cwd(), 'src/tree.json'),
+		'utf-8'
+	)
+	const tree: FSItemDir = JSON.parse(treeRaw)
+
+	const viewableExtensions = ['.blog', '.html', '.png', '.jpg', '.mp3', '.wav']
+
+	const paths: { params: { path: string }; props: Record<string, any> }[] = []
+
+	function walk(node: FSItem, prefix: string) {
+		if (node.kind === 'dir') {
+			for (const child of node.sub) {
+				const childPath = prefix ? `${prefix}/${child.name}` : child.name
+				walk(child, childPath)
+			}
+		} else {
+			const ext = path.extname(node.name).toLowerCase()
+			if (viewableExtensions.includes(ext)) {
+				paths.push({
+					params: { path: prefix },
+					props: { ext },
+				})
+			}
+		}
+	}
+
+	for (const child of tree.sub) {
+		walk(child, child.name)
+	}
+
+	return paths
+}
+
+const { path: filePath } = Astro.params
+const { ext } = Astro.props
+
+let content = ''
+let kind: 'html' | 'image' | 'audio' = 'html'
+
+if (ext === '.png' || ext === '.jpg') {
+	kind = 'image'
+} else if (ext === '.mp3' || ext === '.wav') {
+	kind = 'audio'
+} else {
+	// .blog or .html — read at build time
+	const fsPath = path.join(process.cwd(), 'public/fs-tree', filePath!)
+	content = fs.readFileSync(fsPath, 'utf-8')
+}
+---
+
+<BaseLayout title={`${filePath} — kp2pml30's blog`}>
+	<div class="preview">
+		{
+			kind === 'html' && (
+				<div id="preview-has-code">
+					<Fragment set:html={content} />
+				</div>
+			)
+		}
+		{
+			kind === 'image' && (
+				<img
+					style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin-left: auto; margin-right: auto;"
+					src={`/fs-tree/${filePath}`}
+				/>
+			)
+		}
+		{
+			kind === 'audio' && (
+				<Player src={`/fs-tree/${filePath}`} client:load />
+			)
+		}
+	</div>
+</BaseLayout>

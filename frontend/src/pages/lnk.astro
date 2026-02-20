@@ -1,29 +1,9 @@
-<script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import LiveClock from '@/components/islands/LiveClock.vue'
+---
 
-let now = ref('')
-
-const UTC_OFFSET_HOURS = 4
-
-function setNow() {
-	const n = new Date()
-	const hours = (n.getUTCHours() + UTC_OFFSET_HOURS) % 24
-	const minutes = n.getUTCMinutes()
-	now.value = `${hours}`.padStart(2, '0') + ':' + `${minutes}`.padStart(2, '0')
-}
-
-function useIntervalFn(ms: number, cb: () => void) {
-	let int: number = 0
-	onMounted(() => (int = setInterval(cb, ms)))
-	onUnmounted(() => clearInterval(int))
-}
-
-useIntervalFn(5000, setNow)
-
-setNow()
-</script>
-
-<template>
+<BaseLayout title="lnk — kp2pml30's blog">
 	I am Kira ><> Prokopenko, visionary virtual machines architect
 
 	<a href="https://en.pronouns.page/@r3vdy2b10vv">Pronouns:</a> she/her
@@ -35,7 +15,7 @@ setNow()
 	<ul>
 		<li><a href="mailto:kp2pml30@gmail.com">kp2pml30@gmail.com</a></li>
 		<li><a href="https://t.me/kp2pml30">@kp2pml30</a> (telegram)</li>
-		<li>Timezone: UTC+4 ({{ now }})</li>
+		<li>Timezone: UTC+9 (<LiveClock client:load />)</li>
 	</ul>
 
 	<h2>Other socials</h2>
@@ -92,10 +72,9 @@ setNow()
 		<li>
 			<a
 				href="https://github.com/kp2pml30/cv/blob/artifacts/cv.pdf"
-				target="_blank"
-				>cv</a
+				target="_blank">cv</a
 			>
 			(note: if I am not looking for a job it may be outdated)
 		</li>
 	</ul>
-</template>
+</BaseLayout>

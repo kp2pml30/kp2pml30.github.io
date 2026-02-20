@@ -1,0 +1,98 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import Callout from '@/components/Callout.astro'
+import CommentSection from '@/components/islands/CommentSection.vue'
+---
+
+<BaseLayout>
+	<div class="paragraph">I am Kira, visionary virtual machines architect</div>
+
+	<iframe
+		width="180"
+		height="180"
+		style="border: none; float: right"
+		src="https://dimden.neocities.org/navlink/"
+		name="neolink"></iframe>
+
+	<div class="paragraph">
+		I completed bachelor's degree at ITMO university, and my thesis was focused
+		on language interoperability and optimization of its support in JIT, GC and
+		runtime. I'm also interested in game development and visual art.
+	</div>
+
+	<div class="paragraph">
+		This blog is an outlet for me to talk about my research, technological
+		interests, hobbies and ideas. It consists of two main parts:
+		<ol>
+			<li>
+				<a href="/fs/kp2pml30">kp2pml30</a> — blog about programming
+			</li>
+			<li>
+				<a href="/fs/r3vdy-2-b10vv">r3vdy-2-b10vv</a> — blog about other, more
+				personal stuff
+			</li>
+		</ol>
+		Both of them are available on the
+		<a href="/fs">filesystem</a>
+	</div>
+
+	<div class="paragraph">
+		You can subscribe to <a href="/a/generated/feed.xml"
+			>RSS <img
+				src="/a/rss.svg"
+				style="height: 1em; vertical-align: middle"
+			/></a
+		>
+	</div>
+
+	<Callout emoji="🏗️">
+		Site is under construction. More content is coming soon
+	</Callout>
+
+	<CommentSection client:only="vue" />
+
+	<hr class="hr-space" />
+
+	<div class="paragraph">
+		My titles include but are not limited to:
+		<ol>
+			<li>Visionary Virtual Machines Architect</li>
+			<li>Tech Lead of Chat Bots Squad</li>
+			<li>(ex) Milf In Early 20s</li>
+		</ol>
+	</div>
+
+	<div
+		style="display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; margin-top: 1em"
+	>
+		<a href="/a/generated/feed.xml"
+			><img class="banner-img" src="/a/88x31/rss.gif" /></a
+		>
+		<a href="https://www.goldfingerparty.com/bar/"
+			><img class="banner-img" src="/a/88x31/goldfinger.gif" /></a
+		>
+		<a href="https://lit.link/en/tokyotransmarch"
+			><img class="banner-img" src="/a/88x31/tmarsh.gif" /></a
+		>
+		<a
+			href="https://etherscan.io/address/0x2D50eDE32E32481E06B261E5c9C2224B2A271add"
+			><img class="banner-img" src="/a/88x31/donate.gif" /></a
+		>
+		<a href="https://zh.wikipedia.org/"
+			><img class="banner-img" src="/a/88x31/Zhwikipedialogo.gif" /></a
+		>
+		<a href="https://github.com/kp2pml30"
+			><img class="banner-img" src="/a/88x31/open_source.png" /></a
+		>
+		<a href="https://discord.gg/TYjNRpFknx"
+			><img class="banner-img" src="/a/88x31/discord.gif" /></a
+		>
+	</div>
+</BaseLayout>
+
+<style>
+	.banner-img {
+		height: 62px;
+		image-rendering: pixelated;
+	}
+</style>

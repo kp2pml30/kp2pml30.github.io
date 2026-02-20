@@ -3,7 +3,9 @@ npmInstallHook() {
 
 	runHook preInstall
 
-	npm exec -- vite build --outDir "$out"
+	npm exec -- astro build
+	mkdir -p "$out"
+	cp -r dist/* "$out"/
 
 	runHook postInstall
 

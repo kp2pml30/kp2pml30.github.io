@@ -1,0 +1,82 @@
+---
+import '@/assets/main.css'
+import '@/assets/code.css'
+
+interface Props {
+	title?: string
+}
+
+const { title = "kp2pml30's blog" } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div id="app">
+			<div class="header-all">
+				<div class="header">
+					<span class="id"
+						><a href="/"
+							><span style="color: var(--quaternary-color); padding: 0px"
+								>kp2pml30</span
+							></a
+						>'s personal blog</span
+					>
+					<span class="item">
+						<a href="/">HOME</a>
+						<a href="/fs">ROFS</a>
+						<a href="/about">ABOUT</a>
+						<a href="/lnk">LNK</a>
+					</span>
+				</div>
+				<hr />
+			</div>
+
+			<slot />
+
+			<div class="footer">
+				<hr />
+				Copyright (C) 2023-2026
+				<span style="color: var(--quaternary-color)">kp2pml30</span>, see
+				<a href="/LICENSES">LICENSE</a>
+				<br />
+				<small
+					>All opinions here are my own and do not reflect the views of my
+					employers or university: future, past, and present.</small
+				>
+			</div>
+		</div>
+	</body>
+</html>
+
+<style>
+	.header {
+		text-align: center;
+		width: 100%;
+		display: block;
+		font-size: large;
+	}
+	.header-all {
+		width: 100%;
+		display: grid;
+		margin-bottom: 1em;
+	}
+	.id {
+		float: left;
+	}
+	.item {
+		float: right;
+	}
+	.footer {
+		text-align: center;
+		width: 100%;
+		display: block;
+		margin-top: 1em;
+	}
+</style>
