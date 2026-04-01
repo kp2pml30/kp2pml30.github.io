@@ -1,0 +1,56 @@
+name: Deploy redirect to Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create redirect page
+        run: |
+          mkdir -p _site
+          cat > _site/index.html << 'HTMLEOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta http-equiv="refresh" content="0; url=https://kp2pml30.moe">
+            <link rel="canonical" href="https://kp2pml30.moe">
+            <title>Redirecting…</title>
+          </head>
+          <body>
+            <p>Redirecting to <a href="https://kp2pml30.moe">kp2pml30.moe</a>…</p>
+          </body>
+          </html>
+          HTMLEOF
+          cat > _site/404.html << 'HTMLEOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <script>window.location.replace("https://kp2pml30.moe" + window.location.pathname + window.location.search + window.location.hash);</script>
+            <meta http-equiv="refresh" content="0; url=https://kp2pml30.moe">
+          </head>
+          <body>
+            <p>Redirecting to <a href="https://kp2pml30.moe">kp2pml30.moe</a>…</p>
+          </body>
+          </html>
+          HTMLEOF
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

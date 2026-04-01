@@ -12,16 +12,16 @@ let
 		name = "website-setup-hook";
 	} ./nix/npm-install-hook.sh;
 in pkgs.buildNpmPackage {
-		pname = "kp2pml30-website";
-		version = "0.0.1";
+	pname = "kp2pml30-website";
+	version = "0.0.1";
 
-		inherit npmBuildHook npmInstallHook;
+	inherit npmBuildHook npmInstallHook;
 
-		nativeBuildInputs = with pkgs; [
-			bundler
-		];
+	nativeBuildInputs = with pkgs; [
+		bundler
+	];
 
-		src = ./.;
+	src = ./.;
 
-		npmDepsHash = "sha256-Lh3Seedw9x096o0+XGW8tU18OlQbmzewH9a+9/uzzVA=";
+	npmDepsHash = "sha256-Lh3Seedw9x096o0+XGW8tU18OlQbmzewH9a+9/uzzVA=";
 }
