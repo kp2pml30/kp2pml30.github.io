@@ -12,7 +12,7 @@ pre[class*='language-'] {
 	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: normal;
-	font-family: 'Fira Code', monospace;
+	font-family: 'Fira Code', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', monospace;
 	font-size: 14px;
 	text-shadow: none;
 }

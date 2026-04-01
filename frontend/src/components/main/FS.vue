@@ -31,7 +31,9 @@ const cur_chain: Ref<ChainItem> = ref(
 		if (savedPath.startsWith('/fs/')) {
 			savedPath = savedPath.substring(4)
 		}
-		for (const part of savedPath.split('/')) {
+		const parts = savedPath.split('/').filter((p) => p !== '')
+		for (let i = 0; i < parts.length; i++) {
+			const part = parts[i]
 			const idx = init_chain.dir.sub.findIndex((v) => v.name == part)
 			if (idx < 0) {
 				break
@@ -41,19 +43,14 @@ const cur_chain: Ref<ChainItem> = ref(
 			if (next.kind === 'file') {
 				break
 			}
-			init_chain = {
-				name: part,
-				selected: 0,
-				dir: next,
-				prev: init_chain,
+			if (i < parts.length - 1) {
+				init_chain = {
+					name: part,
+					selected: 0,
+					dir: next,
+					prev: init_chain,
+				}
 			}
-		}
-		if (url.hash != '') {
-			const hash = url.hash.replace(/^#/, '')
-			init_chain.selected = Math.max(
-				0,
-				init_chain.dir.sub.findIndex((v) => v.name == hash)
-			)
 		}
 		cur_index.value = init_chain.selected
 		return init_chain
@@ -119,12 +116,7 @@ const is_dir = computed(() => {
 watch([cur_path, cur_chain, cur_index], ([cp, cc, ci]) => {
 	let res = '/fs/'
 	if (cp != '') {
-		res += cp
-		if (cur_chain.value.dir.sub[cur_index.value].kind == 'dir') {
-			res += '#'
-		} else {
-			res += '/'
-		}
+		res += cp + '/'
 	}
 
 	history.pushState({}, '', res + cc.dir.sub[ci].name)
