@@ -1,7 +1,10 @@
 {
 	inputs = {
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-		rust-overlay.url = "github:oxalica/rust-overlay/stable";
+		rust-overlay = {
+			url = "github:oxalica/rust-overlay/stable";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 		systems = {
 			url = "github:nix-systems/default";
 			inputs.nixpkgs.follows = "nixpkgs";
