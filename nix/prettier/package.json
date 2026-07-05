@@ -1,0 +1,9 @@
+{
+  "name": "prettier-astro-plugin",
+  "version": "0.0.0",
+  "description": "Vendored dependency wrapper so nix can provide prettier-plugin-astro to the pre-commit prettier hook.",
+  "private": true,
+  "dependencies": {
+    "prettier-plugin-astro": "0.14.1"
+  }
+}

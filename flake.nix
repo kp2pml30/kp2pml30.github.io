@@ -36,6 +36,19 @@
         pkgs = import nixpkgs { inherit system; };
         lib = pkgs.lib;
 
+        # prettier + prettier-plugin-astro, built from the vendored lockfile in
+        # ./nix/prettier so `.astro` formats hermetically (the plugin is not in
+        # nixpkgs). Ships its own prettier, version-matched to the plugin; use
+        # it as the binary so every web file formats with one prettier.
+        prettierAstro = pkgs.buildNpmPackage {
+          pname = "prettier-plugin-astro-bundle";
+          version = "0.14.1";
+          src = ./nix/prettier;
+          npmDepsHash = "sha256-U6fYzjYT0QP4KQN/Yb6hCvN20SoPfpMF7napvxElLlg=";
+          dontNpmBuild = true;
+        };
+        prettierAstroModules = "${prettierAstro}/lib/node_modules/prettier-astro-plugin/node_modules";
+
         pre-commit-check = inputs.git-hooks.lib.${system}.run {
           src = ./.;
           hooks = {
@@ -60,15 +73,14 @@
             # TOML (Cargo.toml, rust-toolchain.toml)
             taplo.enable = true;
 
-            # Frontend web source. prettier's default `types = [ "text" ]` is
-            # far too broad, so scope to the extensions prettier parses natively.
-            # `.astro` needs prettier-plugin-astro (not in nixpkgs) and is left
-            # out — format those with the project's own prettier via `npx`.
-            # Excluded: generated files (tree.json, lockfiles), verbatim
-            # published assets under public/, and vendored/tooling trees.
+            # Frontend web source, incl. `.astro` (via the bundled plugin
+            # above). prettier's default `types = [ "text" ]` is far too broad,
+            # so scope to the extensions it parses. Excluded: generated files
+            # (tree.json, lockfiles), verbatim published assets under public/,
+            # and vendored/tooling trees.
             prettier = {
               enable = true;
-              files = "\\.(css|scss|less|jsx?|mjs|cjs|tsx?|mts|cts|vue|json|jsonc|md|markdown|ya?ml|graphql)$";
+              files = "\\.(astro|css|scss|less|jsx?|mjs|cjs|tsx?|mts|cts|vue|json|jsonc|md|markdown|ya?ml|graphql)$";
               excludes = [
                 "^frontend/src/tree\\.json$"
                 "(^|/)package-lock\\.json$"
@@ -77,6 +89,10 @@
                 "^\\.git-third-party/"
                 "/third-party/"
               ];
+              settings = {
+                binPath = "${prettierAstroModules}/.bin/prettier";
+                plugins = [ "${prettierAstroModules}/prettier-plugin-astro/dist/index.js" ];
+              };
             };
 
             # yamd blog documents (*.blog.yamd): rewrite in place; the commit

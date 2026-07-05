@@ -58,7 +58,9 @@ if (ext === '.png' || ext === '.jpg') {
 ---
 
 <BaseLayout title={`${filePath} — kp2pml30's blog`}>
-	<button class="back-link" onclick={`window.location.href='/fs/${filePath}'`}><span class="back-cd">cd</span> /{displayPath}</button>
+	<button class="back-link" onclick={`window.location.href='/fs/${filePath}'`}
+		><span class="back-cd">cd</span> /{displayPath}</button
+	>
 	<div class="preview">
 		{
 			kind === 'html' && (
@@ -75,26 +77,22 @@ if (ext === '.png' || ext === '.jpg') {
 				/>
 			)
 		}
-		{
-			kind === 'audio' && (
-				<Player src={`/fs-tree/${filePath}`} client:load />
-			)
-		}
+		{kind === 'audio' && <Player src={`/fs-tree/${filePath}`} client:load />}
 	</div>
 </BaseLayout>
 
 <style>
-.back-link {
-	display: block;
-	text-align: left;
-	background: transparent;
-	border: none;
-	color: var(--secondary-color);
-	cursor: pointer;
-	margin-bottom: 0.5em;
-	padding: 0;
-}
-.back-cd {
-	color: var(--quaternary-color);
-}
+	.back-link {
+		display: block;
+		text-align: left;
+		background: transparent;
+		border: none;
+		color: var(--secondary-color);
+		cursor: pointer;
+		margin-bottom: 0.5em;
+		padding: 0;
+	}
+	.back-cd {
+		color: var(--quaternary-color);
+	}
 </style>
