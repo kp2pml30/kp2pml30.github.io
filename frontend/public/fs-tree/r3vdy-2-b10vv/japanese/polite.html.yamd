@@ -1,0 +1,465 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+#(define (h3 . b) (apply elem 'h3 b))
+#(define (b . content) (apply elem 'b content))
+#(define (ul . content) (apply elem 'ul content))
+#(define (li . content) (apply elem 'li content))
+
+#h1{#furigana{敬語}{けいご} — Keigo (Polite Language)}
+
+Japanese has three levels of keigo:
+#ul{
+	#li{#strong{#furigana{丁寧語}{ていねいご}} — Polite language (ます/です forms, used with anyone)}
+	#li{#strong{#furigana{尊敬語}{そんけいご}} — Respectful language (elevates the listener/subject's actions)}
+	#li{#strong{#furigana{謙譲語}{けんじょうご}} — Humble language (lowers the speaker's own actions)}
+}
+
+#h2{#furigana{丁寧語}{ていねいご} — Polite Language}
+
+Basic polite forms used in everyday formal speech.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Plain
+			#cell: Polite
+			#cell: Meaning
+		#row
+			#cell: だ
+			#cell: です
+			#cell: is / am / are
+		#row
+			#cell: ～う verb
+			#cell: ～ます
+			#cell: verb (polite)
+		#row
+			#cell: ある
+			#cell: あります
+			#cell: to exist (things)
+		#row
+			#cell: いる
+			#cell: います
+			#cell: to exist (people/animals)
+		#row
+			#cell: いい / よい
+			#cell: よろしい
+			#cell: good / fine
+		#row
+			#cell: どう
+			#cell: いかが
+			#cell: how
+		#row
+			#cell: すごく / とても
+			#cell: #furigana{大変}{たいへん}
+			#cell: very
+		#row
+			#cell: #furigana{今日}{きょう}
+			#cell: #furigana{本日}{ほんじつ}
+			#cell: today
+		#row
+			#cell: #furigana{昨日}{きのう}
+			#cell: #furigana{昨日}{さくじつ}
+			#cell: yesterday
+		#row
+			#cell: #furigana{明日}{あした}
+			#cell: #furigana{明日}{みょうにち}
+			#cell: tomorrow
+		#row
+			#cell: #furigana{今}{いま}
+			#cell: ただいま
+			#cell: now
+		#row
+			#cell: さっき
+			#cell: #furigana{先ほど}{さきほど}
+			#cell: a moment ago
+		#row
+			#cell: あとで
+			#cell: #furigana{後ほど}{のちほど}
+			#cell: later
+		#row
+			#cell: #furigana{この間}{このあいだ}
+			#cell: #furigana{先日}{せんじつ}
+			#cell: the other day
+		#row
+			#cell: #furigana{誰}{だれ}
+			#cell: どなた / どちら#furigana{様}{さま}
+			#cell: who
+		#row
+			#cell: どこ
+			#cell: どちら
+			#cell: where
+		#row
+			#cell: こっち / そっち / あっち
+			#cell: こちら / そちら / あちら
+			#cell: this way / that way / over there
+		#row
+			#cell: #furigana{僕}{ぼく} / #furigana{俺}{おれ}
+			#cell: #furigana{私}{わたくし}
+			#cell: I
+		#row
+			#cell: あの#furigana{人}{ひと}
+			#cell: あの#furigana{方}{かた}
+			#cell: that person
+		#row
+			#cell: ちょっと
+			#cell: #furigana{少々}{しょうしょう}
+			#cell: a little
+		#row
+			#cell: すみません
+			#cell: #furigana{恐れ入ります}{おそれいります}
+			#cell: excuse me / I'm sorry
+
+#h2{お vs ご — When to Use Which Prefix}
+
+Both お and ご are honorific prefixes, but they attach to different types of words.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Prefix
+			#cell: Used with
+			#cell: Examples
+		#row
+			#cell: お
+			#cell: #furigana{和語}{わご}— native Japanese words (kun'yomi)
+			#cell: #furigana{お名前}{おなまえ}, #furigana{お茶}{おちゃ}, #furigana{お金}{おかね}, #furigana{お手紙}{おてがみ}, #furigana{お忙しい}{おいそがしい}
+		#row
+			#cell: ご
+			#cell: #furigana{漢語}{かんご}— Sino-Japanese words (on'yomi)
+			#cell: #furigana{ご連絡}{ごれんらく}, #furigana{ご確認}{ごかくにん}, #furigana{ご利用}{ごりよう}, #furigana{ご住所}{ごじゅうしょ}, #furigana{ご意見}{ごいけん}
+		#row
+			#cell: お (exceptions)
+			#cell: Some 漢語 that take お by convention
+			#cell: #furigana{お電話}{おでんわ}, #furigana{お食事}{おしょくじ}, #furigana{お時間}{おじかん}, #furigana{お返事}{おへんじ}, #furigana{お料理}{おりょうり}
+		#row
+			#cell: ご (exceptions)
+			#cell: Some 和語 that take ご by convention
+			#cell: ごゆっくり, ごもっとも
+
+For verb patterns: use #strong{お} + ます stem (お読みになる, お待ちする) for most verbs. Use #strong{ご} + 漢語 noun + する/になる (ご利用になる, ご連絡する) for する-verbs with 漢語 nouns.
+
+#h2{#furigana{尊敬語}{そんけいご} — Respectful Language}
+
+Used to elevate the actions of the listener or someone of higher status. Never used for your own actions. There are three ways to make a verb respectful, from least to most formal:
+
+#h3{Pattern 1: ～（ら）れる — Passive as Respectful (least formal)}
+
+Use the passive form of the verb. Simple and common, but can be ambiguous with actual passive meaning.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Group
+			#cell: Formation
+			#cell: Example
+		#row
+			#cell: Group 1 (五段)
+			#cell: ～あれる (same as passive)
+			#cell: #furigana{読む}{よむ}→ #furigana{読まれる}{よまれる}— (someone important) reads
+		#row
+			#cell: Group 2 (一段)
+			#cell: ～られる (same as passive)
+			#cell: #furigana{食べる}{たべる}→ #furigana{食べられる}{たべられる}— (someone important) eats
+		#row
+			#cell: Group 3
+			#cell
+				される
+
+				#furigana{来られる}{こられる}
+			#cell: #furigana{先生が説明された}{せんせいがせつめいされた}— the teacher explained
+
+#h3{Pattern 2: お～になる — Standard Respectful (more formal)}
+
+The standard sonkeigo pattern. More clearly respectful than ～（ら）れる with no passive ambiguity.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Type
+			#cell: Formation
+			#cell: Example
+		#row
+			#cell: 和語 verbs
+			#cell: お + ます stem + になる
+			#cell
+				読む → #furigana{お読みになる}{およみになる}
+
+				待つ → #furigana{お待ちになる}{おまちになる}
+
+				帰る → #furigana{お帰りになる}{おかえりになる}
+		#row
+			#cell: 漢語 する-verbs
+			#cell: ご + 漢語 noun + になる
+			#cell
+				利用する → #furigana{ご利用になる}{ごりようになる}
+
+				確認する → #furigana{ご確認になる}{ごかくにんになる}
+
+Polite: お読みになります. Past: お読みになりました. Cannot be used with する itself or with Group 2 one-mora stems (見る, 着る — use special verbs instead).
+
+#h3{Pattern 3: お～ください — Respectful Request}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Type
+			#cell: Formation
+			#cell: Example
+		#row
+			#cell: 和語 verbs
+			#cell: お + ます stem + ください
+			#cell
+				読む → お読みください — please read
+
+				座る → #furigana{お座りください}{おすわりください}— please sit
+		#row
+			#cell: 漢語 する-verbs
+			#cell: ご + 漢語 noun + ください
+			#cell
+				ご確認ください — please confirm
+
+				#furigana{ご注意ください}{ごちゅういください}— please be careful
+
+#h3{Pattern 4: お～です — Respectful State}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Formation
+			#cell: Example
+		#row
+			#cell: お + ます stem + です
+			#cell
+				#furigana{お待ちです}{おまちです}— is waiting
+
+				#furigana{お帰りです}{おかえりです}— is leaving/going home
+
+Special sonkeigo verbs replace the patterns above entirely — they are the most formal option. Use these instead of お～になる when available. See the #link("#summary"){summary table} below for the full list.
+
+Note: いらっしゃる, おっしゃる, くださる, なさる conjugate irregularly in ます form: いらっしゃいます, おっしゃいます, くださいます, なさいます (～る→～います, not ～ります).
+
+#h2{#furigana{謙譲語}{けんじょうご} — Humble Language}
+
+Used to lower your own actions when speaking to or about someone of higher status. Only for #strong{your own} actions — never for the listener's.
+
+#h3{Pattern 1: お～する — Standard Humble}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Type
+			#cell: Formation
+			#cell: Example
+		#row
+			#cell: 和語 verbs
+			#cell: お + ます stem + する
+			#cell
+				#furigana{持つ}{もつ}→ #furigana{お持ちする}{おもちする}— I'll carry (for you)
+
+				#furigana{待つ}{まつ}→ #furigana{お待ちする}{おまちする}— I'll wait (for you)
+
+				#furigana{伝える}{つたえる}→ #furigana{お伝えする}{おつたえする}— I'll convey (to them)
+		#row
+			#cell: 漢語 する-verbs
+			#cell: ご + 漢語 noun + する
+			#cell
+				連絡する → #furigana{ご連絡する}{ごれんらくする}— I'll contact (you)
+
+				説明する → #furigana{ご説明する}{ごせつめいする}— I'll explain (to you)
+
+Polite: お持ちします. Past: お持ちしました.
+
+#h3{Pattern 2: お～いたす — More Humble}
+
+Replace する with いたす for extra humility. Common in business and customer service.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Type
+			#cell: Formation
+			#cell: Example
+		#row
+			#cell: 和語 verbs
+			#cell: お + ます stem + いたす
+			#cell
+				待つ → #furigana{お待ちいたします}{おまちいたします}— I shall wait
+
+				#furigana{届ける}{とどける}→ お届けいたします — I shall deliver
+		#row
+			#cell: 漢語 する-verbs
+			#cell: ご + 漢語 noun + いたす
+			#cell
+				案内する → #furigana{ご案内いたします}{ごあんないいたします}— I shall guide you
+
+				連絡する → ご連絡いたします — I shall contact you
+
+#h3{Formality Ladder (sonkeigo vs kenjougo)}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Level
+			#cell: 尊敬語 (their actions)
+			#cell: 謙譲語 (my actions)
+		#row
+			#cell: Polite (丁寧語)
+			#cell: #furigana{読みます}{よみます}
+			#cell: #furigana{読みます}{よみます}
+		#row
+			#cell: Mild keigo
+			#cell: #furigana{読まれます}{よまれます}
+			#cell: —
+		#row
+			#cell: Standard keigo
+			#cell: お読みになります
+			#cell: お読みします
+		#row
+			#cell: High keigo
+			#cell: —
+			#cell: お読みいたします
+		#row
+			#cell: Special verb (highest)
+			#cell: #furigana{ご覧になります}{ごらんになります}
+			#cell: #furigana{拝読します}{はいどくします}
+
+Special kenjougo verbs replace the patterns above entirely. See the #link("#summary"){summary table} below for the full list.
+
+#(elem 'h2 #:attrs '((id . "summary")) "Special Keigo Verbs — All Levels")
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Meaning
+			#cell: Plain
+			#cell: #furigana{丁寧語}{ていねいご}
+			#cell: #furigana{尊敬語}{そんけいご}
+			#cell: #furigana{謙譲語}{けんじょうご}
+		#row
+			#cell: to be
+			#cell: いる
+			#cell: います
+			#cell: いらっしゃる
+			#cell: おる
+		#row
+			#cell: to go
+			#cell: #furigana{行く}{いく}
+			#cell: #furigana{行きます}{いきます}
+			#cell: いらっしゃる / おいでになる
+			#cell: #furigana{参る}{まいる}/ #furigana{伺う}{うかがう}
+		#row
+			#cell: to come
+			#cell: #furigana{来る}{くる}
+			#cell: #furigana{来ます}{きます}
+			#cell: いらっしゃる / おいでになる / #furigana{お越しになる}{おこしになる}
+			#cell: #furigana{参る}{まいる}/ #furigana{伺う}{うかがう}
+		#row
+			#cell: to do
+			#cell: する
+			#cell: します
+			#cell: なさる
+			#cell: いたす
+		#row
+			#cell: to say
+			#cell: #furigana{言う}{いう}
+			#cell: #furigana{言います}{いいます}
+			#cell: おっしゃる
+			#cell: #furigana{申す}{もうす}/ #furigana{申し上げる}{もうしあげる}
+		#row
+			#cell: to eat
+			#cell: #furigana{食べる}{たべる}
+			#cell: #furigana{食べます}{たべます}
+			#cell: #furigana{召し上がる}{めしあがる}
+			#cell: いただく
+		#row
+			#cell: to drink
+			#cell: #furigana{飲む}{のむ}
+			#cell: #furigana{飲みます}{のみます}
+			#cell: #furigana{召し上がる}{めしあがる}
+			#cell: いただく
+		#row
+			#cell: to see
+			#cell: #furigana{見る}{みる}
+			#cell: #furigana{見ます}{みます}
+			#cell: #furigana{ご覧になる}{ごらんになる}
+			#cell: #furigana{拝見する}{はいけんする}
+		#row
+			#cell: to read
+			#cell: #furigana{読む}{よむ}
+			#cell: #furigana{読みます}{よみます}
+			#cell: #furigana{お読みになる}{およみになる}
+			#cell: #furigana{拝読する}{はいどくする}
+		#row
+			#cell: to know
+			#cell: #furigana{知っている}{しっている}
+			#cell: #furigana{知っています}{しっています}
+			#cell: #furigana{ご存じ}{ごぞんじ}
+			#cell: #furigana{存じる}{ぞんじる}/ #furigana{存じ上げる}{ぞんじあげる}
+		#row
+			#cell: to hear / to ask
+			#cell: #furigana{聞く}{きく}
+			#cell: #furigana{聞きます}{ききます}
+			#cell: —
+			#cell: #furigana{伺う}{うかがう}/ #furigana{拝聴する}{はいちょうする}
+		#row
+			#cell: to give (to me)
+			#cell: くれる
+			#cell: くれます
+			#cell: くださる
+			#cell: —
+		#row
+			#cell: to give (to others)
+			#cell: あげる
+			#cell: あげます
+			#cell: —
+			#cell: #furigana{差し上げる}{さしあげる}
+		#row
+			#cell: to receive
+			#cell: もらう
+			#cell: もらいます
+			#cell: —
+			#cell: いただく
+		#row
+			#cell: to meet
+			#cell: #furigana{会う}{あう}
+			#cell: #furigana{会います}{あいます}
+			#cell: —
+			#cell: #furigana{お目にかかる}{おめにかかる}
+		#row
+			#cell: to visit
+			#cell: #furigana{訪ねる}{たずねる}
+			#cell: #furigana{訪ねます}{たずねます}
+			#cell: —
+			#cell: #furigana{伺う}{うかがう}
+		#row
+			#cell: to understand
+			#cell: わかる
+			#cell: わかります
+			#cell: —
+			#cell: #furigana{承知する}{しょうちする}/ かしこまる
+		#row
+			#cell: to borrow
+			#cell: #furigana{借りる}{かりる}
+			#cell: #furigana{借ります}{かります}
+			#cell: —
+			#cell: #furigana{拝借する}{はいしゃくする}
+		#row
+			#cell: to sleep
+			#cell: #furigana{寝る}{ねる}
+			#cell: #furigana{寝ます}{ねます}
+			#cell: #furigana{お休みになる}{おやすみになる}
+			#cell: —
+		#row
+			#cell: to wear
+			#cell: #furigana{着る}{きる}
+			#cell: #furigana{着ます}{きます}
+			#cell: #furigana{お召しになる}{おめしになる}
+			#cell: —
+		#row
+			#cell: to die
+			#cell: #furigana{死ぬ}{しぬ}
+			#cell: #furigana{死にます}{しにます}
+			#cell: #furigana{お亡くなりになる}{おなくなりになる}
+			#cell: —

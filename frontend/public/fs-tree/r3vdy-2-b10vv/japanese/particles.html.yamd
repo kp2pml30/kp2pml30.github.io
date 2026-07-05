@@ -1,0 +1,251 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+#(define (b . c) (apply elem 'b c))
+
+#h1{Particles}
+
+#h2{Grammar Cases — Cross-Language Comparison}
+
+Japanese uses particles (postpositions) instead of word endings to mark grammatical roles. Here's how they map to cases in other languages.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Function
+			#cell: Japanese particle
+			#cell: Russian (падеж)
+			#cell: German (Kasus)
+			#cell: Latin (cāsus)
+			#cell: Example (Japanese)
+		#row
+			#cell: Subject / Topic
+			#cell: が (subject) / は (topic)
+			#cell: Именительный (кто? что?)
+			#cell: Nominativ (wer? was?)
+			#cell: Nōminātīvus
+			#cell: #furigana{猫が来た}{ねこがきた}— The cat came
+		#row
+			#cell: Direct object
+			#cell: を
+			#cell: Винительный (кого? что?)
+			#cell: Akkusativ (wen? was?)
+			#cell: Accūsātīvus
+			#cell: #furigana{本を読む}{ほんをよむ}— Read a book
+		#row
+			#cell: Indirect object / Direction
+			#cell: に
+			#cell: Дательный (кому? чему?)
+			#cell: Dativ (wem?)
+			#cell: Datīvus
+			#cell: #furigana{友達にあげる}{ともだちにあげる}— Give to a friend
+		#row
+			#cell: Possession / Source
+			#cell: の (possession) / から (source)
+			#cell: Родительный (кого? чего?)
+			#cell: Genitiv (wessen?)
+			#cell: Genitīvus
+			#cell: 友達の本 — Friend's book#linebreak#furigana{東京から来た}{とうきょうからきた}— Came from Tokyo
+		#row
+			#cell: Location (action)
+			#cell: で
+			#cell: Предложный (о ком? где?)
+			#cell: —
+			#cell: Ablātīvus
+			#cell: #furigana{図書館で勉強する}{としょかんでべんきょうする}— Study at the library
+		#row
+			#cell: Location (existence)
+			#cell: に
+			#cell: Предложный (где?)
+			#cell: Dativ (wo?)
+			#cell: Locātīvus (archaic)
+			#cell: #furigana{東京に住んでいる}{とうきょうにすんでいる}— Live in Tokyo
+		#row
+			#cell: Means / Tool
+			#cell: で
+			#cell: Творительный (чем? кем?)
+			#cell: —
+			#cell: Ablātīvus
+			#cell: #furigana{箸で食べる}{はしでたべる}— Eat with chopsticks
+		#row
+			#cell: Companion
+			#cell: と
+			#cell: Творительный (с кем?)
+			#cell: —
+			#cell: Ablātīvus (cum + abl.)
+			#cell: #furigana{友達と行く}{ともだちといく}— Go with a friend
+		#row
+			#cell: Direction / Goal
+			#cell: へ（え）/ に
+			#cell: Винительный (куда?)
+			#cell: Akkusativ (wohin?)
+			#cell: Accūsātīvus
+			#cell: #furigana{日本へ行く}{にほんへいく}— Go to Japan
+		#row
+			#cell: Address / Vocative
+			#cell: ～さん, ～よ (calling out)
+			#cell: Звательный (archaic)
+			#cell: —
+			#cell: Vocātīvus
+			#cell: 田中さん！— Tanaka!
+
+#h2{は vs が}
+
+The most notorious particle distinction in Japanese.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: は (topic)
+			#cell: が (subject)
+		#row
+			#cell: Marks the topic — "as for X, ..."
+			#cell: Marks the subject — identifies who/what does the action
+		#row
+			#cell: Known/old information
+			#cell: New information / answer to "who/what?"
+		#row
+			#cell: Contrast: コーヒー#b{は}飲む（けど紅茶は飲まない）— Coffee, I drink (but not tea)
+			#cell: Identification: 誰#b{が}来た？田中さん#b{が}来た — Who came? Tanaka came.
+		#row
+			#cell: General statements: 猫#b{は}かわいい — Cats are cute (in general)
+			#cell: Specific events: 猫#b{が}いる — There's a cat (right there)
+		#row
+			#cell: Main clause topic
+			#cell: Subordinate clause subject: 私#b{が}作った料理 — The food that I made
+
+#h2{に vs で}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: に
+			#cell: で
+		#row
+			#cell: Location of existence (いる/ある): 部屋#b{に}いる — I'm in the room
+			#cell: Location of action: 部屋#b{で}勉強する — I study in the room
+		#row
+			#cell: Destination: 学校#b{に}行く — Go to school
+			#cell: Means/method: バス#b{で}行く — Go by bus
+		#row
+			#cell: Time point: 3時#b{に}会う — Meet at 3
+			#cell: Scope/range: 3日#b{で}#furigana{終わる}{おわる}— Finish in 3 days
+		#row
+			#cell: Recipient: 先生#b{に}聞く — Ask the teacher
+			#cell: Cause: #furigana{台風で休み}{たいふうでやすみ}— Off because of typhoon
+		#row
+			#cell: Purpose: #furigana{買い物に行く}{かいものにいく}— Go shopping
+			#cell: Material: #furigana{木で作る}{きでつくる}— Made of wood
+
+#h2{へ vs に (direction)}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: へ（え）
+			#cell: に
+		#row
+			#cell: Emphasizes direction/journey — "toward"
+			#cell: Emphasizes destination/arrival — "to"
+		#row
+			#cell: 日本#b{へ}行く — Head toward Japan
+			#cell: 日本#b{に}行く — Go to Japan (arrive there)
+		#row
+			#cell: Often interchangeable in modern speech
+			#cell: Required with specific arrival: #furigana{駅に着く}{えきにつく}— Arrive at the station (not へ)
+
+#h2{Limiting particles — だけ vs しか vs ばかり}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Particle
+			#cell: Verb form
+			#cell: Nuance
+			#cell: Example
+		#row
+			#cell: だけ
+			#cell: Affirmative
+			#cell: Only — neutral, just a fact.
+			#cell: #furigana{水だけ飲んだ}{みずだけのんだ}— I only drank water.
+		#row
+			#cell: しか
+			#cell: Negative (always)
+			#cell: Only — implies "not enough" or "unfortunately only".
+			#cell: 水しか飲まなかった — I drank nothing but water (and I wish there was more).
+		#row
+			#cell: ばかり
+			#cell: Affirmative
+			#cell: Nothing but — often negative connotation, excess.
+			#cell: ゲームばかりしている — You do nothing but play games.
+
+#h2{Listing particles — と vs や vs とか vs など}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Particle
+			#cell: List type
+			#cell: Example
+		#row
+			#cell: と
+			#cell: Complete list (A and B, that's all)
+			#cell: #furigana{犬と猫}{いぬとねこ}— Dogs and cats (specifically these two)
+		#row
+			#cell: や
+			#cell: Incomplete list (A and B, among others)
+			#cell: 犬や猫 — Dogs and cats (and other animals)
+		#row
+			#cell: とか
+			#cell: Casual incomplete list — "like A and B"
+			#cell: #furigana{寿司とかラーメンとか}{すしとかラーメンとか}— Like sushi, ramen, etc.
+		#row
+			#cell: など
+			#cell: Etc. / and so on (written/formal)
+			#cell: #furigana{野菜や果物など}{やさいやくだものなど}— Vegetables, fruits, etc.
+
+#h2{Other important particles}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Particle
+			#cell: Function
+			#cell: Example
+		#row
+			#cell: も
+			#cell: Also / too / even
+			#cell: #furigana{私も行く}{わたしもいく}— I'll go too.#linebreak#furigana{一つも食べなかった}{ひとつもたべなかった}— Didn't eat even one.
+		#row
+			#cell: か
+			#cell: Question / or
+			#cell: 行きますか — Will you go?#linebreak コーヒーか#furigana{紅茶}{こうちゃ}— Coffee or tea.
+		#row
+			#cell: よ
+			#cell: Emphasis / informing (sentence-final)
+			#cell: おいしいよ — It's good, you know!
+		#row
+			#cell: ね
+			#cell: Seeking agreement (sentence-final)
+			#cell: #furigana{いい天気ですね}{いいてんきですね}— Nice weather, isn't it?
+		#row
+			#cell: の
+			#cell: Explanatory / question (sentence-final, casual)
+			#cell: どうしたの — What happened?
+		#row
+			#cell: まで
+			#cell: Until / as far as
+			#cell: #furigana{5時まで待つ}{ごじまでまつ}— Wait until 5.#linebreak 東京まで — As far as Tokyo.
+		#row
+			#cell: までに
+			#cell: By (deadline)
+			#cell: #furigana{金曜日までに出す}{きんようびまでにだす}— Submit by Friday.
+		#row
+			#cell: より
+			#cell: Than (comparison)
+			#cell: #furigana{犬より猫が好き}{いぬよりねこがすき}— I like cats more than dogs.
+		#row
+			#cell: ほど
+			#cell: To the extent / as much as (often negative)
+			#cell: #furigana{思ったほど難しくない}{おもったほどむずかしくない}— Not as hard as I thought.

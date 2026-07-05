@@ -163,11 +163,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783261753,
-        "narHash": "sha256-bgFXqD+3M+M/Girndpq0Zec7djAAXbdoLm2Hp3wlurs=",
+        "lastModified": 1783264241,
+        "narHash": "sha256-//0nnRKjUNnb7+RpoDmQtOHiV/MblpD3VWcnCI48nm4=",
         "ref": "refs/heads/main",
-        "rev": "f90fd52ffc491f33a1976703c2a40578744642ab",
-        "revCount": 2,
+        "rev": "deec4e8c492708b834becc0f8ce3a0aa528b5c16",
+        "revCount": 4,
         "type": "git",
         "url": "https://git.kp2pml30.moe/ya/yamd.git"
       },

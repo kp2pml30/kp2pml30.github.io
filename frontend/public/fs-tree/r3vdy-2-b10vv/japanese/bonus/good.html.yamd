@@ -1,0 +1,467 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+#(define (h3 . b) (apply elem 'h3 b))
+
+#h1{Japanese Positive & Complimentary Language}
+
+Useful words and expressions for praising, encouraging, and being polite in Japanese.
+
+#h2{Complimenting people}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: かっこいい / 格好いい
+			#cell: かっこいい
+			#cell: Cool / handsome
+			#cell: For people, things, actions. Very common.
+		#row
+			#cell: かわいい / 可愛い
+			#cell: かわいい
+			#cell: Cute / adorable
+			#cell: Used for people, animals, things. Extremely versatile.
+		#row
+			#cell: きれい / 綺麗
+			#cell: きれい
+			#cell: Beautiful / clean
+			#cell: な-adjective. For people, scenery, rooms.
+		#row
+			#cell: 美しい
+			#cell: うつくしい
+			#cell: Beautiful (formal/poetic)
+			#cell: More literary than きれい.
+		#row
+			#cell: 美人
+			#cell: びじん
+			#cell: Beautiful woman / beauty
+			#cell: Noun. 美男（びなん）/ イケメン for men.
+		#row
+			#cell: 素敵
+			#cell: すてき
+			#cell: Lovely / wonderful
+			#cell: な-adjective. For people, outfits, ideas.
+		#row
+			#cell: 優しい
+			#cell: やさしい
+			#cell: Kind / gentle
+			#cell: One of the best compliments for personality.
+		#row
+			#cell: 頭がいい
+			#cell: あたまがいい
+			#cell: Smart / clever
+			#cell: 賢い（かしこい）is similar but slightly more bookish.
+		#row
+			#cell: 真面目
+			#cell: まじめ
+			#cell: Serious / diligent / responsible
+			#cell: Positive in Japanese — means hardworking and reliable.
+		#row
+			#cell: 面白い
+			#cell: おもしろい
+			#cell: Interesting / funny
+			#cell: For people, stories, ideas.
+		#row
+			#cell: 明るい
+			#cell: あかるい
+			#cell: Bright / cheerful (personality)
+			#cell: #furigana{性格が明るい}{せいかくがあかるい}= cheerful personality.
+		#row
+			#cell: すごい
+			#cell: —
+			#cell: Amazing / awesome
+			#cell: Very versatile. すげー is the rough casual form.
+		#row
+			#cell: えらい
+			#cell: —
+			#cell: Admirable / great (for effort)
+			#cell: Used to praise someone for working hard or doing the right thing.
+
+#h2{Praising things & situations}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: おいしい / 美味しい
+			#cell: おいしい
+			#cell: Delicious
+			#cell: うまい is casual/masculine equivalent. #furigana{激うま}{げきうま}= super delicious.
+		#row
+			#cell: 最高
+			#cell: さいこう
+			#cell: The best / awesome
+			#cell: Very enthusiastic praise.
+		#row
+			#cell: 素晴らしい
+			#cell: すばらしい
+			#cell: Wonderful / splendid
+			#cell: Slightly formal. Strong praise.
+		#row
+			#cell: 完璧
+			#cell: かんぺき
+			#cell: Perfect
+			#cell: な-adjective.
+		#row
+			#cell: やばい
+			#cell: —
+			#cell: Amazing / crazy (good)
+			#cell: Slang. Originally "dangerous" but now mostly positive among young people.
+		#row
+			#cell: 半端ない
+			#cell: はんぱない
+			#cell: Incredible / insane (good)
+			#cell: マジ半端ない = seriously incredible.
+		#row
+			#cell: 神
+			#cell: かみ
+			#cell: God-tier / godly
+			#cell: Slang. 神ゲー = amazing game, #furigana{神曲}{かみきょく}= amazing song.
+		#row
+			#cell: 最強
+			#cell: さいきょう
+			#cell: Strongest / the GOAT
+			#cell: Slang praise for the best at something.
+		#row
+			#cell: 天才
+			#cell: てんさい
+			#cell: Genius
+			#cell: Used as genuine or playful praise.
+
+#h2{Encouragement}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Expression
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: #furigana{頑張って}{がんばって}
+			#cell: Do your best! / Good luck!
+			#cell: The most common encouragement. #furigana{頑張れ}{がんばれ}is the imperative form.
+		#row
+			#cell: #furigana{応援してる}{おうえんしてる}
+			#cell: I'm rooting for you!
+			#cell: Supportive, warm.
+		#row
+			#cell: #furigana{大丈夫}{だいじょうぶ}
+			#cell: It's okay / You'll be fine
+			#cell: Reassuring.
+		#row
+			#cell: #furigana{気にしないで}{きにしないで}
+			#cell: Don't worry about it
+			#cell: 気にすんな is the rough casual form.
+		#row
+			#cell: ドンマイ
+			#cell: Don't mind / No worries
+			#cell: From English "don't mind". Casual.
+		#row
+			#cell: よくやった
+			#cell: Well done! / Good job!
+			#cell: よくできました is the polite/teacher version.
+		#row
+			#cell: さすが
+			#cell: As expected (of you) / Impressive
+			#cell: Praises someone for living up to their reputation. さすがだね = you're amazing as always.
+		#row
+			#cell: #furigana{その調子}{そのちょうし}
+			#cell: Keep it up! / That's the way!
+			#cell: Encouraging someone to continue what they're doing.
+		#row
+			#cell: #furigana{無理しないで}{むりしないで}
+			#cell: Don't push yourself too hard
+			#cell: Caring, considerate.
+
+#h2{Gratitude & appreciation}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Expression
+			#cell: Meaning
+			#cell: Level
+		#row
+			#cell: ありがとう
+			#cell: Thanks
+			#cell: Casual
+		#row
+			#cell: ありがとうございます
+			#cell: Thank you
+			#cell: Polite
+		#row
+			#cell: どうもありがとうございます
+			#cell: Thank you very much
+			#cell: Polite+
+		#row
+			#cell: #furigana{助かります}{たすかります}
+			#cell: That's a big help / I appreciate it
+			#cell: Polite, practical
+		#row
+			#cell: #furigana{助かった}{たすかった}
+			#cell: That was a lifesaver
+			#cell: Casual
+		#row
+			#cell: #furigana{感謝します}{かんしゃします}
+			#cell: I'm grateful
+			#cell: Formal
+		#row
+			#cell: おかげさまで
+			#cell: Thanks to you
+			#cell: Polite, humble
+		#row
+			#cell: いつもありがとう
+			#cell: Thanks as always
+			#cell: Warm, appreciative
+		#row
+			#cell: #furigana{お疲れ様です}{おつかれさまです}
+			#cell: Thank you for your hard work
+			#cell: Workplace staple. #furigana{お疲れ}{おつかれ}is casual.
+		#row
+			#cell: #furigana{ご苦労様です}{ごくろうさまです}
+			#cell: Thank you for your trouble
+			#cell: Only used to subordinates. Rude to superiors.
+
+#h2{Agreeing & affirming}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Expression
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: いいね
+			#cell: Nice! / Sounds good!
+			#cell: Casual approval. いいですね is polite.
+		#row
+			#cell: そうだね
+			#cell: That's right / Yeah
+			#cell: Agreeing casually.
+		#row
+			#cell: #furigana{確かに}{たしかに}
+			#cell: Indeed / That's true
+			#cell: Acknowledging a good point.
+		#row
+			#cell: なるほど
+			#cell: I see / Makes sense
+			#cell: Showing understanding. Slightly casual.
+		#row
+			#cell: #furigana{その通り}{そのとおり}
+			#cell: Exactly / That's correct
+			#cell: Strong agreement.
+		#row
+			#cell: #furigana{間違いない}{まちがいない}
+			#cell: No doubt about it / For sure
+			#cell: Emphatic agreement.
+
+#h2{さしすせそ — The Art of Flattering Responses}
+
+A well-known mnemonic for conversational responses that make the other person feel good. Especially popular in dating/social advice.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell{}
+			#cell: Expression
+			#cell: Meaning
+			#cell: When to use
+		#row
+			#cell: さ
+			#cell: さすが！
+			#cell: As expected of you! / Impressive!
+			#cell: When someone does something well or shows competence.
+		#row
+			#cell: し
+			#cell: #furigana{知らなかった}{しらなかった}！
+			#cell: I didn't know that!
+			#cell: When someone tells you something — makes them feel knowledgeable.
+		#row
+			#cell: す
+			#cell: すごい！
+			#cell: Amazing! / Wow!
+			#cell: General-purpose impressed reaction.
+		#row
+			#cell: せ
+			#cell: センスいい！
+			#cell: You have great taste/sense!
+			#cell: Complimenting someone's choices — fashion, food, ideas.
+		#row
+			#cell: そ
+			#cell: そうなんだ！
+			#cell: Really? / Is that so!
+			#cell: Showing genuine interest in what someone is saying.
+
+#h2{Affectionate expressions}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Expression
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: #furigana{好き}{すき}
+			#cell: I like you
+			#cell: The standard way to express affection. #furigana{大好き}{だいすき}is stronger.
+		#row
+			#cell: #furigana{会いたい}{あいたい}
+			#cell: I want to see you / I miss you
+			#cell: 会いたかった = I've been wanting to see you.
+		#row
+			#cell: #furigana{一緒にいたい}{いっしょにいたい}
+			#cell: I want to be with you
+			#cell{}
+		#row
+			#cell: #furigana{楽しかった}{たのしかった}
+			#cell: I had fun / That was fun
+			#cell: Common after spending time together.
+		#row
+			#cell: おやすみ
+			#cell: Good night
+			#cell: Warm, casual. おやすみなさい is polite.
+		#row
+			#cell: #furigana{気をつけてね}{きをつけてね}
+			#cell: Take care / Be careful
+			#cell: Caring send-off.
+		#row
+			#cell: #furigana{待ってたよ}{まってたよ}
+			#cell: I was waiting for you
+			#cell{}
+
+#h3{Terms of endearment}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Term
+			#cell: Usage
+			#cell: Notes
+		#row
+			#cell: Name + ちゃん
+			#cell: Affectionate name suffix
+			#cell: Used for close friends, partners, children. ゆきちゃん, あやちゃん.
+		#row
+			#cell: Name + くん
+			#cell: Familiar suffix (usually for males)
+			#cell: Also used by women for boyfriends.
+		#row
+			#cell: Name without suffix (呼び捨て / よびすて)
+			#cell: Using just the first name
+			#cell: Shows closeness. Calling someone by first name alone is already intimate in Japanese.
+		#row
+			#cell: あなた
+			#cell: You / Dear
+			#cell: Wives sometimes call husbands あなた. Otherwise avoid — it can sound condescending.
+
+#h3{Cute sentence endings}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Ending
+			#cell: Effect
+			#cell: Example
+		#row
+			#cell: ～だよ / ～だよね
+			#cell: Soft assertion / seeking agreement
+			#cell: おいしいよね — It's good, right?
+		#row
+			#cell: ～ね / ～ねー
+			#cell: Seeking confirmation, friendly tone
+			#cell: #furigana{いい天気だね}{いいてんきだね}— Nice weather, huh?
+		#row
+			#cell: ～の / ～なの
+			#cell: Soft explanatory (often feminine)
+			#cell: ちょっと#furigana{疲れたの}{つかれたの}— I'm a bit tired.
+		#row
+			#cell: ～かな
+			#cell: I wonder... (soft/indirect)
+			#cell: 行こうかな — Maybe I'll go...
+		#row
+			#cell: ～よ
+			#cell: Gentle emphasis / informing
+			#cell: #furigana{大丈夫だよ}{だいじょうぶだよ}— It's fine, you know.
+		#row
+			#cell: ～もん / ～もの
+			#cell: Because...! (slightly childish/whiny)
+			#cell: だって#furigana{眠いもん}{ねむいもん}— Because I'm sleepy!
+
+#h2{Texting & internet slang}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Shorthand
+			#cell: Full form
+			#cell: Meaning
+		#row
+			#cell: w / www / #furigana{草}{くさ}
+			#cell: （笑）わらい
+			#cell: LOL. More w's = funnier. 草 comes from www looking like grass.
+		#row
+			#cell: おk / おけ
+			#cell: OK
+			#cell{}
+		#row
+			#cell: りょ / り
+			#cell: #furigana{了解}{りょうかい}
+			#cell: Roger / Got it.
+		#row
+			#cell: おつ
+			#cell: #furigana{お疲れ}{おつかれ}
+			#cell: Thanks for the work / See ya.
+		#row
+			#cell: あざす / あざます
+			#cell: ありがとうございます
+			#cell: Thanks (very slangy).
+		#row
+			#cell: それな
+			#cell: —
+			#cell: That. / Exactly. / So true.
+		#row
+			#cell: まじ / マジ
+			#cell: —
+			#cell: Seriously? / For real. マジで = really.
+		#row
+			#cell: うける / ウケる
+			#cell: —
+			#cell: That's hilarious.
+		#row
+			#cell: きた！
+			#cell: 来た！
+			#cell: It's here! / Yes! (excitement)
+		#row
+			#cell: おめ
+			#cell: おめでとう
+			#cell: Congrats.
+		#row
+			#cell: わず
+			#cell: ～was (English past)
+			#cell: Just did ~. 渋谷わず = was in Shibuya.
+		#row
+			#cell: #furigana{乙}{おつ}
+			#cell: お疲れ
+			#cell: GG / good work (internet/gaming).
+		#row
+			#cell: ワロタ
+			#cell: #furigana{笑った}{わらった}
+			#cell: LOL'd (2ch/older internet).
+		#row
+			#cell: kwsk
+			#cell: #furigana{詳しく}{くわしく}
+			#cell: Tell me more / Details please.
+		#row
+			#cell: うぽつ
+			#cell: アップロードお疲れ
+			#cell: Thanks for uploading (to video creators).

@@ -1,0 +1,610 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+#(define (b . args) (apply elem 'b args))
+
+#h1{Numbers, Counters & Time}
+
+#h2{Basic numbers}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Number
+			#cell: Sino-Japanese (漢語)
+			#cell: Native Japanese (和語)
+		#row
+			#cell: 1
+			#cell: いち
+			#cell: ひとつ
+		#row
+			#cell: 2
+			#cell: に
+			#cell: ふたつ
+		#row
+			#cell: 3
+			#cell: さん
+			#cell: みっつ
+		#row
+			#cell: 4
+			#cell: し / よん
+			#cell: よっつ
+		#row
+			#cell: 5
+			#cell: ご
+			#cell: いつつ
+		#row
+			#cell: 6
+			#cell: ろく
+			#cell: むっつ
+		#row
+			#cell: 7
+			#cell: しち / なな
+			#cell: ななつ
+		#row
+			#cell: 8
+			#cell: はち
+			#cell: やっつ
+		#row
+			#cell: 9
+			#cell: く / きゅう
+			#cell: ここのつ
+		#row
+			#cell: 10
+			#cell: じゅう
+			#cell: とお
+
+Native Japanese numbers (～つ) are used for general counting up to 10, when no specific counter applies. Above 10, always use Sino-Japanese.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Number
+			#cell: Reading
+		#row
+			#cell: 100
+			#cell: ひゃく
+		#row
+			#cell: 300
+			#cell: さんびゃく (not さんひゃく)
+		#row
+			#cell: 600
+			#cell: ろっぴゃく (not ろくひゃく)
+		#row
+			#cell: 800
+			#cell: はっぴゃく (not はちひゃく)
+		#row
+			#cell: 1,000
+			#cell: せん
+		#row
+			#cell: 3,000
+			#cell: さんぜん (not さんせん)
+		#row
+			#cell: 8,000
+			#cell: はっせん (not はちせん)
+		#row
+			#cell: 10,000
+			#cell: いちまん
+		#row
+			#cell: 100,000,000
+			#cell: いちおく
+
+#h2{Common counters}
+
+Counters with irregular readings are marked in bold.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Counter
+			#cell: Used for
+			#cell: 1
+			#cell: 2
+			#cell: 3
+			#cell: 4
+			#cell: 5
+			#cell: 6
+			#cell: 7
+			#cell: 8
+			#cell: 9
+			#cell: 10
+		#row
+			#cell: #furigana{個}{こ}
+			#cell: Small objects, general
+			#cell: #b{いっこ}
+			#cell: にこ
+			#cell: さんこ
+			#cell: よんこ
+			#cell: ごこ
+			#cell: #b{ろっこ}
+			#cell: ななこ
+			#cell: #b{はっこ}
+			#cell: きゅうこ
+			#cell: #b{じゅっこ}
+		#row
+			#cell: #furigana{本}{ほん}
+			#cell: Long/thin objects (pens, bottles, trees, roads)
+			#cell: #b{いっぽん}
+			#cell: にほん
+			#cell: #b{さんぼん}
+			#cell: よんほん
+			#cell: ごほん
+			#cell: #b{ろっぽん}
+			#cell: ななほん
+			#cell: #b{はっぽん}
+			#cell: きゅうほん
+			#cell: #b{じゅっぽん}
+		#row
+			#cell: #furigana{枚}{まい}
+			#cell: Flat objects (paper, plates, shirts)
+			#cell: いちまい
+			#cell: にまい
+			#cell: さんまい
+			#cell: よんまい
+			#cell: ごまい
+			#cell: ろくまい
+			#cell: ななまい
+			#cell: はちまい
+			#cell: きゅうまい
+			#cell: じゅうまい
+		#row
+			#cell: #furigana{匹}{ひき}
+			#cell: Small animals (cats, dogs, fish, insects)
+			#cell: #b{いっぴき}
+			#cell: にひき
+			#cell: #b{さんびき}
+			#cell: よんひき
+			#cell: ごひき
+			#cell: #b{ろっぴき}
+			#cell: ななひき
+			#cell: #b{はっぴき}
+			#cell: きゅうひき
+			#cell: #b{じゅっぴき}
+		#row
+			#cell: #furigana{頭}{とう}
+			#cell: Large animals (horses, cows, elephants)
+			#cell: いっとう
+			#cell: にとう
+			#cell: さんとう
+			#cell: よんとう
+			#cell: ごとう
+			#cell: ろくとう
+			#cell: ななとう
+			#cell: はっとう
+			#cell: きゅうとう
+			#cell: じゅっとう
+		#row
+			#cell: #furigana{羽}{わ}
+			#cell: Birds, rabbits
+			#cell: #b{いちわ}
+			#cell: にわ
+			#cell: #b{さんば / さんわ}
+			#cell: よんわ
+			#cell: ごわ
+			#cell: #b{ろくわ / ろっぱ}
+			#cell: ななわ
+			#cell: #b{はちわ / はっぱ}
+			#cell: きゅうわ
+			#cell: じゅうわ
+		#row
+			#cell: #furigana{台}{だい}
+			#cell: Machines, vehicles, electronics
+			#cell: いちだい
+			#cell: にだい
+			#cell: さんだい
+			#cell: よんだい
+			#cell: ごだい
+			#cell: ろくだい
+			#cell: ななだい
+			#cell: はちだい
+			#cell: きゅうだい
+			#cell: じゅうだい
+		#row
+			#cell: #furigana{杯}{はい}
+			#cell: Cups, glasses, bowls
+			#cell: #b{いっぱい}
+			#cell: にはい
+			#cell: #b{さんばい}
+			#cell: よんはい
+			#cell: ごはい
+			#cell: #b{ろっぱい}
+			#cell: ななはい
+			#cell: #b{はっぱい}
+			#cell: きゅうはい
+			#cell: #b{じゅっぱい}
+		#row
+			#cell: #furigana{冊}{さつ}
+			#cell: Books, notebooks
+			#cell: #b{いっさつ}
+			#cell: にさつ
+			#cell: さんさつ
+			#cell: よんさつ
+			#cell: ごさつ
+			#cell: ろくさつ
+			#cell: ななさつ
+			#cell: #b{はっさつ}
+			#cell: きゅうさつ
+			#cell: #b{じゅっさつ}
+		#row
+			#cell: #furigana{階}{かい}
+			#cell: Floors of a building
+			#cell: #b{いっかい}
+			#cell: にかい
+			#cell: #b{さんがい}
+			#cell: よんかい
+			#cell: ごかい
+			#cell: #b{ろっかい}
+			#cell: ななかい
+			#cell: #b{はっかい}
+			#cell: きゅうかい
+			#cell: #b{じゅっかい}
+		#row
+			#cell: #furigana{回}{かい}
+			#cell: Times / occurrences
+			#cell: #b{いっかい}
+			#cell: にかい
+			#cell: さんかい
+			#cell: よんかい
+			#cell: ごかい
+			#cell: #b{ろっかい}
+			#cell: ななかい
+			#cell: #b{はっかい}
+			#cell: きゅうかい
+			#cell: #b{じゅっかい}
+
+#h2{People}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Number
+			#cell: Reading
+		#row
+			#cell: 1人
+			#cell: #b{ひとり}
+		#row
+			#cell: 2人
+			#cell: #b{ふたり}
+		#row
+			#cell: 3人
+			#cell: さんにん
+		#row
+			#cell: 4人
+			#cell: #b{よにん}
+		#row
+			#cell: 5人
+			#cell: ごにん
+		#row
+			#cell: 6人
+			#cell: ろくにん
+		#row
+			#cell: 7人
+			#cell: #b{しちにん / ななにん}
+		#row
+			#cell: 8人
+			#cell: はちにん
+		#row
+			#cell: 9人
+			#cell: きゅうにん
+		#row
+			#cell: 10人
+			#cell: じゅうにん
+
+#h2{Months (～月 / がつ)}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Month
+			#cell: Japanese
+			#cell: Reading
+		#row
+			#cell: January
+			#cell: 1月
+			#cell: いちがつ
+		#row
+			#cell: February
+			#cell: 2月
+			#cell: にがつ
+		#row
+			#cell: March
+			#cell: 3月
+			#cell: さんがつ
+		#row
+			#cell: April
+			#cell: 4月
+			#cell: #b{しがつ} (not よんがつ)
+		#row
+			#cell: May
+			#cell: 5月
+			#cell: ごがつ
+		#row
+			#cell: June
+			#cell: 6月
+			#cell: ろくがつ
+		#row
+			#cell: July
+			#cell: 7月
+			#cell: #b{しちがつ} (not なながつ)
+		#row
+			#cell: August
+			#cell: 8月
+			#cell: はちがつ
+		#row
+			#cell: September
+			#cell: 9月
+			#cell: #b{くがつ} (not きゅうがつ)
+		#row
+			#cell: October
+			#cell: 10月
+			#cell: じゅうがつ
+		#row
+			#cell: November
+			#cell: 11月
+			#cell: じゅういちがつ
+		#row
+			#cell: December
+			#cell: 12月
+			#cell: じゅうにがつ
+
+#h2{Duration in months (～か月 / かげつ)}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Duration
+			#cell: Reading
+		#row
+			#cell: 1か月
+			#cell: #b{いっかげつ}
+		#row
+			#cell: 2か月
+			#cell: にかげつ
+		#row
+			#cell: 3か月
+			#cell: さんかげつ
+		#row
+			#cell: 4か月
+			#cell: よんかげつ
+		#row
+			#cell: 6か月
+			#cell: #b{ろっかげつ}
+		#row
+			#cell: 10か月
+			#cell: #b{じゅっかげつ}
+
+#h2{Days of the month (～日)}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Day
+			#cell: Reading
+			#cell: Day
+			#cell: Reading
+		#row
+			#cell: 1日
+			#cell: #b{ついたち}
+			#cell: 11日
+			#cell: じゅういちにち
+		#row
+			#cell: 2日
+			#cell: #b{ふつか}
+			#cell: 14日
+			#cell: #b{じゅうよっか}
+		#row
+			#cell: 3日
+			#cell: #b{みっか}
+			#cell: 17日
+			#cell: じゅうしちにち
+		#row
+			#cell: 4日
+			#cell: #b{よっか}
+			#cell: 19日
+			#cell: じゅうくにち
+		#row
+			#cell: 5日
+			#cell: #b{いつか}
+			#cell: 20日
+			#cell: #b{はつか}
+		#row
+			#cell: 6日
+			#cell: #b{むいか}
+			#cell: 24日
+			#cell: #b{にじゅうよっか}
+		#row
+			#cell: 7日
+			#cell: #b{なのか}
+			#cell: 27日
+			#cell: にじゅうしちにち
+		#row
+			#cell: 8日
+			#cell: #b{ようか}
+			#cell: 29日
+			#cell: にじゅうくにち
+		#row
+			#cell: 9日
+			#cell: #b{ここのか}
+			#cell:
+			#cell:
+		#row
+			#cell: 10日
+			#cell: #b{とおか}
+			#cell:
+			#cell:
+
+Days 11–31 follow regular pattern (じゅういちにち, じゅうににち...) except 14日, 20日, 24日.
+
+#h2{Days of the week}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Day
+			#cell: Japanese
+			#cell: Reading
+			#cell: Kanji meaning
+		#row
+			#cell: Monday
+			#cell: 月曜日
+			#cell: げつようび
+			#cell: Moon
+		#row
+			#cell: Tuesday
+			#cell: 火曜日
+			#cell: かようび
+			#cell: Fire
+		#row
+			#cell: Wednesday
+			#cell: 水曜日
+			#cell: すいようび
+			#cell: Water
+		#row
+			#cell: Thursday
+			#cell: 木曜日
+			#cell: もくようび
+			#cell: Wood
+		#row
+			#cell: Friday
+			#cell: 金曜日
+			#cell: きんようび
+			#cell: Gold/Metal
+		#row
+			#cell: Saturday
+			#cell: 土曜日
+			#cell: どようび
+			#cell: Earth
+		#row
+			#cell: Sunday
+			#cell: 日曜日
+			#cell: にちようび
+			#cell: Sun
+
+#h2{Time — Hours (～時 / じ)}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Hour
+			#cell: Reading
+			#cell: Hour
+			#cell: Reading
+		#row
+			#cell: 1時
+			#cell: いちじ
+			#cell: 7時
+			#cell: #b{しちじ}
+		#row
+			#cell: 2時
+			#cell: にじ
+			#cell: 8時
+			#cell: はちじ
+		#row
+			#cell: 3時
+			#cell: さんじ
+			#cell: 9時
+			#cell: #b{くじ}
+		#row
+			#cell: 4時
+			#cell: #b{よじ} (not よんじ)
+			#cell: 10時
+			#cell: じゅうじ
+		#row
+			#cell: 5時
+			#cell: ごじ
+			#cell: 11時
+			#cell: じゅういちじ
+		#row
+			#cell: 6時
+			#cell: ろくじ
+			#cell: 12時
+			#cell: じゅうにじ
+
+#furigana{午前}{ごぜん}= AM, #furigana{午後}{ごご}= PM. 午前9時 = 9 AM.
+
+#h2{Time — Minutes (～分 / ふん・ぷん)}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Minute
+			#cell: Reading
+			#cell: Minute
+			#cell: Reading
+		#row
+			#cell: 1分
+			#cell: #b{いっぷん}
+			#cell: 6分
+			#cell: #b{ろっぷん}
+		#row
+			#cell: 2分
+			#cell: にふん
+			#cell: 7分
+			#cell: ななふん
+		#row
+			#cell: 3分
+			#cell: #b{さんぷん}
+			#cell: 8分
+			#cell: #b{はっぷん / はちふん}
+		#row
+			#cell: 4分
+			#cell: #b{よんぷん}
+			#cell: 9分
+			#cell: きゅうふん
+		#row
+			#cell: 5分
+			#cell: ごふん
+			#cell: 10分
+			#cell: #b{じゅっぷん}
+
+#furigana{半}{はん}= half. #furigana{3時半}{さんじはん}= 3:30.
+
+#h2{Duration — Hours & Minutes}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Duration
+			#cell: Counter
+			#cell: Example
+		#row
+			#cell: ~ hours
+			#cell: ～#furigana{時間}{じかん}
+			#cell: 3時間 = さんじかん (3 hours). #b{4時間 = よじかん}.
+		#row
+			#cell: ~ minutes
+			#cell: ～#furigana{分間}{ふんかん}/ ～分
+			#cell: 30分 = さんじゅっぷん (30 minutes).
+		#row
+			#cell: ~ seconds
+			#cell: ～#furigana{秒}{びょう}
+			#cell: 10秒 = じゅうびょう (10 seconds).
+
+#h2{Age (～歳 / さい)}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Age
+			#cell: Reading
+		#row
+			#cell: 1歳
+			#cell: #b{いっさい}
+		#row
+			#cell: 8歳
+			#cell: #b{はっさい}
+		#row
+			#cell: 10歳
+			#cell: #b{じゅっさい}
+		#row
+			#cell: 20歳
+			#cell: #b{はたち} (special reading)
+
+Other ages are regular: にさい, さんさい, よんさい, ごさい, ろくさい, ななさい, きゅうさい...
+
+#h2{Ordinal numbers (～番目 / ばんめ)}
+
+Add #furigana{番目}{ばんめ}to make ordinals: 1番目 = いちばんめ (first), 2番目 = にばんめ (second), etc.
+
+#furigana{1番}{いちばん}alone means "number one" or "the most": #furigana{一番好き}{いちばんすき}= like the most.

@@ -1,0 +1,213 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+#(define (h3 . b) (apply elem 'h3 b))
+
+#h1{Giving & Receiving — あげる・もらう・くれる}
+
+Japanese has different verbs for "give" and "receive" depending on the direction (who gives to whom) and the speaker's perspective.
+
+#h2{Basic verbs}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Verb
+			#cell: Direction
+			#cell: Meaning
+			#cell: Key rule
+		#row
+			#cell: あげる
+			#cell: I/someone → someone else
+			#cell: To give (away from speaker)
+			#cell: The giver is the subject. Never used when someone gives to the speaker.
+		#row
+			#cell: くれる
+			#cell: Someone → me/my group
+			#cell: To give (toward speaker)
+			#cell: The giver is the subject. Used when the speaker (or someone close) receives.
+		#row
+			#cell: もらう
+			#cell: I/someone ← someone else
+			#cell: To receive
+			#cell: The receiver is the subject. The giver is marked with に or から.
+
+#h3{Examples}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Japanese
+			#cell: Translation
+			#cell: Why this verb
+		#row
+			#cell: #furigana{私は友達にプレゼントをあげた}{わたしはともだちにプレゼントをあげた}
+			#cell: I gave my friend a present.
+			#cell: I → friend (away from speaker).
+		#row
+			#cell: 友達が私にプレゼントをくれた
+			#cell: My friend gave me a present.
+			#cell: Friend → me (toward speaker).
+		#row
+			#cell: 私は友達にプレゼントをもらった
+			#cell: I received a present from my friend.
+			#cell: I am the receiver (subject).
+		#row
+			#cell: #furigana{田中さんは山田さんにお菓子をあげた}{たなかさんはやまださんにおかしをあげた}
+			#cell: Tanaka gave Yamada sweets.
+			#cell: Third person → third person (neutral).
+		#row
+			#cell: #furigana{田中さんが弟にお菓子をくれた}{たなかさんがおとうとにおかしをくれた}
+			#cell: Tanaka gave my brother sweets.
+			#cell: Third person → my family member (toward speaker's group).
+
+#h2{て form — doing favors}
+
+Combine て form with あげる/くれる/もらう to express doing (or having done) something as a favor.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ～てあげる
+			#cell: I do something for someone (as a favor).
+			#cell: #furigana{荷物を持ってあげた}{にもつをもってあげた}— I carried the bags for them.
+		#row
+			#cell: ～てくれる
+			#cell: Someone does something for me (I'm grateful).
+			#cell: #furigana{友達が教えてくれた}{ともだちがおしえてくれた}— My friend taught me (and I appreciate it).
+		#row
+			#cell: ～てもらう
+			#cell: I have/get someone to do something for me.
+			#cell: #furigana{先生に説明してもらった}{せんせいにせつめいしてもらった}— I had the teacher explain it to me.
+
+#h3{Nuance differences}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Focus
+			#cell: Nuance
+		#row
+			#cell: ～てあげる
+			#cell: On the doer (I/someone)
+			#cell: Can sound condescending if used about yourself too directly. ～てあげましょうか is safer for offering.
+		#row
+			#cell: ～てくれる
+			#cell: On the doer (someone else)
+			#cell: Emphasizes gratitude — "they kindly did X for me". Very natural in Japanese.
+		#row
+			#cell: ～てもらう
+			#cell: On the receiver (I/someone)
+			#cell: Emphasizes that you arranged or benefited from the action. ～てもらえますか is a polite request.
+
+#h2{Keigo versions}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Plain
+			#cell: Respectful (尊敬語)
+			#cell: Humble (謙譲語)
+		#row
+			#cell: あげる
+			#cell: —
+			#cell: #furigana{差し上げる}{さしあげる}
+		#row
+			#cell: くれる
+			#cell: くださる
+			#cell: —
+		#row
+			#cell: もらう
+			#cell: —
+			#cell: いただく
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Plain
+			#cell: Keigo
+			#cell: Example
+		#row
+			#cell: ～てあげる
+			#cell: ～#furigana{て差し上げる}{てさしあげる}
+			#cell: お持ちして差し上げます — I'll carry it for you (very humble).
+		#row
+			#cell: ～てくれる
+			#cell: ～てくださる
+			#cell: 先生が教えてくださった — The teacher kindly taught me.
+		#row
+			#cell: ～てもらう
+			#cell: ～ていただく
+			#cell: #furigana{見ていただけますか}{みていただけますか}— Could you take a look? (polite request)
+
+#h2{Making requests with giving/receiving}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Expression
+			#cell: Politeness
+			#cell: Example
+		#row
+			#cell: ～てくれる？
+			#cell: Casual
+			#cell: #furigana{手伝ってくれる}{てつだってくれる}？— Can you help me?
+		#row
+			#cell: ～てくれない？
+			#cell: Casual (softer)
+			#cell: ちょっと待ってくれない？ — Could you wait a sec?
+		#row
+			#cell: ～てもらえる？
+			#cell: Casual-polite
+			#cell: #furigana{写真を撮ってもらえる}{しゃしんをとってもらえる}？— Could you take a photo?
+		#row
+			#cell: ～てもらえますか
+			#cell: Polite
+			#cell: 説明してもらえますか — Could you explain?
+		#row
+			#cell: ～ていただけますか
+			#cell: Very polite
+			#cell: #furigana{確認していただけますか}{かくにんしていただけますか}— Could you please confirm?
+		#row
+			#cell: ～ていただけないでしょうか
+			#cell: Most polite
+			#cell: お時間をいただけないでしょうか — Might I have some of your time?
+
+#h2{Set phrases from giving/receiving}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Phrase
+			#cell: Literal origin
+			#cell: Meaning & usage
+		#row
+			#cell: いただきます
+			#cell: いただく (humble "to receive") in ます form
+			#cell: Said before eating — "I humbly receive (this food)". Expresses gratitude to the cook, the ingredients, etc.
+		#row
+			#cell: ごちそうさまでした
+			#cell: #furigana{ご馳走}{ごちそう}= feast + さま + でした
+			#cell: Said after eating — "It was a feast / Thank you for the meal".
+		#row
+			#cell: ～をいただけますか
+			#cell: いただく potential + ます + か
+			#cell: Could I have ~? Polite way to order or request something. お水をいただけますか = Could I have water?
+		#row
+			#cell: ～をください
+			#cell: くださる (honorific "to give") imperative
+			#cell: Please give me ~. Standard polite request. これをください = I'll have this, please.
+		#row
+			#cell: #furigana{お待たせしました}{おまたせしました}
+			#cell: 待たせる (to make wait) in humble form
+			#cell: Sorry to have kept you waiting. Said by staff, waiters, etc.
+		#row
+			#cell: いらっしゃいませ
+			#cell: いらっしゃる (honorific "to come/be") in ます imperative
+			#cell: Welcome! Said by shop/restaurant staff to customers.

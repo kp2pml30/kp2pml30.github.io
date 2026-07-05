@@ -26,10 +26,18 @@ def render_blog(path)
 	# binary with the YAMD env var, e.g. YAMD='nix run .#yamd --'.
 	yamd = ENV.fetch('YAMD', 'yamd')
 	args = *yamd.split(' '), path.to_s, '-o', target.to_s
-	o, e, s = Open3.capture3(*args)
+	# Project-local yamd plugins live as collections under frontend/yamd-lib
+	# (e.g. #use(jp/furigana) -> frontend/yamd-lib/jp/furigana.rkt). Put that
+	# dir on Racket's collection search path; the leading colon preserves
+	# Racket's defaults and the yamd CLI's own collection.
+	plugins = Pathname.new(__FILE__).parent.parent.join('frontend', 'yamd-lib').realpath.to_s
+	env = { 'PLTCOLLECTS' => ":#{plugins}" }
+	o, e, s = Open3.capture3(env, *args)
 	raise "run failed #{o} #{e} #{args}" if not s.success?
 
-	puts path
+	puts "#{path} -> #{target}"
+	puts "=== stdout ===\n#{o}" if not o.empty?
+	puts "=== stderr ===\n#{e}" if not e.empty?
 end
 
 require 'nokogiri'

@@ -1,0 +1,119 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Japanese Adjective & Noun Conjugations}
+
+Japanese has two adjective types:
+#strong{い-adjectives} (e.g. 高い, 安い) and
+#strong{な-adjectives} (e.g. 静か, 元気).
+#strong{いい} (good) is an irregular い-adjective that conjugates from よい.
+#strong{Nouns} conjugate the same way as な-adjectives.
+
+#h2{Conjugation Forms}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Form
+			#cell: い-adjective
+			#cell: いい (irregular)
+			#cell: な-adjective / Noun
+			#cell: Meaning
+		#row
+			#cell: Plain present
+			#cell: ～い (高い)
+			#cell: いい
+			#cell: ～だ (静かだ, 学生だ)
+			#cell: Casual present affirmative.
+		#row
+			#cell: Polite present
+			#cell: ～いです (高いです)
+			#cell: いいです
+			#cell: ～です (静かです, 学生です)
+			#cell: Polite present affirmative.
+		#row
+			#cell: Plain negative
+			#cell: ～い→～くない (高くない)
+			#cell: よくない
+			#cell: ～じゃない (静かじゃない, 学生じゃない)
+			#cell: Casual present negative.
+		#row
+			#cell: Polite negative
+			#cell: ～い→～くないです / ～くありません (高くないです)
+			#cell: よくないです / よくありません
+			#cell: ～じゃないです / ～じゃありません (静かじゃないです)
+			#cell: Polite present negative.
+		#row
+			#cell: Plain past
+			#cell: ～い→～かった (高かった)
+			#cell: よかった
+			#cell: ～だった (静かだった, 学生だった)
+			#cell: Casual past affirmative.
+		#row
+			#cell: Polite past
+			#cell: ～い→～かったです (高かったです)
+			#cell: よかったです
+			#cell: ～でした (静かでした, 学生でした)
+			#cell: Polite past affirmative.
+		#row
+			#cell: Plain past negative
+			#cell: ～い→～くなかった (高くなかった)
+			#cell: よくなかった
+			#cell: ～じゃなかった (静かじゃなかった, 学生じゃなかった)
+			#cell: Casual past negative.
+		#row
+			#cell: Polite past negative
+			#cell: ～い→～くなかったです / ～くありませんでした
+			#cell: よくなかったです / よくありませんでした
+			#cell: ～じゃなかったです / ～じゃありませんでした
+			#cell: Polite past negative.
+		#row
+			#cell: て form
+			#cell: ～い→～くて (高くて)
+			#cell: よくて
+			#cell: ～で (静かで, 学生で)
+			#cell: Connects clauses — "is ... and".
+		#row
+			#cell: Adverbial form
+			#cell: ～い→～く (高く)
+			#cell: よく
+			#cell: ～に (静かに)
+			#cell: Modifies a verb — "in a ... way".
+		#row
+			#cell: Conditional (ば form)
+			#cell: ～い→～ければ (高ければ)
+			#cell: よければ
+			#cell: ～なら / ～であれば (静かなら, 学生なら)
+			#cell: Expresses a condition — "if it is ...".
+		#row
+			#cell: たら form (conditional)
+			#cell: ～い→～かったら (高かったら)
+			#cell: よかったら
+			#cell: ～だったら (静かだったら, 学生だったら)
+			#cell: Expresses "if/when" — often for specific conditions.
+		#row
+			#cell: ～そう (appearance)
+			#cell: ～い→～そう (高そう)
+			#cell: よさそう
+			#cell: ～そう (静かそう)
+			#cell: Looks/seems like — based on appearance.
+		#row
+			#cell: ～すぎる (excess)
+			#cell: ～い→～すぎる (高すぎる)
+			#cell: よすぎる
+			#cell: ～すぎる (静かすぎる)
+			#cell: Too much of a quality — "too ...".
+		#row
+			#cell: Noun modification
+			#cell: ～い + noun (高い山)
+			#cell: いい + noun (いい天気)
+			#cell: ～な + noun (静かな部屋)
+			#cell: Modifies a noun directly.
+		#row
+			#cell: ～くなる / ～になる (become)
+			#cell: ～い→～くなる (高くなる)
+			#cell: よくなる
+			#cell: ～になる (静かになる, 学生になる)
+			#cell: To become — change of state.

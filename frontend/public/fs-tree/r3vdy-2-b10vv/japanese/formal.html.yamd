@@ -1,0 +1,202 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Formal & Written Expressions}
+
+Formal grammar patterns common in news, academic writing, business documents, and JLPT N2/N1. These are rarely used in casual conversation.
+
+#h2{Regarding / About}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: について
+			#cell: Noun + について
+			#cell: About / regarding — general topic.
+			#cell: #furigana{日本の文化について話す}{にほんのぶんかについてはなす}— Talk about Japanese culture.
+		#row
+			#cell: #furigana{に関して}{にかんして}
+			#cell: Noun + に関して
+			#cell: Regarding / concerning — more formal than について.
+			#cell: #furigana{この問題に関して}{このもんだいにかんして}— Regarding this problem.
+		#row
+			#cell: にとって
+			#cell: Noun + にとって
+			#cell: For (someone) / from the standpoint of.
+			#cell: #furigana{私にとって大切な人}{わたしにとってたいせつなひと}— A person important to me.
+		#row
+			#cell: として
+			#cell: Noun + として
+			#cell: As / in the capacity of.
+			#cell: #furigana{教師として働く}{きょうしとしてはたらく}— Work as a teacher.
+		#row
+			#cell: #furigana{に対して}{にたいして}
+			#cell: Noun + に対して
+			#cell: Toward / against / in contrast to.
+			#cell: #furigana{学生に対して厳しい}{がくせいにたいしてきびしい}— Strict toward students.
+
+#h2{Location / Context / Scope}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: において / における
+			#cell: Noun + において
+			#cell: In / at — formal で. における modifies nouns.
+			#cell: #furigana{会議において決定された}{かいぎにおいてけっていされた}— It was decided at the meeting.
+		#row
+			#cell: #furigana{上で}{うえで}
+			#cell: 辞書形 / noun の + 上で
+			#cell: After doing / in terms of — prerequisite or context.
+			#cell: #furigana{検討した上で返事する}{けんとうしたうえでへんじする}— I'll reply after considering it.
+		#row
+			#cell: #furigana{に際して}{にさいして}
+			#cell: Noun + に際して
+			#cell: On the occasion of.
+			#cell: #furigana{出発に際して挨拶する}{しゅっぱつにさいしてあいさつする}— Give a greeting on departure.
+		#row
+			#cell: にわたって
+			#cell: Noun + にわたって
+			#cell: Over / spanning (time or space).
+			#cell: #furigana{3年にわたって研究した}{さんねんにわたってけんきゅうした}— Researched over 3 years.
+		#row
+			#cell: をもって
+			#cell: Noun + をもって
+			#cell: With / by means of / as of (date).
+			#cell: #furigana{本日をもって終了する}{ほんじつをもってしゅうりょうする}— It ends as of today.
+
+#h2{Concession / Despite}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: にもかかわらず
+			#cell: Plain form / noun + にもかかわらず
+			#cell: Despite / in spite of — formal のに.
+			#cell: #furigana{雨にもかかわらず試合は行われた}{あめにもかかわらずしあいはおこなわれた}— The game was held despite the rain.
+		#row
+			#cell: ながらも
+			#cell: ます stem / い-adj / noun + ながらも
+			#cell: Although / even while — concessive.
+			#cell: #furigana{小さいながらも立派な家}{ちいさいながらもりっぱないえ}— A fine house, though small.
+		#row
+			#cell: とはいえ
+			#cell: Plain form + とはいえ
+			#cell: That said / even so.
+			#cell: #furigana{便利とはいえ、高すぎる}{べんりとはいえ、たかすぎる}— Convenient, but too expensive.
+		#row
+			#cell: ものの
+			#cell: Plain form + ものの
+			#cell: Although — formal けど.
+			#cell: #furigana{買ったものの、使っていない}{かったものの、つかっていない}— I bought it, but haven't used it.
+
+#h2{Cause / Reason (formal)}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: #furigana{に伴い}{にともない}
+			#cell: Noun / 辞書形 の + に伴い
+			#cell: Along with / as a result of — accompanying change.
+			#cell: #furigana{人口増加に伴い}{じんこうぞうかにともない}— Along with population growth.
+		#row
+			#cell: によって / により
+			#cell: Noun + によって
+			#cell: By means of / depending on / caused by.
+			#cell: #furigana{地震によって建物が壊れた}{じしんによってたてものがこわれた}— Buildings were destroyed by the earthquake.
+		#row
+			#cell: #furigana{に基づいて}{にもとづいて}
+			#cell: Noun + に基づいて
+			#cell: Based on.
+			#cell: #furigana{データに基づいて判断する}{データにもとづいてはんだんする}— Judge based on data.
+		#row
+			#cell: #furigana{を通じて}{をつうじて}/ を通して
+			#cell: Noun + を通じて
+			#cell: Through / via / throughout.
+			#cell: インターネットを通じて#furigana{知り合った}{しりあった}— Met through the internet.
+
+#h2{Limit / Extent}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: #furigana{に限り}{にかぎり}/ に限って
+			#cell: Noun + に限り
+			#cell: Limited to / only for.
+			#cell: #furigana{本日に限り半額}{ほんじつにかぎりはんがく}— Half price today only.
+		#row
+			#cell: #furigana{に限らず}{にかぎらず}
+			#cell: Noun + に限らず
+			#cell: Not limited to — broader scope.
+			#cell: #furigana{日本に限らず}{にほんにかぎらず}— Not limited to Japan.
+		#row
+			#cell: をはじめ
+			#cell: Noun + をはじめ
+			#cell: Starting with / including.
+			#cell: #furigana{東京をはじめ大都市で}{とうきょうをはじめだいとしで}— In major cities, starting with Tokyo.
+		#row
+			#cell: #furigana{に過ぎない}{にすぎない}
+			#cell: Noun / plain form + に過ぎない
+			#cell: Merely / nothing more than.
+			#cell: #furigana{推測に過ぎない}{すいそくにすぎない}— It's merely speculation.
+		#row
+			#cell: どころではない
+			#cell: 辞書形 / noun + どころではない
+			#cell: Far from / not the time for — situation makes it impossible.
+			#cell: #furigana{遊ぶどころではない}{あそぶどころではない}— This is no time for playing around.
+
+#h2{Formal sentence endings}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ～である
+			#cell: Is — formal/written version of だ.
+			#cell: #furigana{これは事実である}{これはじじつである}— This is a fact.
+		#row
+			#cell: ～ではないだろうか
+			#cell: Isn't it? / Could it be that...? — rhetorical question.
+			#cell: もっと良い方法があるのではないだろうか — Might there not be a better way?
+		#row
+			#cell: ～#furigana{と言える}{といえる}
+			#cell: One can say that — drawing a conclusion.
+			#cell: 成功と言える — One can call it a success.
+		#row
+			#cell: ～#furigana{ざるを得ない}{ざるをえない}
+			#cell: Cannot help but / have no choice but to.
+			#cell: #furigana{認めざるを得ない}{みとめざるをえない}— I have no choice but to admit it.
+		#row
+			#cell: ～#furigana{に他ならない}{にほかならない}
+			#cell: Nothing other than / precisely because.
+			#cell: #furigana{努力の結果に他ならない}{どりょくのけっかにほかならない}— It's nothing other than the result of effort.

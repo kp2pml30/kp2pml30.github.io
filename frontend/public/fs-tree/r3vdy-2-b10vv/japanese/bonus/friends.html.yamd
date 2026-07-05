@@ -1,0 +1,242 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Casual / Friendly Contractions}
+
+In casual speech, many grammar forms get shortened. These are common among friends and in informal settings but should be avoided in polite/business contexts.
+
+#h2{Must / Have to — なければならない contractions}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Full form
+			#cell: Contraction
+			#cell: Example (行く — いく)
+		#row
+			#cell: ～なければならない
+			#cell: ～なきゃ（ならない）
+			#cell: 行かなきゃ — I gotta go
+		#row
+			#cell: ～なければならない
+			#cell: ～なくちゃ（ならない）
+			#cell: 行かなくちゃ — I gotta go
+		#row
+			#cell: ～なければいけない
+			#cell: ～なきゃいけない
+			#cell: #furigana{食べなきゃいけない}{たべなきゃいけない}— I have to eat
+		#row
+			#cell: ～なければだめ
+			#cell: ～なきゃだめ
+			#cell: #furigana{勉強しなきゃだめ}{べんきょうしなきゃだめ}— You have to study
+		#row
+			#cell: ～ないといけない
+			#cell: ～ないと
+			#cell: #furigana{早く起きないと}{はやくおきないと}— I need to wake up early
+
+In very casual speech, just ～なきゃ or ～なくちゃ alone (dropping ならない/いけない/だめ) is enough to express "I must".
+
+#h2{ている / てある contractions}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Full form
+			#cell: Contraction
+			#cell: Example
+		#row
+			#cell: ～ている
+			#cell: ～てる
+			#cell: 食べている → 食べてる — is eating
+		#row
+			#cell: ～ていた
+			#cell: ～てた
+			#cell: #furigana{待っていた}{まっていた}→ 待ってた — was waiting
+		#row
+			#cell: ～ていない
+			#cell: ～てない
+			#cell: 知っていない → 知ってない — don't know
+		#row
+			#cell: ～ている
+			#cell: ～とる (western dialects)
+			#cell: 何しとる？ — What are you doing?
+		#row
+			#cell: ～てある
+			#cell: ～たる (casual)
+			#cell: 書いてある → 書いたる — it's written
+
+#h2{ては / では contractions}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Full form
+			#cell: Contraction
+			#cell: Example
+		#row
+			#cell: ～ては
+			#cell: ～ちゃ
+			#cell: 食べてはいけない → 食べちゃいけない — must not eat
+		#row
+			#cell: ～では
+			#cell: ～じゃ
+			#cell: それではだめ → それじゃだめ — that's no good
+		#row
+			#cell: ～てはいけない
+			#cell: ～ちゃだめ
+			#cell: #furigana{触っちゃだめ}{さわっちゃだめ}— don't touch
+		#row
+			#cell: ～てはいられない
+			#cell: ～ちゃいられない
+			#cell: #furigana{泣いちゃいられない}{ないちゃいられない}— can't be crying (now)
+
+#h2{てしまう contractions}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Full form
+			#cell: Contraction
+			#cell: Example
+		#row
+			#cell: ～てしまう
+			#cell: ～ちゃう
+			#cell: 食べてしまう → 食べちゃう — end up eating / eat (completely)
+		#row
+			#cell: ～てしまった
+			#cell: ～ちゃった
+			#cell: #furigana{壊してしまった}{こわしてしまった}→ 壊しちゃった — I broke it (oops)
+		#row
+			#cell: ～でしまう
+			#cell: ～じゃう
+			#cell: 飲んでしまう → 飲んじゃう — end up drinking
+		#row
+			#cell: ～でしまった
+			#cell: ～じゃった
+			#cell: #furigana{死んでしまった}{しんでしまった}→ 死んじゃった — died
+
+#h2{～ればいい / Conditional contractions}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Full form
+			#cell: Contraction
+			#cell: Example
+		#row
+			#cell: ～ればいい
+			#cell: ～りゃいい
+			#cell: やればいい → やりゃいい — you should just do it
+		#row
+			#cell: ～なければ
+			#cell: ～なけりゃ / ～なきゃ
+			#cell: 行かなければ → 行かなきゃ — if I don't go
+		#row
+			#cell: ～ければ
+			#cell: ～けりゃ
+			#cell: よければ → よけりゃ — if it's good
+
+#h2{の / もの contractions}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Full form
+			#cell: Contraction
+			#cell: Example
+		#row
+			#cell: ～のだ / ～のです
+			#cell: ～んだ / ～んです
+			#cell: どうしたのですか → どうしたんですか — what happened?
+		#row
+			#cell: ～ものだ
+			#cell: ～もんだ
+			#cell: そういうものだ → そういうもんだ — that's how it is
+		#row
+			#cell: ～もの (excuse)
+			#cell: ～もん
+			#cell: だって#furigana{寒いもん}{さむいもん}— because it's cold! (whiny)
+		#row
+			#cell: ～のですか / ～んですか
+			#cell: ～の？
+			#cell: 何をしているんですか → 何してるの？ — what are you doing?
+		#row
+			#cell: ～の？ (question)
+			#cell: ～ん？
+			#cell: 行くの？ → 行くん？ — are you going?
+
+#h2{Sound contractions}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Full form
+			#cell: Contraction
+			#cell: Example
+		#row
+			#cell: ～らない
+			#cell: ～んない
+			#cell: わからない → わかんない — don't understand
+		#row
+			#cell: ～ておく
+			#cell: ～とく
+			#cell: #furigana{買っておく}{かっておく}→ 買っとく — buy in advance
+		#row
+			#cell: ～ておいた
+			#cell: ～といた
+			#cell: #furigana{準備しておいた}{じゅんびしておいた}→ 準備しといた — prepared (in advance)
+		#row
+			#cell: ～てあげる
+			#cell: ～たげる
+			#cell: #furigana{教えてあげる}{おしえてあげる}→ 教えたげる — I'll teach you (for you)
+		#row
+			#cell: ～ところ
+			#cell: ～とこ
+			#cell: 食べるところ → 食べるとこ — about to eat
+		#row
+			#cell: ～という
+			#cell: ～って / ～つう
+			#cell: 何という → 何ていう / 何つう — what is it called
+		#row
+			#cell: ～ということ
+			#cell: ～ってこと
+			#cell: つまり行かないということ → つまり行かないってこと — so you mean you're not going
+		#row
+			#cell: すごい + adj
+			#cell: すげー + adj
+			#cell: すごいかっこいい → すげーかっこいい — super cool (masculine)
+		#row
+			#cell: ～ない
+			#cell: ～ねー
+			#cell: わからない → わかんねー — don't get it (rough masculine)
+
+#h2{Particle dropping & changes}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Full form
+			#cell: Casual
+			#cell: Example
+		#row
+			#cell: を
+			#cell: (dropped)
+			#cell: ご飯を食べる → #furigana{ご飯食べる}{ごはんたべる}
+		#row
+			#cell: は
+			#cell: (often dropped)
+			#cell: 私は行く → #furigana{私、行く}{わたし、いく}
+		#row
+			#cell: に
+			#cell: (sometimes dropped)
+			#cell: 駅に行く → #furigana{駅行く}{えきいく}
+		#row
+			#cell: ～のだ (explanatory)
+			#cell: ～んだ
+			#cell: 何をしているのだ → 何してんだ — what are you doing
+		#row
+			#cell: ～ですか
+			#cell: rising intonation alone
+			#cell: 行きますか → 行く？ — going?

@@ -1,0 +1,243 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Grammar Patterns}
+
+Intermediate and advanced grammar patterns for expressing expectations, decisions, obligations, and more.
+
+#h2{Expectation & Judgment}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: はず
+			#cell: Plain form + はず (な-adj + な + はず, noun + の + はず)
+			#cell: Should be / Expected to — based on reason or evidence.
+			#cell: もう#furigana{届いた}{とどいた}はず — It should have arrived by now.
+		#row
+			#cell: はずがない
+			#cell: Plain form + はずがない
+			#cell: There's no way that... — strong denial based on logic.
+			#cell: #furigana{彼がそんなことを言うはずがない}{かれがそんなことをいうはずがない}— There's no way he said that.
+		#row
+			#cell: わけ
+			#cell: Plain form + わけ
+			#cell: Reason / means that — logical conclusion.
+			#cell: つまり行かないわけだ — So that means you're not going.
+		#row
+			#cell: わけがない
+			#cell: Plain form + わけがない
+			#cell: No way / impossible — stronger than はずがない.
+			#cell: そんなわけがない — There's absolutely no way.
+		#row
+			#cell: わけではない
+			#cell: Plain form + わけではない
+			#cell: It's not that... — partial denial, clarification.
+			#cell: #furigana{嫌いなわけではない}{きらいなわけではない}— It's not that I dislike it.
+		#row
+			#cell: わけにはいかない
+			#cell: 辞書形 / ない form + わけにはいかない
+			#cell: Can't afford to / mustn't — social or moral obligation prevents it.
+			#cell: #furigana{約束を破るわけにはいかない}{やくそくをやぶるわけにはいかない}— I can't break my promise.
+
+#h2{Decisions & Changes}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ことにする
+			#cell: 辞書形 / ない + ことにする
+			#cell: Decide to — a personal decision.
+			#cell: #furigana{早く寝る}{はやくねる}ことにした — I decided to go to bed early.
+		#row
+			#cell: ことになる
+			#cell: 辞書形 / ない + ことになる
+			#cell: It has been decided that — decision by others or circumstances.
+			#cell: #furigana{来月引っ越す}{らいげつひっこす}ことになった — It's been decided I'll move next month.
+		#row
+			#cell: ようにする
+			#cell: 辞書形 / ない + ようにする
+			#cell: Try to / make an effort to — habitual effort.
+			#cell: #furigana{野菜を食べるようにしている}{やさいをたべるようにしている}— I try to eat vegetables.
+		#row
+			#cell: ようになる
+			#cell: 辞書形 / ない + ようになる
+			#cell: Come to / reach the point where — gradual change.
+			#cell: #furigana{日本語が話せるようになった}{にほんごがはなせるようになった}— I've become able to speak Japanese.
+
+#h2{Aspect & Timing}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ところ
+			#cell: 辞書形 / ている / た + ところ
+			#cell: About to / in the middle of / just did — depends on verb tense.
+			#cell: 食べるところ — about to eat.#linebreak 食べているところ — in the middle of eating.#linebreak 食べたところ — just ate.
+		#row
+			#cell: ばかり
+			#cell: た form + ばかり / noun + ばかり
+			#cell: Just did / nothing but — "just finished" or "only does".
+			#cell: #furigana{来たばかり}{きたばかり}— Just arrived.#linebreak#furigana{文句ばかり言う}{もんくばかりいう}— Does nothing but complain.
+		#row
+			#cell: ことがある
+			#cell: た form + ことがある
+			#cell: Have experienced — "have you ever...?"
+			#cell: #furigana{富士山に登ったことがある}{ふじさんにのぼったことがある}— I've climbed Mt. Fuji.
+		#row
+			#cell: てしまう
+			#cell: て form + しまう
+			#cell: Completion (done completely) or regret (unfortunately did).
+			#cell: #furigana{全部食べてしまった}{ぜんぶたべてしまった}— I ate it all / I accidentally ate it all.
+
+#h2{Obligation & Advice}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: べき
+			#cell: 辞書形 + べき (するべき or すべき)
+			#cell: Should / ought to — moral or logical obligation.
+			#cell: #furigana{謝るべきだ}{あやまるべきだ}— You should apologize.
+		#row
+			#cell: べきではない
+			#cell: 辞書形 + べきではない
+			#cell: Should not — strong advice against.
+			#cell: そんなことを#furigana{言うべきではない}{いうべきではない}— You shouldn't say such things.
+		#row
+			#cell: なければならない
+			#cell: ない form → なければならない
+			#cell: Must / have to — objective obligation.
+			#cell: #furigana{宿題をしなければならない}{しゅくだいをしなければならない}— I must do homework.
+		#row
+			#cell: #furigana{ざるを得ない}{ざるをえない}
+			#cell: ない stem + ざるを得ない (する → せざるを得ない)
+			#cell: Have no choice but to — reluctant obligation.
+			#cell: #furigana{認めざるを得ない}{みとめざるをえない}— I have no choice but to admit it.
+		#row
+			#cell: ほうがいい
+			#cell: た form / ない form + ほうがいい
+			#cell: Had better / should — personal advice.
+			#cell: 早く寝たほうがいい — You'd better go to bed early.#linebreak#furigana{無理しないほうがいい}{むりしないほうがいい}— You'd better not push yourself.
+
+#h2{Ability & Possibility}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ことができる
+			#cell: 辞書形 + ことができる
+			#cell: Can / be able to — more formal than potential form.
+			#cell: ここで#furigana{泳ぐことができる}{およぐことができる}— You can swim here.
+		#row
+			#cell: 得る（うる / える）
+			#cell: ます stem + 得る
+			#cell: Can / possible to — formal/written. ありえない = impossible.
+			#cell: そういうことも#furigana{あり得る}{ありうる}— That's also possible.
+		#row
+			#cell: かねる
+			#cell: ます stem + かねる
+			#cell: Cannot bring oneself to / difficult to — polite refusal.
+			#cell: #furigana{お受けしかねます}{おうけしかねます}— I'm afraid I cannot accept.
+		#row
+			#cell: かねない
+			#cell: ます stem + かねない
+			#cell: Might / could possibly (negative outcome) — warning.
+			#cell: #furigana{事故になりかねない}{じこになりかねない}— It could lead to an accident.
+
+#h2{Hearsay & Quotation}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: #furigana{と言う}{という}
+			#cell: Plain form + という
+			#cell: Say that / called — direct or indirect quotation.
+			#cell: #furigana{田中さんは来ないと言った}{たなかさんはこないといった}— Tanaka said he won't come.
+		#row
+			#cell: って
+			#cell: Plain form + って
+			#cell: Casual quotation — replaces と.
+			#cell: #furigana{明日来るって}{あしたくるって}— They said they're coming tomorrow.
+		#row
+			#cell: #furigana{ように言う}{ようにいう}
+			#cell: 辞書形 / ない + ように言う
+			#cell: Tell someone to — indirect command.
+			#cell: #furigana{早く来るように言った}{はやくくるようにいった}— I told them to come early.
+		#row
+			#cell: #furigana{と思う}{とおもう}
+			#cell: Plain form + と思う
+			#cell: I think that... と思っている = ongoing opinion.
+			#cell: おいしいと思う — I think it's delicious.
+		#row
+			#cell: #furigana{と考える}{とかんがえる}
+			#cell: Plain form + と考える
+			#cell: I consider / think (more deliberate than 思う).
+			#cell: #furigana{必要だと考える}{ひつようだとかんがえる}— I consider it necessary.
+		#row
+			#cell: とされている
+			#cell: Plain form + とされている
+			#cell: It is considered / regarded as — formal/academic.
+			#cell: #furigana{健康にいいとされている}{けんこうにいいとされている}— It's considered good for health.
+
+#h2{ものだ & Related}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ものだ
+			#cell: 辞書形 + ものだ
+			#cell: That's how things are / one should — general truth or social expectation.
+			#cell: #furigana{人は誰でも間違うものだ}{ひとはだれでもまちがうものだ}— Everyone makes mistakes.
+		#row
+			#cell: たものだ
+			#cell: た form + ものだ
+			#cell: Used to — nostalgic recollection of the past.
+			#cell: #furigana{子供の頃はよく遊んだものだ}{こどものころはよくあそんだものだ}— I used to play a lot as a child.
+		#row
+			#cell: ものではない
+			#cell: 辞書形 + ものではない
+			#cell: One should not — social/moral admonition.
+			#cell: #furigana{嘘をつくものではない}{うそをつくものではない}— One shouldn't tell lies.
+		#row
+			#cell: ものなら
+			#cell: Potential form + ものなら
+			#cell: If (you could) — implies it's difficult or challenging.
+			#cell: できるものならやってみろ — If you can, try it.

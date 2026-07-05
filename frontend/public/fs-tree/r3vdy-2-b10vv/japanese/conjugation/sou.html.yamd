@@ -1,0 +1,305 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+#(define (h3 . b) (apply elem 'h3 b))
+
+#h1{Four Ways to Say "Seems Like"}
+
+Japanese has four main constructions for expressing appearance, conjecture, and hearsay.
+They look similar but differ in the source of information and how they attach to words.
+
+#h2{Overview}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Form
+			#cell: Source of information
+			#cell: Nuance
+		#row
+			#cell: ～そうだ (appearance)
+			#cell: Visual impression, gut feeling
+			#cell: "It looks like it will..." — judging by how something looks right now.
+		#row
+			#cell: ～そうだ (hearsay)
+			#cell: Someone told you, you read/heard it
+			#cell: "I heard that..." — reporting secondhand information.
+		#row
+			#cell: ～ようだ / ～みたいだ
+			#cell: Evidence, reasoning, your own senses
+			#cell: "It seems like..." — a conclusion based on what you observe or deduce.
+		#row
+			#cell: ～らしい
+			#cell: Indirect evidence, general reputation
+			#cell: "Apparently..." — based on what you've gathered from various sources.
+
+#h2{1. ～そうだ — Appearance}
+
+Based on how something looks. You see it and judge. Attaches to the #strong{stem} (before い/だ).
+
+#h3{Formation}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word type
+			#cell: Rule
+			#cell: Example
+		#row
+			#cell: Verb
+			#cell: ます stem + そう
+			#cell: #furigana{降ります}{ふります}→ 降りそう — looks like it will rain
+		#row
+			#cell: い-adjective
+			#cell: drop い + そう
+			#cell: おいしい → おいしそう — looks delicious
+		#row
+			#cell: な-adjective
+			#cell: stem + そう
+			#cell: #furigana{元気}{げんき}→ 元気そう — looks healthy
+		#row
+			#cell: いい (irregular)
+			#cell: よさそう
+			#cell: よさそう — looks good
+		#row
+			#cell: ない (negative)
+			#cell: なさそう
+			#cell: おいしくなさそう — doesn't look delicious
+
+#h3{Conjugation of ～そう}
+
+～そう behaves as a な-adjective:
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Form
+			#cell: Example (おいしそう)
+		#row
+			#cell: Plain
+			#cell: おいしそうだ
+		#row
+			#cell: Polite
+			#cell: おいしそうです
+		#row
+			#cell: Negative
+			#cell: おいしそうじゃない
+		#row
+			#cell: Past
+			#cell: おいしそうだった
+		#row
+			#cell: Noun modification
+			#cell: おいしそうな#furigana{料理}{りょうり}
+		#row
+			#cell: Adverbial
+			#cell: おいしそうに#furigana{食べる}{たべる}
+
+#h2{2. ～そうだ — Hearsay}
+
+Reporting what you heard or read. Attaches to the #strong{plain form} (dictionary/た/ない/etc.) directly.
+
+#h3{Formation}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word type
+			#cell: Rule
+			#cell: Example
+		#row
+			#cell: Verb (present)
+			#cell: plain form + そうだ
+			#cell: #furigana{雨が降る}{あめがふる}そうだ — I heard it will rain
+		#row
+			#cell: Verb (past)
+			#cell: た form + そうだ
+			#cell: 雨が#furigana{降った}{ふった}そうだ — I heard it rained
+		#row
+			#cell: Verb (negative)
+			#cell: ない form + そうだ
+			#cell: 雨が#furigana{降らない}{ふらない}そうだ — I heard it won't rain
+		#row
+			#cell: い-adjective
+			#cell: plain form + そうだ
+			#cell: おいしいそうだ — I heard it's delicious
+		#row
+			#cell: な-adjective
+			#cell: stem + だそうだ
+			#cell: #furigana{静か}{しずか}だそうだ — I heard it's quiet
+		#row
+			#cell: Noun
+			#cell: noun + だそうだ
+			#cell: #furigana{学生}{がくせい}だそうだ — I heard they're a student
+
+Key difference from appearance そう: hearsay attaches to the #strong{complete} plain form (おいし#strong{い}そう), appearance attaches to the #strong{stem} (おいし#strong{∅}そう).
+
+#h2{3. ～ようだ / ～みたいだ — Conjecture from Evidence}
+
+A conclusion you draw from evidence or your own senses. ～みたいだ is the casual equivalent of ～ようだ.
+
+#h3{Formation}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word type
+			#cell: ～ようだ
+			#cell: ～みたいだ
+		#row
+			#cell: Verb
+			#cell: plain form + ようだ#linebreak 雨が#furigana{降る}{ふる}ようだ
+			#cell: plain form + みたいだ#linebreak 雨が降るみたいだ
+		#row
+			#cell: い-adjective
+			#cell: plain form + ようだ#linebreak おいしいようだ
+			#cell: plain form + みたいだ#linebreak おいしいみたいだ
+		#row
+			#cell: な-adjective
+			#cell: stem + な + ようだ#linebreak 静かなようだ
+			#cell: stem + みたいだ#linebreak 静かみたいだ
+		#row
+			#cell: Noun
+			#cell: noun + の + ようだ#linebreak 学生のようだ
+			#cell: noun + みたいだ#linebreak 学生みたいだ
+
+#h3{Conjugation}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Form
+			#cell: ～ようだ (な-adj behavior)
+			#cell: ～みたいだ (な-adj behavior)
+		#row
+			#cell: Plain
+			#cell: 降るようだ
+			#cell: 降るみたいだ
+		#row
+			#cell: Polite
+			#cell: 降るようです
+			#cell: 降るみたいです
+		#row
+			#cell: Negative
+			#cell: 降るようではない
+			#cell: 降るみたいじゃない
+		#row
+			#cell: Past
+			#cell: 降るようだった
+			#cell: 降るみたいだった
+		#row
+			#cell: Noun modification
+			#cell: #furigana{子供}{こども}のような#furigana{顔}{かお}
+			#cell: 子供みたいな顔
+		#row
+			#cell: Adverbial
+			#cell: 子供のように#furigana{遊ぶ}{あそぶ}
+			#cell: 子供みたいに遊ぶ
+
+#h2{4. ～らしい — Apparently}
+
+Based on indirect evidence — things you've heard, read, or gathered. Also used for "typical of" (～らしい as a quality).
+
+#h3{Formation}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word type
+			#cell: Rule
+			#cell: Example
+		#row
+			#cell: Verb
+			#cell: plain form + らしい
+			#cell: 雨が降るらしい — apparently it will rain
+		#row
+			#cell: い-adjective
+			#cell: plain form + らしい
+			#cell: おいしいらしい — apparently it's delicious
+		#row
+			#cell: な-adjective
+			#cell: stem + らしい
+			#cell: 静からしい — apparently it's quiet
+		#row
+			#cell: Noun
+			#cell: noun + らしい
+			#cell: 学生らしい — apparently they're a student
+
+#h3{Conjugation}
+
+～らしい conjugates as an い-adjective:
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Form
+			#cell: Example
+		#row
+			#cell: Plain
+			#cell: 降るらしい
+		#row
+			#cell: Polite
+			#cell: 降るらしいです
+		#row
+			#cell: Negative
+			#cell: 降るらしくない
+		#row
+			#cell: Past
+			#cell: 降るらしかった
+
+#h3{～らしい as "typical of"}
+
+When attached directly to a noun, ～らしい can also mean "typical of" or "befitting":
+
+#list
+	#item: #furigana{男らしい}{おとこらしい}— manly, masculine
+	#item: #furigana{子供らしい}{こどもらしい}— childlike (in a natural/positive way)
+	#item: #furigana{春らしい}{はるらしい}— spring-like
+	#item: #furigana{学生らしい}{がくせいらしい}— befitting a student
+
+#h2{Comparison at a Glance}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell{}
+			#cell: ～そう (appearance)
+			#cell: ～そう (hearsay)
+			#cell: ～ようだ / ～みたいだ
+			#cell: ～らしい
+		#row
+			#cell: Attaches to
+			#cell: Stem (before い/だ)
+			#cell: Plain form (complete)
+			#cell: Plain form (+ な/の)
+			#cell: Plain form (no だ)
+		#row
+			#cell: Conjugates as
+			#cell: な-adjective
+			#cell: Does not conjugate (そうだ only)
+			#cell: な-adjective
+			#cell: い-adjective
+		#row
+			#cell: Source
+			#cell: Your eyes, visual impression
+			#cell: Someone told you
+			#cell: Evidence, senses, reasoning
+			#cell: Indirect info, reputation
+		#row
+			#cell: "delicious"
+			#cell: おいし#strong{∅}そう
+			#cell: おいし#strong{い}そうだ
+			#cell: おいしいようだ
+			#cell: おいしいらしい
+		#row
+			#cell: "quiet"
+			#cell: 静か#strong{∅}そう
+			#cell: 静か#strong{だ}そうだ
+			#cell: 静か#strong{な}ようだ
+			#cell: 静か#strong{∅}らしい
+		#row
+			#cell: "will rain"
+			#cell: 降り#strong{∅}そう
+			#cell: 降る#strong{∅}そうだ
+			#cell: 降るようだ
+			#cell: 降るらしい

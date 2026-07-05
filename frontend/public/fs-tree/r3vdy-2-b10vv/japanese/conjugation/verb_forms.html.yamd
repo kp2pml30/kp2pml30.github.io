@@ -1,0 +1,192 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Japanese Verb Conjugations}
+
+Japanese verbs are divided into three groups:
+#strong{Group 1} (五段 godan / u-verbs),
+#strong{Group 2} (一段 ichidan / ru-verbs), and
+#strong{Group 3} (irregular: する and 来る).
+
+#h2{Conjugation Forms}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Form
+			#cell: Group 1 (五段)
+			#cell: Group 2 (一段)
+			#cell: Group 3 (irregular)
+			#cell: Meaning
+		#row
+			#cell: ます form (polite present)
+			#cell: ～う→～います (飲む→飲みます)
+			#cell: ～る→～ます (食べる→食べます)
+			#cell: します#linebreak#furigana{来ます}{きます}
+			#cell: Polite way to state an action in the present or future.
+		#row
+			#cell: #furigana{辞書形}{じしょけい}/ Dictionary form
+			#cell: ～います→～う (飲みます→飲む, 書きます→書く, 話します→話す)
+			#cell: ～ます→～る (食べます→食べる, 見ます→見る)
+			#cell: する#linebreak#furigana{来る}{くる}
+			#cell: The plain, unconjugated form found in dictionaries.
+		#row
+			#cell: ない form (plain negative)
+			#cell: ～う→～あない (飲む→飲まない)#linebreak Exception: ～う→～わない (買う→買わない)#linebreak Exception: ある→ない
+			#cell: ～る→～ない (食べる→食べない)
+			#cell: しない#linebreak#furigana{来ない}{こない}
+			#cell: Casual way to negate an action.
+		#row
+			#cell: た form (plain past)
+			#cell: Sound changes:#linebreak～う/～つ/～る→～った (買った)#linebreak～む/～ぬ/～ぶ→～んだ (飲んだ)#linebreak～く→～いた (書いた)#linebreak～ぐ→～いだ (泳いだ)#linebreak～す→～した (話した)#linebreak Exception: 行く→行った
+			#cell: ～る→～た (食べる→食べた)
+			#cell: した#linebreak#furigana{来た}{きた}
+			#cell: Casual way to express a completed past action.
+		#row
+			#cell: て form
+			#cell: Same sound changes as た form, but with て/で:#linebreak～う/～つ/～る→～って#linebreak～む/～ぬ/～ぶ→～んで#linebreak～く→～いて, ～ぐ→～いで#linebreak～す→～して#linebreak Exception: 行く→行って
+			#cell: ～る→～て (食べる→食べて)
+			#cell: して#linebreak#furigana{来て}{きて}
+			#cell: Connects actions, makes requests, or forms progressive tense.
+		#row
+			#cell: #furigana{可能形}{かのうけい}/ Potential form
+			#cell: ～う→～える (飲む→飲める, 書く→書ける)
+			#cell: ～る→～られる (食べる→食べられる)
+			#cell: できる#linebreak#furigana{来られる}{こられる}
+			#cell: Expresses ability — "can do" something.
+		#row
+			#cell: #furigana{受身形}{うけみけい}/ Passive form
+			#cell: ～う→～あれる (飲む→飲まれる, 書く→書かれる)
+			#cell: ～る→～られる (食べる→食べられる)
+			#cell: される#linebreak#furigana{来られる}{こられる}
+			#cell: Indicates the subject is acted upon — "is done to".
+		#row
+			#cell: #furigana{使役形}{しえきけい}/ Causative form
+			#cell: ～う→～あせる (飲む→飲ませる, 書く→書かせる)
+			#cell: ～る→～させる (食べる→食べさせる)
+			#cell: させる#linebreak#furigana{来させる}{こさせる}
+			#cell: Expresses making or letting someone do something.
+		#row
+			#cell: #furigana{使役受身形}{しえきうけみけい}/ Causative-passive form
+			#cell: ～う→～あされる (飲む→飲まされる)#linebreak or ～あせられる (書く→書かせられる)
+			#cell: ～る→～させられる (食べる→食べさせられる)
+			#cell: させられる#linebreak#furigana{来させられる}{こさせられる}
+			#cell: Expresses being made to do something (against one's will).
+		#row
+			#cell: #furigana{命令形}{めいれいけい}/ Imperative form
+			#cell: ～う→～え (飲む→飲め, 書く→書け)
+			#cell: ～る→～ろ (食べる→食べろ)
+			#cell: しろ/せよ#linebreak#furigana{来い}{こい}
+			#cell: A direct, strong command — "Do it!"
+		#row
+			#cell: #furigana{禁止形}{きんしけい}/ Prohibitive form
+			#cell: 辞書形 + な (飲むな)
+			#cell: 辞書形 + な (食べるな)
+			#cell: するな#linebreak くるな
+			#cell: A strong prohibition — "Don't do it!"
+		#row
+			#cell: #furigana{意向形}{いこうけい}/ Volitional form
+			#cell: ～う→～おう (飲む→飲もう, 書く→書こう)
+			#cell: ～る→～よう (食べる→食べよう)
+			#cell: しよう#linebreak#furigana{来よう}{こよう}
+			#cell: Expresses intention or suggests doing something — "Let's / I'll".
+		#row
+			#cell: #furigana{条件形}{じょうけんけい}/ Conditional (ば form)
+			#cell: ～う→～えば (飲む→飲めば, 書く→書けば)
+			#cell: ～る→～れば (食べる→食べれば)
+			#cell: すれば#linebreak#furigana{来れば}{くれば}
+			#cell: Expresses a condition — "if" something happens.
+		#row
+			#cell: たら form (conditional)
+			#cell: た form + ら (飲んだら, 書いたら)
+			#cell: た form + ら (食べたら)
+			#cell: したら#linebreak#furigana{来たら}{きたら}
+			#cell: Expresses "if/when" — often for specific or one-time conditions.
+		#row
+			#cell: たい form (desire)
+			#cell: ます stem + たい (飲みたい, 書きたい)
+			#cell: ます stem + たい (食べたい)
+			#cell: したい#linebreak#furigana{来たい}{きたい}
+			#cell: Expresses the speaker's want or desire to do something.
+
+#h2{Irregular Group 2 (一段) Verbs that End in ～い in ます Form}
+
+Most Group 2 (ichidan) verbs end in ～え (e-sound) before ます, but some end in
+～い (i-sound), making them look like Group 1 verbs. These must be memorized.
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Dictionary Form
+			#cell: ます Form
+			#cell: Meaning
+		#row
+			#cell: #furigana{見る}{みる}
+			#cell: #furigana{見ます}{みます}
+			#cell: to see / to watch
+		#row
+			#cell: #furigana{着る}{きる}
+			#cell: #furigana{着ます}{きます}
+			#cell: to wear (upper body)
+		#row
+			#cell: #furigana{起きる}{おきる}
+			#cell: #furigana{起きます}{おきます}
+			#cell: to wake up / to get up
+		#row
+			#cell: #furigana{落ちる}{おちる}
+			#cell: #furigana{落ちます}{おちます}
+			#cell: to fall / to drop
+		#row
+			#cell: #furigana{降りる}{おりる}
+			#cell: #furigana{降ります}{おります}
+			#cell: to get off / to descend
+		#row
+			#cell: #furigana{浴びる}{あびる}
+			#cell: #furigana{浴びます}{あびます}
+			#cell: to shower / to bathe in
+		#row
+			#cell: #furigana{借りる}{かりる}
+			#cell: #furigana{借ります}{かります}
+			#cell: to borrow
+		#row
+			#cell: #furigana{伸びる}{のびる}
+			#cell: #furigana{伸びます}{のびます}
+			#cell: to extend / to stretch
+		#row
+			#cell: #furigana{足りる}{たりる}
+			#cell: #furigana{足ります}{たります}
+			#cell: to be sufficient
+		#row
+			#cell: #furigana{過ぎる}{すぎる}
+			#cell: #furigana{過ぎます}{すぎます}
+			#cell: to pass / to exceed
+		#row
+			#cell: #furigana{信じる}{しんじる}
+			#cell: #furigana{信じます}{しんじます}
+			#cell: to believe
+		#row
+			#cell: #furigana{感じる}{かんじる}
+			#cell: #furigana{感じます}{かんじます}
+			#cell: to feel
+		#row
+			#cell: #furigana{生きる}{いきる}
+			#cell: #furigana{生きます}{いきます}
+			#cell: to live
+		#row
+			#cell: #furigana{似る}{にる}
+			#cell: #furigana{似ます}{にます}
+			#cell: to resemble
+		#row
+			#cell: #furigana{煮る}{にる}
+			#cell: #furigana{煮ます}{にます}
+			#cell: to boil / to cook
+		#row
+			#cell: #furigana{閉じる}{とじる}
+			#cell: #furigana{閉じます}{とじます}
+			#cell: to close / to shut
+		#row
+			#cell: できる
+			#cell: できます
+			#cell: to be able to / to be completed

@@ -1,0 +1,435 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Japanese Bad Words & Vulgar Language}
+
+#strong{Disclaimer:} This page is for educational purposes only — to help learners recognize and understand these words in context (anime, manga, conversations). Knowing what words mean helps you avoid using them inappropriately.
+
+Japanese swearing is generally milder than in English. Context and tone matter a lot — some of these are playful among friends but offensive in formal settings.
+
+#h2{Body-related}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: ちんちん
+			#cell: —
+			#cell: Penis
+			#cell: Childish word, like "wee-wee". Not extremely vulgar.
+		#row
+			#cell: ちんこ / ちんぽ
+			#cell: —
+			#cell: Penis
+			#cell: Cruder than ちんちん.
+		#row
+			#cell: 玉
+			#cell: たま
+			#cell: Balls / testicles
+			#cell: Literally "ball". #furigana{金玉}{きんたま}is more explicit.
+		#row
+			#cell: おっぱい
+			#cell: —
+			#cell: Boobs
+			#cell: Childish/casual. Not extremely rude.
+		#row
+			#cell: まんこ
+			#cell: —
+			#cell: Pussy / vagina
+			#cell: Very vulgar. The female equivalent of ちんこ. Heavily censored in media.
+		#row
+			#cell: おまんこ
+			#cell: —
+			#cell: Pussy / vagina
+			#cell: Slightly softer with お prefix, but still very vulgar.
+		#row
+			#cell: 子宮
+			#cell: しきゅう
+			#cell: Womb / uterus
+			#cell: Medical term, but used vulgarly in certain contexts.
+		#row
+			#cell: ケツ
+			#cell: けつ
+			#cell: Ass
+			#cell: Vulgar for #furigana{お尻}{おしり}.
+
+#h2{Insults}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: 馬鹿
+			#cell: ばか
+			#cell: Idiot / stupid
+			#cell: Very common. Can be playful or genuinely insulting depending on tone.
+		#row
+			#cell: 阿呆
+			#cell: あほ
+			#cell: Idiot / fool
+			#cell: More common in Kansai. In Kansai ばか is harsher; in Tokyo あほ is harsher.
+		#row
+			#cell: 間抜け
+			#cell: まぬけ
+			#cell: Dimwit / blockhead
+			#cell: Implies someone is slow or clueless.
+		#row
+			#cell: ぼけ / ボケ
+			#cell: —
+			#cell: Idiot / airhead
+			#cell: Kansai slang. Part of the comedy duo dynamic ボケ＆ツッコミ.
+		#row
+			#cell: ブス
+			#cell: —
+			#cell: Ugly (woman)
+			#cell: Very rude insult about appearance.
+		#row
+			#cell: デブ
+			#cell: —
+			#cell: Fatso
+			#cell: Rude. Casual word for an overweight person.
+		#row
+			#cell: うざい / うぜー
+			#cell: —
+			#cell: Annoying / obnoxious
+			#cell: Very common among young people.
+		#row
+			#cell: きもい / キモい
+			#cell: —
+			#cell: Gross / creepy
+			#cell: Short for #furigana{気持ち悪い}{きもちわるい}.
+		#row
+			#cell: ださい / ダサい
+			#cell: —
+			#cell: Lame / uncool
+			#cell: Mocking someone's style or behavior.
+		#row
+			#cell: 変態
+			#cell: へんたい
+			#cell: Pervert
+			#cell: Also shortened to エッチ / H（えっち）which is milder.
+		#row
+			#cell: 痴漢
+			#cell: ちかん
+			#cell: Groper / molester
+			#cell: Serious accusation, not casual.
+		#row
+			#cell: 社畜
+			#cell: しゃちく
+			#cell: Corporate slave
+			#cell: 社（company）+ 畜（livestock）. Self-deprecating or mocking overworked salarymen.
+		#row
+			#cell: ニート
+			#cell: —
+			#cell: NEET — not in education, employment, or training
+			#cell: From English. Used as an insult for someone who does nothing.
+		#row
+			#cell: 引きこもり
+			#cell: ひきこもり
+			#cell: Shut-in / recluse
+			#cell: Someone who doesn't leave their room. Can be a serious condition or a casual insult.
+		#row
+			#cell: オタク / おたく
+			#cell: —
+			#cell: Nerd / otaku
+			#cell: Can be self-identifying or mildly insulting depending on context. キモオタ = gross otaku.
+		#row
+			#cell: 負け犬
+			#cell: まけいぬ
+			#cell: Loser (lit. "losing dog")
+			#cell: Harsh insult.
+		#row
+			#cell: クズ
+			#cell: くず
+			#cell: Scum / trash (person)
+			#cell: #furigana{人間のクズ}{にんげんのくず}= scum of the earth.
+		#row
+			#cell: ゴミ
+			#cell: —
+			#cell: Garbage / trash (person)
+			#cell: Calling someone worthless.
+		#row
+			#cell: 役立たず
+			#cell: やくたたず
+			#cell: Useless / good-for-nothing
+			#cell: #furigana{穀潰し}{ごくつぶし}is harsher — "grain waster".
+		#row
+			#cell: 最低
+			#cell: さいてい
+			#cell: The worst / lowest
+			#cell: #furigana{最低な人}{さいていなひと}= the worst kind of person.
+
+#h2{Swear words & exclamations}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: くそ / 糞
+			#cell: くそ
+			#cell: Shit / damn
+			#cell: Very common swear. Also used as prefix: #furigana{くそ暑い}{くそあつい}= damn hot.
+		#row
+			#cell: 臭い
+			#cell: くさい
+			#cell: Stinky / smells bad
+			#cell: Not a swear itself, but rude to say to someone. くせー is rougher.
+		#row
+			#cell: 畜生
+			#cell: ちくしょう
+			#cell: Damn it!
+			#cell: Classic exclamation of frustration. Literally "beast".
+		#row
+			#cell: くたばれ
+			#cell: —
+			#cell: Drop dead!
+			#cell: Very harsh. Imperative of くたばる (to drop dead).
+		#row
+			#cell: ふざけるな
+			#cell: —
+			#cell: Don't mess with me! / Cut the crap!
+			#cell: ふざけんな is the casual contraction.
+		#row
+			#cell: うるさい / うるせー
+			#cell: —
+			#cell: Shut up! / Noisy!
+			#cell: #furigana{黙れ}{だまれ}is harsher — "shut your mouth".
+		#row
+			#cell: 死ね
+			#cell: しね
+			#cell: Die!
+			#cell: Imperative of 死ぬ. Very harsh insult.
+		#row
+			#cell: 消えろ
+			#cell: きえろ
+			#cell: Get lost! / Disappear!
+			#cell: Imperative of 消える.
+
+#h2{Rude speech patterns}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ～やがる
+			#cell: Expresses contempt for someone's action — "that bastard did..."
+			#cell: あいつ、#furigana{逃げやがった}{にげやがった}— That bastard ran away.
+		#row
+			#cell: ～くせに
+			#cell: Even though (accusatory) — "despite being..."
+			#cell: #furigana{何も知らないくせに}{なにもしらないくせに}— Even though you know nothing...
+		#row
+			#cell: てめえ / てめー
+			#cell: You (very aggressive)
+			#cell: てめー、何やってんだ — What the hell are you doing?
+		#row
+			#cell: おまえ / お前
+			#cell: You (rough, male speech)
+			#cell: #furigana{お前が悪い}{おまえがわるい}— It's your fault.
+		#row
+			#cell: きさま / 貴様
+			#cell: You (hostile, archaic-sounding)
+			#cell: Mostly in fiction/anime. Extremely rude in real life.
+		#row
+			#cell: ～じゃねーよ
+			#cell: Rough negative — "it's not..."
+			#cell: #furigana{知らねーよ}{しらねーよ}— I don't know (and I don't care).
+
+#h2{Bodily functions}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: 屁
+			#cell: へ
+			#cell: Fart
+			#cell: おなら is the polite/childish version.
+		#row
+			#cell: うんこ / うんち
+			#cell: —
+			#cell: Poop
+			#cell: Childish. うんこ is slightly cruder.
+		#row
+			#cell: 小便
+			#cell: しょうべん
+			#cell: Piss
+			#cell: おしっこ is the childish/polite version.
+		#row
+			#cell: げろ / ゲロ
+			#cell: —
+			#cell: Puke / vomit
+			#cell: Casual/crude for #furigana{嘔吐}{おうと}.
+		#row
+			#cell: 生理
+			#cell: せいり
+			#cell: Period / menstruation
+			#cell: Not vulgar itself, but often taboo in conversation. #furigana{生理中}{せいりちゅう}= on one's period.
+		#row
+			#cell: 月経
+			#cell: げっけい
+			#cell: Menstruation
+			#cell: Formal/medical term. Less commonly used in casual speech.
+		#row
+			#cell: ナプキン
+			#cell: —
+			#cell: Sanitary pad
+			#cell: From English "napkin". Talking about it openly is considered embarrassing/taboo.
+
+#h2{Euphemisms}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Literal meaning
+			#cell: Direct Japanese
+			#cell: What it hides
+		#row
+			#cell: あの世
+			#cell: あのよ
+			#cell: That world
+			#cell: #furigana{死後の世界}{しごのせかい}
+			#cell: The afterlife / death.
+		#row
+			#cell: お花摘み
+			#cell: おはなつみ
+			#cell: Picking flowers
+			#cell: トイレに行く
+			#cell: Going to the toilet (women's speech).
+		#row
+			#cell: 手を洗う
+			#cell: てをあらう
+			#cell: Washing hands
+			#cell: トイレに行く
+			#cell: Going to the toilet.
+		#row
+			#cell: 大人の関係
+			#cell: おとなのかんけい
+			#cell: Adult relationship
+			#cell: #furigana{性的関係}{せいてきかんけい}
+			#cell: Sexual relationship.
+		#row
+			#cell: 夜の営み
+			#cell: よるのいとなみ
+			#cell: Nighttime activity
+			#cell: セックス
+			#cell: Sex (between a couple).
+		#row
+			#cell: 一線を越える
+			#cell: いっせんをこえる
+			#cell: Crossing a line
+			#cell: セックスする
+			#cell: Having sex (for the first time with someone).
+		#row
+			#cell: できちゃった
+			#cell: —
+			#cell: It happened
+			#cell: #furigana{妊娠した}{にんしんした}
+			#cell: Unplanned pregnancy. できちゃった婚 = shotgun wedding.
+		#row
+			#cell: お腹に赤ちゃんがいる
+			#cell: おなかにあかちゃんがいる
+			#cell: There's a baby in the belly
+			#cell: #furigana{妊娠している}{にんしんしている}
+			#cell: Being pregnant (soft/indirect phrasing).
+		#row
+			#cell: あちらの世界
+			#cell: あちらのせかい
+			#cell: The world over there
+			#cell: #furigana{死後の世界}{しごのせかい}
+			#cell: Death / the afterlife.
+		#row
+			#cell: 眠る
+			#cell: ねむる
+			#cell: To sleep
+			#cell: #furigana{死ぬ}{しぬ}
+			#cell: To die (on gravestones: 永遠に眠る = to sleep forever).
+		#row
+			#cell: いなくなる
+			#cell: —
+			#cell: To be gone / disappear
+			#cell: 死ぬ / #furigana{自殺する}{じさつする}
+			#cell: To die or to commit suicide.
+		#row
+			#cell: お手洗い
+			#cell: おてあらい
+			#cell: Hand-washing place
+			#cell: #furigana{便所}{べんじょ}
+			#cell: Toilet / restroom.
+		#row
+			#cell: 化粧室
+			#cell: けしょうしつ
+			#cell: Powder room
+			#cell: #furigana{便所}{べんじょ}
+			#cell: Toilet (formal, especially for women).
+		#row
+			#cell: あれ
+			#cell: —
+			#cell: That thing
+			#cell: —
+			#cell: Anything taboo in context — sex, period, bodily functions. Relies entirely on context.
+		#row
+			#cell: 女の子の日
+			#cell: おんなのこのひ
+			#cell: Girl's day
+			#cell: #furigana{生理}{せいり}
+			#cell: Menstruation.
+		#row
+			#cell: 月のもの
+			#cell: つきのもの
+			#cell: Monthly thing
+			#cell: #furigana{生理}{せいり}
+			#cell: Menstruation.
+		#row
+			#cell: 飛ばす
+			#cell: とばす
+			#cell: To let fly
+			#cell: #furigana{屁をこく}{へをこく}
+			#cell: To fart (playful).
+		#row
+			#cell: ご不幸
+			#cell: ごふこう
+			#cell: Misfortune
+			#cell: #furigana{死}{し}
+			#cell: A death (in the family). Used to avoid saying 死 directly.
+		#row
+			#cell: 身体を売る
+			#cell: からだをうる
+			#cell: To sell one's body
+			#cell: #furigana{売春}{ばいしゅん}
+			#cell: Prostitution.
+		#row
+			#cell: 夜の仕事
+			#cell: よるのしごと
+			#cell: Night work
+			#cell: #furigana{風俗}{ふうぞく}/ 売春
+			#cell: Sex work / hostessing.
+		#row
+			#cell: パパ活
+			#cell: ぱぱかつ
+			#cell: Daddy activities
+			#cell: #furigana{援助交際}{えんじょこうさい}
+			#cell: Compensated dating / sugar daddy arrangement.

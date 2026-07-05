@@ -1,0 +1,262 @@
+#use(jp/furigana)
+#use(std/table)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Sentence Connectors}
+
+Japanese connects clauses using conjunctive particles and expressions. They attach to the end of the first clause.
+
+#h2{Reason / Cause}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Joiner
+			#cell: Attaches to
+			#cell: Nuance
+			#cell: Example
+		#row
+			#cell: から
+			#cell: Plain or polite form
+			#cell: Because — subjective reason, often justifying your own actions or opinions.
+			#cell: #furigana{暑い}{あつい}から、#furigana{窓}{まど}を#furigana{開けた}{あけた}— It was hot, so I opened the window.
+		#row
+			#cell: ので
+			#cell: Plain form (な-adj/noun + な + ので)
+			#cell: Because — softer, more objective. Preferred in polite speech and writing.
+			#cell: #furigana{雨}{あめ}なので、#furigana{出かけない}{でかけない}— Because it's raining, I won't go out.
+		#row
+			#cell: し
+			#cell: Plain form (な-adj/noun + だし)
+			#cell: Listing reasons (and besides...). Implies there are more reasons beyond what's said.
+			#cell: #furigana{安い}{やすい}し、おいしいし、よく#furigana{行く}{いく}— It's cheap, and tasty, so I go often.
+		#row
+			#cell: て form
+			#cell: Verb て form / adj くて / noun で
+			#cell: Cause/sequence — neutral connection. The first event leads to or causes the second.
+			#cell: #furigana{風邪をひいて}{かぜをひいて}、学校を#furigana{休んだ}{やすんだ}— I caught a cold and missed school.
+
+#h2{Contrast / But}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Joiner
+			#cell: Attaches to
+			#cell: Nuance
+			#cell: Example
+		#row
+			#cell: けど / けれど / けれども
+			#cell: Plain or polite form
+			#cell: But — casual (けど) to formal (けれども). Also used to soften or introduce a topic.
+			#cell: #furigana{高い}{たかい}けど、#furigana{買った}{かった}— It was expensive, but I bought it.
+		#row
+			#cell: が
+			#cell: Polite form (ます/です)
+			#cell: But — formal, written. Also used to softly introduce a topic or request.
+			#cell: すみませんが、ちょっとお聞きしたいのですが — Excuse me, I'd like to ask something...
+		#row
+			#cell: のに
+			#cell: Plain form (な-adj/noun + な + のに)
+			#cell: Even though / despite — implies frustration, disappointment, or surprise.
+			#cell: #furigana{約束した}{やくそくした}のに、#furigana{来なかった}{こなかった}— Even though they promised, they didn't come.
+		#row
+			#cell: ても / でも
+			#cell: て form + も
+			#cell: Even if — hypothetical concession.
+			#cell: 雨が#furigana{降っても}{ふっても}、行く — Even if it rains, I'll go.
+		#row
+			#cell: くせに
+			#cell: Plain form (な-adj/noun + の + くせに)
+			#cell: Even though — critical/accusatory. Implies someone is not acting as expected.
+			#cell: #furigana{知っている}{しっている}くせに、#furigana{教えない}{おしえない}— Even though you know, you won't tell me.
+
+#h2{Condition / If}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Joiner
+			#cell: Attaches to
+			#cell: Nuance
+			#cell: Example
+		#row
+			#cell: たら
+			#cell: た form + ら
+			#cell: If/when — general purpose. Often for one-time or specific situations. Also "when (it happened)".
+			#cell: #furigana{駅に着いたら}{えきについたら}、#furigana{電話して}{でんわして}— When you arrive at the station, call me.
+		#row
+			#cell: ば
+			#cell: Conditional form (えば/ければ)
+			#cell: If — general/hypothetical conditions. Focuses on the condition itself.
+			#cell: #furigana{安ければ}{やすければ}、買う — If it's cheap, I'll buy it.
+		#row
+			#cell: なら
+			#cell: Plain form / noun / な-adj stem
+			#cell: If (it's the case that) — reacting to something the listener said or a known situation.
+			#cell: #furigana{日本に行く}{にほんにいく}なら、#furigana{京都がいい}{きょうとがいい}— If you're going to Japan, Kyoto is good.
+		#row
+			#cell: と
+			#cell: Plain present form
+			#cell: When/if — automatic, habitual, or natural results. Cannot be used with volition/requests.
+			#cell: #furigana{春になると}{はるになると}、#furigana{桜が咲く}{さくらがさく}— When spring comes, the cherry blossoms bloom.
+		#row
+			#cell: とき（に）/ 時（に）
+			#cell: Plain form + とき (な-adj + な + とき, noun + の + とき)
+			#cell: When — a time/occasion when something happens. Dictionary form = action not yet done; た form = action already done.
+			#cell: #furigana{日本に行った}{にほんにいった}とき、#furigana{お寺を見た}{おてらをみた}— When I went to Japan, I saw temples.#linebreak 日本に行くとき、パスポートがいる — When (before) going to Japan, you need a passport.
+
+#h2{Sequence / And / Then}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Joiner
+			#cell: Attaches to
+			#cell: Nuance
+			#cell: Example
+		#row
+			#cell: て form
+			#cell: Verb て form
+			#cell: And then — sequential actions or simultaneous states.
+			#cell: #furigana{起きて}{おきて}、#furigana{顔を洗って}{かおをあらって}、朝ごはんを食べた — I woke up, washed my face, and ate breakfast.
+		#row
+			#cell: てから
+			#cell: て form + から
+			#cell: After doing — emphasizes that the first action is completed before the second starts.
+			#cell: #furigana{宿題をしてから}{しゅくだいをしてから}、#furigana{遊ぶ}{あそぶ}— After doing homework, I'll play.
+		#row
+			#cell: たあとで / あとで
+			#cell: た form + あとで
+			#cell: After — the second action happens some time after the first.
+			#cell: 食べたあとで、#furigana{散歩した}{さんぽした}— After eating, I took a walk.
+		#row
+			#cell: #furigana{前に}{まえに}
+			#cell: 辞書形 + 前に
+			#cell: Before doing something.
+			#cell: #furigana{寝る前に}{ねるまえに}、#furigana{本を読む}{ほんをよむ}— Before sleeping, I read a book.
+		#row
+			#cell: ながら
+			#cell: ます stem + ながら
+			#cell: While doing — two simultaneous actions. The main action is the second clause.
+			#cell: #furigana{音楽を聞きながら}{おんがくをききながら}、#furigana{勉強する}{べんきょうする}— I study while listening to music.
+		#row
+			#cell: たり～たりする
+			#cell: た form + り
+			#cell: Doing things like ... and ... — non-exhaustive list of actions.
+			#cell: 週末は#furigana{映画を見たり}{えいがをみたり}、#furigana{買い物したり}{かいものしたり}する — On weekends I watch movies, go shopping, etc.
+
+#h2{Purpose / In order to}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Joiner
+			#cell: Attaches to
+			#cell: Nuance
+			#cell: Example
+		#row
+			#cell: ために
+			#cell: 辞書形 / noun + の + ために
+			#cell: In order to — purpose (intentional). Also "because of" with た form.
+			#cell: #furigana{日本語を勉強するために}{にほんごをべんきょうするために}、日本に来た — I came to Japan to study Japanese.
+		#row
+			#cell: ように
+			#cell: 辞書形 / ない form + ように
+			#cell: So that — goal/hope, often for things not fully in your control.
+			#cell: #furigana{忘れない}{わすれない}ように、メモした — I took notes so I wouldn't forget.
+		#row
+			#cell: のに
+			#cell: 辞書形 / noun + に
+			#cell: For the purpose of — what something is used for.
+			#cell: この道具は#furigana{料理を作る}{りょうりをつくる}のに#furigana{使う}{つかう}— This tool is used for cooking.
+
+#h2{Addition / Moreover}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Joiner
+			#cell: Attaches to
+			#cell: Nuance
+			#cell: Example
+		#row
+			#cell: し
+			#cell: Plain form
+			#cell: And also / besides — listing multiple reasons or qualities.
+			#cell: #furigana{頭もいい}{あたまもいい}し、#furigana{優しい}{やさしい}し — They're smart, and kind too.
+		#row
+			#cell: それに
+			#cell: Sentence-initial
+			#cell: Moreover / on top of that — adds supporting information.
+			#cell: 安いし、それに、おいしい — It's cheap, and on top of that, it's delicious.
+		#row
+			#cell: #furigana{その上}{そのうえ}
+			#cell: Sentence-initial
+			#cell: Furthermore — more formal than それに.
+			#cell: #furigana{経験がある}{けいけんがある}。その上、#furigana{資格も持っている}{しかくももっている}— They have experience. Furthermore, they have qualifications.
+		#row
+			#cell: #furigana{上に}{うえに}
+			#cell: Plain form + 上に (な-adj + な + 上に)
+			#cell: In addition to — adds to what was already said, often compounding.
+			#cell: 雨が#furigana{降った上に}{ふったうえに}、#furigana{風も強かった}{かぜもつよかった}— On top of the rain, the wind was strong too.
+
+#h2{Sentence-Initial Connectors}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Connector
+			#cell: Meaning
+		#row
+			#cell: でも
+			#cell: But / However (casual)
+		#row
+			#cell: しかし
+			#cell: However (formal)
+		#row
+			#cell: ただし
+			#cell: However / Provided that (formal, adds a condition)
+		#row
+			#cell: だから
+			#cell: So / Therefore (casual, subjective)
+		#row
+			#cell: ですから
+			#cell: So / Therefore (polite)
+		#row
+			#cell: したがって
+			#cell: Therefore / Consequently (formal/written)
+		#row
+			#cell: そのため
+			#cell: For that reason (formal)
+		#row
+			#cell: それで
+			#cell: And so / Because of that
+		#row
+			#cell: すると
+			#cell: Then / Thereupon (something unexpected followed)
+		#row
+			#cell: そして
+			#cell: And then
+		#row
+			#cell: また
+			#cell: Also / Again
+		#row
+			#cell: つまり
+			#cell: In other words / That is to say
+		#row
+			#cell: ところが
+			#cell: However (unexpected contrast)
+		#row
+			#cell: ところで
+			#cell: By the way (topic change)
+		#row
+			#cell: #furigana{一方}{いっぽう}
+			#cell: On the other hand
+		#row
+			#cell: #furigana{逆に}{ぎゃくに}
+			#cell: Conversely
+		#row
+			#cell: #furigana{実は}{じつは}
+			#cell: Actually / To tell the truth
