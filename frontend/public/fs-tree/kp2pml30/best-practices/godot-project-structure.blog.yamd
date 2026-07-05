@@ -1,59 +1,59 @@
-#% meta "date", "2025 07 01"
+#use(std/html)
+#use(std/code)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+#html-block{<meta name="date" content="2025 07 01">}
 
-#! tag("h1")
-	Godot Project Structure
+#h1{Godot Project Structure}
 
 It is my opinion, and is by no means "objective"
 
-#! tag('h2')
-	Godot conventions
+#h2{Godot conventions}
 
 Godot by default uses following conventions:
-#! list("-")
-	#. if directory contains file #`.gdignore` godot won't look into it and won't import files from there
-	#. directory #`/addons` contains #link("https://docs.godotengine.org/en/stable/tutorials/plugins/editor/installing_plugins.html")#{ "addons" }#
+#list
+	#item: if directory contains file #tt{.gdignore} godot won't look into it and won't import files from there
+	#item: directory #tt{/addons} contains #link("https://docs.godotengine.org/en/stable/tutorials/plugins/editor/installing_plugins.html"){"addons"}
 
-#! tag('h2')
-	Proposed file structure
+#h2{Proposed file structure}
 
-#$ code
+#code(lang: "plain")
 	├── _export/ # <- here you will export your game when time comes
-	│   └── .gdignore
+	│   └── .gdignore
 	├── addons/
 	├── assets-src/ # <- assets that don't get imported by default, useful for original textures and .blend
-	│   └── .gdignore
+	│   └── .gdignore
 	├── core/ # <- no-assets "core" functionality without which your game can't function
-	│   └── PROJECT.gd # <- autoload, see below
+	│   └── PROJECT.gd # <- autoload, see below
 	├── demo/ # <- everything that will be included in demo on par with `/core` and `/addons`
 	├── full/
 	├── scripts/ # <- contains different automation scripts, such as exporters
-	│   └── .gdignore
+	│   └── .gdignore
 	└── test/ # <- directory for temporary stuff and experimenting
 
 This separation is proposed to allow splitting exported project into different packs. Godot has some complications with moving files, so you probably want it from the start.
 
-#`core` is separated so that you can open source it in case you want to help modders/whatever
+#tt{core} is separated so that you can open source it in case you want to help modders/whatever
 
-For #`demo/` directory I would propose layout akin to
+For #tt{demo/} directory I would propose layout akin to
 
-#$ code
+#code(lang: "plain")
 	├── assets/
-	│   ├── meshes/
-	│   ├── music/
-	│   ├── sounds/
-	│   └── textures/
+	│   ├── meshes/
+	│   ├── music/
+	│   ├── sounds/
+	│   └── textures/
 	└── scenes/
-	    ├── levels/
-	    └── ...
+	    ├── levels/
+	    └── ...
 
 Such a layout can make it easier to find what you need
 
-#! tag('h2')
-	#`PROJECT.gd`
+#h2{#tt{PROJECT.gd}}
 
 I suggest introducing this autoload (singleton) to keep project global data, such as layer names (they must be synced with project settings, so that both godot UI and gdscript use the same)
 
-#$ code(lang: YAMD::Code::Lang::GD_SCRIPT)
+#code(lang: "plain")
 	extends Node
 
 	enum LayerPhys3D {

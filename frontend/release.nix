@@ -1,27 +1,29 @@
-{ lib
-, pkgs
-, system
-, ...
+{
+  lib,
+  pkgs,
+  system,
+  ...
 }:
 let
-	npmBuildHook = pkgs.makeSetupHook {
-		name = "website-build-hook";
-	} ./nix/npm-build-hook.sh;
+  npmBuildHook = pkgs.makeSetupHook {
+    name = "website-build-hook";
+  } ./nix/npm-build-hook.sh;
 
-	npmInstallHook = pkgs.makeSetupHook {
-		name = "website-setup-hook";
-	} ./nix/npm-install-hook.sh;
-in pkgs.buildNpmPackage {
-	pname = "kp2pml30-website";
-	version = "0.0.1";
+  npmInstallHook = pkgs.makeSetupHook {
+    name = "website-setup-hook";
+  } ./nix/npm-install-hook.sh;
+in
+pkgs.buildNpmPackage {
+  pname = "kp2pml30-website";
+  version = "0.0.1";
 
-	inherit npmBuildHook npmInstallHook;
+  inherit npmBuildHook npmInstallHook;
 
-	nativeBuildInputs = with pkgs; [
-		bundler
-	];
+  nativeBuildInputs = with pkgs; [
+    bundler
+  ];
 
-	src = ./.;
+  src = ./.;
 
-	npmDepsHash = "sha256-Lh3Seedw9x096o0+XGW8tU18OlQbmzewH9a+9/uzzVA=";
+  npmDepsHash = "sha256-Lh3Seedw9x096o0+XGW8tU18OlQbmzewH9a+9/uzzVA=";
 }

@@ -12,7 +12,9 @@ pre[class*='language-'] {
 	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: normal;
-	font-family: 'Fira Code', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', monospace;
+	font-family:
+		'Fira Code', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo',
+		monospace;
 	font-size: 14px;
 	text-shadow: none;
 }
@@ -28,6 +30,20 @@ pre[class*='language-'],
 
 code[class='code-inline'] {
 	background: var(--background-darker-color);
+}
+
+/* Racket yamd (std/base #tt) emits bare inline <code>; give it the same
+   treatment the old code-inline class had. Block code stays [class*=language-]. */
+:not(pre) > code:not([class]) {
+	background: var(--background-darker-color);
+	padding: 0.15em 0.2em 0.05em;
+	border-radius: 0.3em;
+	border: 0.13em solid #7a6652;
+	box-shadow: 1px 1px 0.3em -0.1em #000 inset;
+	font-family:
+		'Fira Code', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo',
+		monospace;
+	font-size: 0.9em;
 }
 
 pre[class*='language-'] {
@@ -75,6 +91,24 @@ pre[class*='language-'] code {
 }
 
 .highlight-comment {
+	color: var(--muted-soft-color);
+}
+
+/* Racket yamd std/code token spans (<span class="tok-<kind>">). Mirrors the
+   old highlight-* palette above; the lexers emit keyword/string/number/comment. */
+.tok-keyword {
+	color: var(--primary-color);
+}
+
+.tok-string {
+	color: var(--quaternary-color);
+}
+
+.tok-number {
+	color: var(--quinary-color);
+}
+
+.tok-comment {
 	color: var(--muted-soft-color);
 }
 

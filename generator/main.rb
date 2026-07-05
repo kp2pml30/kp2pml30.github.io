@@ -20,9 +20,12 @@ end
 def render_blog(path)
 	target = path.sub_ext('')
 
-	yamd = Pathname.new(__FILE__).parent.join('yamd', 'exe', 'yamd')
-	gem = Pathname.new(__FILE__).parent.join('yamd', 'Gemfile')
-	args = 'bundle', 'exec', "--gemfile=#{gem.to_s}", yamd.to_s, '--in', path.to_s, '--out', target.to_s
+	# The renderer is the Racket yamd CLI, provided on PATH by the flake input
+	# (git.kp2pml30.moe/ya/yamd). It takes the input file positionally and
+	# writes an HTML fragment to -o (html is the default backend). Override the
+	# binary with the YAMD env var, e.g. YAMD='nix run .#yamd --'.
+	yamd = ENV.fetch('YAMD', 'yamd')
+	args = *yamd.split(' '), path.to_s, '-o', target.to_s
 	o, e, s = Open3.capture3(*args)
 	raise "run failed #{o} #{e} #{args}" if not s.success?
 

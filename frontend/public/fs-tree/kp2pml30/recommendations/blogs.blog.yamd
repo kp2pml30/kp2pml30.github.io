@@ -1,6 +1,7 @@
-#% meta "date", "2025 03 30"
+#use(std/html)
+#(define (h1 . b) (apply elem 'h1 b))
+#html-block{<meta name="date" content="2025 03 30">}
 
-#! tag("h1")
-	Recommended blogs
-#! list('-')
-	#. #link("https://pointersgonewild.com/")#{ Maxime Chevalier-Boisvert }#
+#h1{Recommended blogs}
+#list
+	#item: #link("https://pointersgonewild.com/"){Maxime Chevalier-Boisvert}

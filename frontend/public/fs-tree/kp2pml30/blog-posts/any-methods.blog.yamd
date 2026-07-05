@@ -1,44 +1,46 @@
-#% meta "date", "2023 11 30"
+#use(std/html)
+#use(std/code)
+#use(std/math/asciimath)
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+#html-block{<meta name="date" content="2023 11 30">}
 
-#! tag("h1")
-	Which methods an #`Any` type should have?
+#h1{Which methods an #tt{Any} type should have?}
 
-Here under #`Any` root of objects hierarchy is meant
+Here under #tt{Any} root of objects hierarchy is meant
 
-#! tag('h2')
-	Why there should be no #`hashCode`, #`equals` in #`Any` (and entire #`Comparable` as a type)
+#h2{Why there should be no #tt{hashCode}, #tt{equals} in #tt{Any} (and entire #tt{Comparable} as a type)}
 
 These methods look like a Java legacy, as they prohibit modifications, that make collections work different for different types.
-For instance, #`Map` can be implemented via #`Set`, if pair comparator compares only first elements (same with #`hashCode` and #`equals`).
-Instead of all this methods, their users must accept a #`Comparator` and so on,
+For instance, #tt{Map} can be implemented via #tt{Set}, if pair comparator compares only first elements (same with #tt{hashCode} and #tt{equals}).
+Instead of all this methods, their users must accept a #tt{Comparator} and so on,
 where there may be a "default" that does language-specific things
 
-#! tag('h2')
-	Why there should be no #`equals`?
+#h2{Why there should be no #tt{equals}?}
 
-#`equals` semantics may be different:
-#! list("-")
-	#. It may compare pointers
-	#. It may compare values
-	#. It may compare values in a special way (#(-0 != +0))
+#tt{equals} semantics may be different:
+#list
+	#item: It may compare pointers
+	#item: It may compare values
+	#item: It may compare values in a special way (#m{-0 != +0})
 
-There is also an issue with "pointers comparison", as single dispatch can't correctly handle all #`null`/#`undefined` cases
+There is also an issue with "pointers comparison", as single dispatch can't correctly handle all #tt{null}/#tt{undefined} cases
 
-#! tag('h2')
-	Should there be a #`toString`?
+#h2{Should there be a #tt{toString}?}
 
-Well, there are two issues with #`toString`:
-#! list("1")
-	#. I am pretty sure that default #`toString` signature is incorrect.
-		Why is it #`this.toString(): String` and not #`this.toString(sb: StringBuilder): void`?
+Well, there are two issues with #tt{toString}:
+#list(style: "1")
+	#item
+		I am pretty sure that default #tt{toString} signature is incorrect.
+		Why is it #tt{this.toString(): String} and not #tt{this.toString(sb: StringBuilder): void}?
 		First variant has extremely degraded performance, while second variant allows just making a stub
-	#. Why is it called #`toString`? It should be called #`toDebugString`. And should it be possible to override such method?
+	#item
+		Why is it called #tt{toString}? It should be called #tt{toDebugString}. And should it be possible to override such method?
 		That is probably a philosophical question, I would tend to answer "no", but who knows
 
-#! tag('h2')
-	Proposed #`Any` type
+#h2{Proposed #tt{Any} type}
 
-#$ code
+#code(lang: "plain")
 	class Any {
 		final fn toDebugString(): String {
 			let sb = new StringBuilder()

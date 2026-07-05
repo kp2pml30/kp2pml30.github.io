@@ -1,10 +1,11 @@
-#% meta "date", "2025 03 30"
+#use(std/html)
+#(define (h1 . b) (apply elem 'h1 b))
+#html-block{<meta name="date" content="2025 03 30">}
 
-#! tag("h1")
-	Best practices for game store pages
+#h1{Best practices for game store pages}
 
-#! list("1")
-	#. fancy thumbnail is a must
-	#. demo is appreciated, progress must be carried over
-	#. if game has a coop, there should be a discounted bundle for a few people
-	#. first trailer must show gameplay
+#list(style: "1")
+	#item: fancy thumbnail is a must
+	#item: demo is appreciated, progress must be carried over
+	#item: if game has a coop, there should be a discounted bundle for a few people
+	#item: first trailer must show gameplay

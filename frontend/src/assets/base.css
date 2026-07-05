@@ -129,7 +129,9 @@ body {
 		background-color 0.5s;
 	line-height: 1.6;
 
-	font-family: 'Fira Code', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', monospace, sans-serif;
+	font-family:
+		'Fira Code', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo',
+		monospace, sans-serif;
 	font-size: 15px;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -137,7 +139,9 @@ body {
 }
 
 .default-font {
-	font-family: 'Fira Code', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', monospace, sans-serif;
+	font-family:
+		'Fira Code', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo',
+		monospace, sans-serif;
 }
 
 ::-webkit-scrollbar {
