@@ -63,6 +63,15 @@ import CommentSection from '@/components/islands/CommentSection.vue'
 		</ol>
 	</div>
 
+	<h2>Tag Cloud</h2>
+	<img
+		class="tag-cloud"
+		src="/a/generated/tag-cloud.svg"
+		alt="Tag cloud"
+		width="1200"
+		height="630"
+	/>
+
 	<div
 		style="display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; margin-top: 1em"
 	>
@@ -98,5 +107,12 @@ import CommentSection from '@/components/islands/CommentSection.vue'
 	.banner-img {
 		height: 62px;
 		image-rendering: pixelated;
+	}
+
+	.tag-cloud {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0.5em auto 1em;
 	}
 </style>

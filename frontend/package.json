@@ -5,6 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "astro dev",
+		"prebuild": "kp2pml30-moe-generator",
 		"build": "astro build",
 		"preview": "astro preview"
 	},

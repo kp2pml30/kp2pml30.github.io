@@ -3,7 +3,7 @@ npmInstallHook() {
 
 	runHook preInstall
 
-	npm exec -- astro build
+	npm run build
 	mkdir -p "$out"
 	cp -r dist/* "$out"/
 

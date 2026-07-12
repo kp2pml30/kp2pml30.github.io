@@ -1,2 +1,2 @@
-# No build step needed here. The blog is rendered by generator/main.rb using
-# the Racket yamd CLI (flake input git.kp2pml30.moe/ya/yamd), run separately.
+# No build step needed here. The blog is rendered during install before Astro
+# builds, using the packaged kp2pml30-moe-generator.

@@ -8,6 +8,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+**/__pycache__/
+
 node_modules
 .DS_Store
 .vite
@@ -20,7 +22,8 @@ coverage
 /cypress/videos/
 /cypress/screenshots/
 
-frontend/public/**/*.html
+/frontend/public/**/*.html
+/frontend/public/**/*.blog
 
 # Editor directories and files
 .vscode/*

@@ -1,12 +1,12 @@
 # kp2pml30's blog
 
-Source for kp2pml30's blog: an Astro static site, a Rust backend, and a Ruby generator that renders `.blog.yamd` posts.
+Source for kp2pml30's blog: an Astro static site, a Rust backend, and a Python generator that renders `.blog.yamd` posts.
 
 ## Background
 
 The site is a terminal-flavoured personal blog. Content lives as `.blog.yamd`
 files under `frontend/public/fs-tree/` and is rendered to `.blog` HTML by the
-Ruby generator (which drives the [`yamd`](https://git.kp2pml30.moe/ya/yamd.git)
+Python generator (which drives the [`yamd`](https://git.kp2pml30.moe/ya/yamd.git)
 CLI). The Rust backend handles dynamic bits (e.g. altcha proof-of-work). Nix
 packages every component and provides the dev shell.
 
@@ -31,7 +31,7 @@ Inside the dev shell:
 
 ```sh
 # regenerate rendered posts from *.blog.yamd sources
-ruby generator/main.rb
+kp2pml30-moe-generator
 
 # frontend dev server
 cd frontend && npm install && npm run dev

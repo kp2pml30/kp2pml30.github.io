@@ -2,6 +2,7 @@
   lib,
   pkgs,
   system,
+  generator,
   ...
 }:
 let
@@ -21,6 +22,7 @@ pkgs.buildNpmPackage {
 
   nativeBuildInputs = with pkgs; [
     bundler
+    generator
   ];
 
   src = ./.;

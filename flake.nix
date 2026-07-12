@@ -48,6 +48,20 @@
           dontNpmBuild = true;
         };
         prettierAstroModules = "${prettierAstro}/lib/node_modules/prettier-astro-plugin/node_modules";
+        generatorPython = pkgs.python312.withPackages (pythonPackages: [
+          pythonPackages.wordcloud
+        ]);
+        generator = pkgs.writeShellApplication {
+          name = "kp2pml30-moe-generator";
+          runtimeInputs = [
+            generatorPython
+            inputs.yamd.packages.${system}.default
+          ];
+          text = ''
+            export KP2PML30_SITE_ROOT="''${KP2PML30_SITE_ROOT:-$PWD}"
+            exec ${generatorPython}/bin/python3 ${./generator/main.py} "$@"
+          '';
+        };
 
         pre-commit-check = inputs.git-hooks.lib.${system}.run {
           src = ./.;
@@ -72,6 +86,10 @@
 
             # TOML (Cargo.toml, rust-toolchain.toml)
             taplo.enable = true;
+
+            # Python
+            ruff.enable = true;
+            ruff-format.enable = true;
 
             # Frontend web source, incl. `.astro` (via the bundled plugin
             # above). prettier's default `types = [ "text" ]` is far too broad,
@@ -108,7 +126,15 @@
       in
       {
         packages = {
-          kp2pml30-moe-frontend = import ./frontend/release.nix { inherit lib pkgs system; };
+          kp2pml30-moe-generator = generator;
+          kp2pml30-moe-frontend = import ./frontend/release.nix {
+            inherit
+              generator
+              lib
+              pkgs
+              system
+              ;
+          };
           kp2pml30-moe-backend = import ./backend/release.nix { inherit lib pkgs system; };
         };
 
@@ -129,16 +155,11 @@
           inherit (pre-commit-check) shellHook;
           packages =
             (with pkgs; [
-              ruby
-              rubyPackages.nokogiri
-              rubyPackages.builder
-
-              # Racket yamd CLI (generator/main.rb renders .blog.yamd with it).
-              inputs.yamd.packages.${system}.default
+              generator
 
               rustup
 
-              python312
+              generatorPython
               pre-commit
 
               nodejs
