@@ -24,6 +24,7 @@ coverage
 
 /frontend/public/**/*.html
 /frontend/public/**/*.blog
+/frontend/src/tree.json
 
 # Editor directories and files
 .vscode/*

@@ -27,5 +27,5 @@ pkgs.buildNpmPackage {
 
   src = ./.;
 
-  npmDepsHash = "sha256-Lh3Seedw9x096o0+XGW8tU18OlQbmzewH9a+9/uzzVA=";
+  npmDepsHash = "sha256-VNqZ3DuWVK1cxFnqJpPlGlCjhKLGY4cpo07Xcb3+Saw=";
 }

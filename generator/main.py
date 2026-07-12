@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import shlex
 import subprocess
 import sys
@@ -21,7 +22,6 @@ from typing import Any
 
 from wordcloud import WordCloud
 
-
 SITE_ROOT = Path(
 	os.environ.get('KP2PML30_SITE_ROOT', Path(__file__).resolve().parent.parent)
 )
@@ -32,6 +32,68 @@ TREE_ROOT = FRONTEND_ROOT / 'public' / 'fs-tree'
 SITE_URL = 'https://kp2pml30.moe'
 UNKNOWN_DATE = '???? ?? ??'
 OUTPUT_LOCK = Lock()
+WORD_RE = re.compile(r"[A-Za-z][A-Za-z0-9_'-]{2,}")
+IGNORED_TEXT_TAGS = {'code', 'head', 'math', 'pre', 'script', 'style', 'svg'}
+STOP_WORDS = {
+	'about',
+	'after',
+	'all',
+	'also',
+	'and',
+	'are',
+	'but',
+	'can',
+	"can't",
+	'could',
+	"couldn't",
+	'do',
+	"don't",
+	'does',
+	"doesn't",
+	'for',
+	'from',
+	'have',
+	'here',
+	'into',
+	'its',
+	'just',
+	'like',
+	'more',
+	'not',
+	'one',
+	'only',
+	'our',
+	'out',
+	'should',
+	'some',
+	'than',
+	'that',
+	'the',
+	'their',
+	'there',
+	'these',
+	'they',
+	'this',
+	'was',
+	'when',
+	'which',
+	'while',
+	'will',
+	'with',
+	'would',
+	'you',
+	'your',
+	"i'll",
+}
+AURA_WORD_COLORS = (
+	'#a277ff',
+	'#61ffca',
+	'#ffca85',
+	'#f694ff',
+	'#82e2ff',
+	'#ff6767',
+	'#edecee',
+)
 
 
 def default_meta() -> dict[str, Any]:
@@ -62,19 +124,25 @@ class ProcessedFile:
 	path: Path
 	meta: dict[str, Any]
 	parser: HtmlMetadataParser | None
+	words: Counter[str] = field(default_factory=Counter)
 
 
 @dataclass
 class HtmlMetadataParser(HTMLParser):
 	meta: dict[str, Any] = field(default_factory=default_meta)
 	first_h1: str | None = None
+	words: Counter[str] = field(default_factory=Counter)
 	_in_h1: bool = False
 	_h1_parts: list[str] = field(default_factory=list)
+	_ignored_depth: int = 0
 
 	def __post_init__(self) -> None:
 		super().__init__()
 
 	def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+		if tag in IGNORED_TEXT_TAGS:
+			self._ignored_depth += 1
+
 		attrs_dict = dict(attrs)
 		if tag == 'meta':
 			name = attrs_dict.get('name')
@@ -90,6 +158,8 @@ class HtmlMetadataParser(HTMLParser):
 			self._h1_parts = []
 
 	def handle_endtag(self, tag: str) -> None:
+		if tag in IGNORED_TEXT_TAGS and self._ignored_depth:
+			self._ignored_depth -= 1
 		if tag == 'h1' and self._in_h1:
 			self.first_h1 = ''.join(self._h1_parts).strip()
 			self._in_h1 = False
@@ -97,6 +167,12 @@ class HtmlMetadataParser(HTMLParser):
 	def handle_data(self, data: str) -> None:
 		if self._in_h1:
 			self._h1_parts.append(data)
+		if self._ignored_depth:
+			return
+		for match in WORD_RE.finditer(data.lower()):
+			word = match.group(0).strip("'_-")
+			if word and word not in STOP_WORDS:
+				self.words[word] += 1
 
 
 def parse_args() -> Options:
@@ -199,16 +275,36 @@ def process_yamd(
 	return generated, meta, parser
 
 
+def parse_html_file(path: Path) -> HtmlMetadataParser | None:
+	if path.suffix not in {'.blog', '.html'}:
+		return None
+
+	parser = HtmlMetadataParser()
+	parser.feed(path.read_text())
+	return parser
+
+
 def process_file(path: Path, options: Options) -> ProcessedFile:
 	if str(path).endswith('.yamd'):
 		path, meta, parser = process_yamd(path, options)
-		return ProcessedFile(path=path, meta=meta, parser=parser)
+		return ProcessedFile(
+			path=path,
+			meta=meta,
+			parser=parser,
+			words=parser.words if parser else Counter(),
+		)
 
 	meta = default_meta()
 	meta_path = path.with_suffix('.meta.json')
 	if meta_path.exists():
 		meta = json.loads(meta_path.read_text())
-	return ProcessedFile(path=path, meta=meta, parser=None)
+	parser = parse_html_file(path)
+	return ProcessedFile(
+		path=path,
+		meta=meta,
+		parser=parser,
+		words=parser.words if parser else Counter(),
+	)
 
 
 def insert_file(trie: dict[str, Any], path: Path, meta: dict[str, Any]) -> None:
@@ -293,27 +389,52 @@ def build_sitemap(blog_items: list[BlogItem]) -> str:
 	)
 
 
-def write_tag_cloud(tags: Counter[str], path: Path, options: Options) -> None:
-	if not tags:
+def aura_word_color(word: str, *args: Any, **kwargs: Any) -> str:
+	return AURA_WORD_COLORS[sum(ord(char) for char in word) % len(AURA_WORD_COLORS)]
+
+
+def write_tag_cloud(words: Counter[str], path: Path, options: Options) -> None:
+	if not words:
 		path.unlink(missing_ok=True)
 		return
 	if options.check_ignored:
 		warn_if_not_gitignored(path)
 
-	synthetic_tags = ['kp2pml30', 'r3vdy-2-b10vv']
-	for tag in synthetic_tags:
-		del tags[tag]
+	bad_words = [x for x in words if "'" in x or '"' in x]
+	bad_words.extend(['kp2pml30', 'r3vdy', 'b10vv', 'r3vdy-2-b10vv'])
+
+	cloud_words = words.copy()
+	for word in bad_words:
+		del cloud_words[word]
+
+	if not cloud_words:
+		path.unlink(missing_ok=True)
+		return
 
 	cloud = WordCloud(
 		width=1200,
 		height=630,
 		background_color=None,
 		mode='RGBA',
-		color_func=lambda *args, **kwargs: '#d7d7d7',
-		prefer_horizontal=1.0,
+		color_func=aura_word_color,
+		prefer_horizontal=0.8,
 		random_state=0,
-	).generate_from_frequencies(tags)
-	path.write_text(cloud.to_svg(embed_font=False))
+	).generate_from_frequencies(cloud_words)
+	path.write_text(cloud.to_svg(embed_font=True))
+
+	with OUTPUT_LOCK:
+		print(f'word cloud written to {path}')
+
+
+def process_paths(paths: list[Path], options: Options) -> list[ProcessedFile]:
+	if len(paths) <= 1:
+		return [process_file(path, options) for path in paths]
+
+	with ThreadPoolExecutor(max_workers=min(options.jobs, len(paths))) as executor:
+		futures: list[Future[ProcessedFile]] = [
+			executor.submit(process_file, path, options) for path in paths
+		]
+		return [future.result() for future in futures]
 
 
 def main() -> None:
@@ -325,6 +446,7 @@ def main() -> None:
 	}
 	blog_items: list[BlogItem] = []
 	tags: Counter[str] = Counter()
+	words: Counter[str] = Counter()
 	paths = []
 
 	for path in sorted(TREE_ROOT.glob('**/*')):
@@ -336,32 +458,27 @@ def main() -> None:
 			continue
 		paths.append(path)
 
-	with ThreadPoolExecutor(max_workers=options.jobs) as executor:
-		futures: list[Future[ProcessedFile]] = [
-			executor.submit(process_file, path, options) for path in paths
-		]
+	for processed in process_paths(paths, options):
+		path = processed.path
+		meta = processed.meta
+		parser = processed.parser
 
-		for future in futures:
-			processed = future.result()
-			path = processed.path
-			meta = processed.meta
-			parser = processed.parser
-
-			if str(path).endswith('.blog') and parser is not None:
-				if meta['date'] is None:
-					msg = f'No date found for {path} {meta}'
-					raise RuntimeError(msg)
-				blog_items.append(
-					BlogItem(
-						title=parser.first_h1 or path.name,
-						date=meta['date'],
-						date_edited=meta['date_edited'],
-						path=path.relative_to(TREE_ROOT).as_posix(),
-					)
+		if str(path).endswith('.blog') and parser is not None:
+			if meta['date'] is None:
+				msg = f'No date found for {path} {meta}'
+				raise RuntimeError(msg)
+			blog_items.append(
+				BlogItem(
+					title=parser.first_h1 or path.name,
+					date=meta['date'],
+					date_edited=meta['date_edited'],
+					path=path.relative_to(TREE_ROOT).as_posix(),
 				)
+			)
 
-			tags.update(meta.get('tags', []))
-			insert_file(trie, path, meta)
+		words.update(processed.words)
+		tags.update(meta.get('tags', []))
+		insert_file(trie, path, meta)
 
 	trie = normalize_tree(trie)
 	write_generated_text(
@@ -387,8 +504,13 @@ def main() -> None:
 	write_generated_text(
 		generated_dir / 'sitemap.xml', build_sitemap(blog_items), options
 	)
-	(generated_dir / 'tag-cloud.png').unlink(missing_ok=True)
-	write_tag_cloud(tags, generated_dir / 'tag-cloud.svg', options)
+
+	word_cloud_path = generated_dir / 'word-cloud.svg'
+	word_cloud_path.unlink(missing_ok=True)
+	write_tag_cloud(words, word_cloud_path, options)
+	tag_cloud_path = generated_dir / 'tag-cloud.svg'
+	tag_cloud_path.unlink(missing_ok=True)
+	write_tag_cloud(tags, tag_cloud_path, options)
 
 
 if __name__ == '__main__':

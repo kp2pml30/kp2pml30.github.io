@@ -1,0 +1,22 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: kp2pml30 <kp2pml30@gmail.com>
+Date: Sun, 12 Jul 2026 00:00:00 +0900
+Subject: [PATCH] fix: use KeyInit for HMAC initialization
+
+---
+ src/utils.rs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/utils.rs b/src/utils.rs
+index 071d86e..61cc2f7 100644
+--- a/src/utils.rs
++++ b/src/utils.rs
+@@ -47,7 +47,7 @@ pub fn hmac_function(altcha_algorithm: &AltchaAlgorithm, data: &str, key: &str)
+ }
+ 
+ fn hmac_from_slice_to_hex_str<HmacType: KeyInit + Mac>(data: &str, key: &str) -> String {
+-    let mut mac = <HmacType as hmac::Mac>::new_from_slice(key.as_bytes())
++    let mut mac = <HmacType as KeyInit>::new_from_slice(key.as_bytes())
+         .expect("HMAC can take key of any size");
+     mac.update(data.as_bytes());
+     let res = mac.finalize();

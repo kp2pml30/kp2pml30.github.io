@@ -20,6 +20,7 @@ let
     patches = [
       ../.git-third-party/patches/backend/third-party/altcha-lib-rs/1
       ../.git-third-party/patches/backend/third-party/altcha-lib-rs/2
+      ../.git-third-party/patches/backend/third-party/altcha-lib-rs/3
     ];
 
     installPhase = ''

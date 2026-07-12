@@ -101,9 +101,30 @@ async function readMessages() {
 				<altcha-widget
 					:challengeurl="`${BACKEND_ADDR}/altcha-challenge`"
 					debug
+					auto="onsubmit"
+					colorscheme="dark"
 				></altcha-widget>
 				<input type="submit" value="POST" style="width: 100%" />
 			</div>
 		</form>
 	</div>
 </template>
+
+<style>
+altcha-widget {
+	color-scheme: dark;
+	--altcha-color-base: var(--background-soft-color);
+	--altcha-color-base-content: var(--foreground-color);
+	--altcha-color-neutral: var(--muted-soft-color);
+	--altcha-color-neutral-content: var(--foreground-color);
+	--altcha-color-primary: var(--primary-color);
+	--altcha-color-primary-content: var(--background-color);
+	--altcha-color-success: var(--success-color);
+	--altcha-color-success-content: var(--background-color);
+	--altcha-border-color: var(--foreground-soft-color);
+	--altcha-input-background-color: var(--background-darker-color);
+	--altcha-input-color: var(--foreground-color);
+	--altcha-checkbox-border-color: var(--foreground-soft-color);
+	--altcha-spinner-color: var(--foreground-color);
+}
+</style>

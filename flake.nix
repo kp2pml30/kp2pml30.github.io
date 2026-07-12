@@ -2,7 +2,7 @@
   description = "kp2pml30's blog";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     rust-overlay = {
       url = "github:oxalica/rust-overlay/stable";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,10 +16,18 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    git-third-party = {
+      url = "github:kp2pml30/git-third-party";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.systems.follows = "systems";
+    };
     yamd = {
       url = "git+https://git.kp2pml30.moe/ya/yamd.git";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.git-hooks.follows = "git-hooks";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.systems.follows = "systems";
     };
   };
 
@@ -163,7 +171,7 @@
               pre-commit
 
               nodejs
-              nodePackages.npm
+              nodejs
               prefetch-npm-deps
             ])
             ++ pre-commit-check.enabledPackages;
