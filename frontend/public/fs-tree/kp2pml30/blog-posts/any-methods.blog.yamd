@@ -1,10 +1,11 @@
 #use(std/html)
 #use(std/code)
 #use(std/math/asciimath)
+#use(meta)
+#meta(created: "2023 11 30" edited: "2026 07 05" tags: '("kp2pml30" "programming" "design" "langs" "hot-take"))
+
 #(define (h1 . b) (apply elem 'h1 b))
 #(define (h2 . b) (apply elem 'h2 b))
-#html-block{<meta name="date" content="2023 11 30">}
-
 #h1{Which methods an #tt{Any} type should have?}
 
 Here under #tt{Any} root of objects hierarchy is meant

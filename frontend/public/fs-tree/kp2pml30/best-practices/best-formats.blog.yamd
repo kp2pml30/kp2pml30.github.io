@@ -1,0 +1,19 @@
+#use(std/table)
+#use(std/html)
+#use(meta)
+#meta(created: "2026 07 06" edited: "2026 07 06" tags: '("kp2pml30" "hot-take" "programming" "design"))
+
+#section{Best Formats and Other Hot Takes}::
+
+#section{Formats}:
+
+	#table(header: 1)
+
+		#row{Purpose}{Format}{Explanation}
+		#row{Human Config}{TOML}{}
+		#row{Code Config}{JSON}{}
+		#row{Generic Digest}{Douglas Crockford's base32}{}
+		#row{Hash}{sha_3}{keccak is pre-standard}
+		#row{Compression for Cold Storage}{xz -9}{Far better compression rate than competitors}
+		#row{Compression for realtime}{zstd}{Good Balance}
+		#row{Archive for Cold Storage}{tar}{Compresses cross-file}

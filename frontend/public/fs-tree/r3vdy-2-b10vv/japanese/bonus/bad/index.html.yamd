@@ -1,0 +1,24 @@
+#use(jp/furigana)
+#use(meta)
+#meta(created: "2026 07 12" edited: "2026 07 12" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
+
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Japanese Bad Words & Vulgar Language}
+
+#strong{Disclaimer:} These pages are for educational purposes only — to help learners recognize and understand these words in context (anime, manga, games, online posts, and conversations). Knowing what words mean helps you avoid using them inappropriately.
+
+Japanese swearing is generally milder than in English, but social setting, relationship, gendered expectations, and tone matter a lot. A word that sounds playful among close friends can become insulting or threatening in a formal setting.
+
+#h2{Sections}
+
+#list
+	#item: #link("/view/r3vdy-2-b10vv/japanese/bonus/bad/bodily.html"){Bodily language}: body parts, sexual terms, bodily functions, and taboo but non-vulgar medical words.
+	#item: #link("/view/r3vdy-2-b10vv/japanese/bonus/bad/slurs.html"){Slurs & insults}: common insults, rough exclamations, and hostile commands.
+	#item: #link("/view/r3vdy-2-b10vv/japanese/bonus/bad/characters.html"){Rude character speech}: rough pronouns, endings, and fictional/anime speech patterns that signal aggression or arrogance.
+	#item: #link("/view/r3vdy-2-b10vv/japanese/bonus/bad/euphimisms.html"){Euphemisms}: indirect ways Japanese avoids saying death, sex, toilets, menstruation, and other taboo topics directly.
+
+#h2{How to read these}
+
+The English glosses are intentionally direct, but they are not always exact in strength. Japanese often relies less on a fixed "swear word" and more on register, bluntness, pronoun choice, command form, and the speaker's relationship to the listener.

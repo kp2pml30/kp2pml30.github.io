@@ -1,0 +1,160 @@
+#use(jp/furigana)
+#use(std/table)
+#use(meta)
+#meta(created: "2026 07 12" edited: "2026 07 12" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
+
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Japanese Euphemisms}
+
+Japanese often softens taboo topics with indirect phrases. These are useful to recognize because the literal wording may sound harmless while the implied topic is death, sex, toilets, menstruation, pregnancy, or sex work.
+
+#h2{Euphemisms}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Literal meaning
+			#cell: Direct Japanese
+			#cell: What it hides
+		#row
+			#cell: あの世
+			#cell: あのよ
+			#cell: That world
+			#cell: #furigana{死後の世界}{しごのせかい}
+			#cell: The afterlife / death.
+		#row
+			#cell: お花摘み
+			#cell: おはなつみ
+			#cell: Picking flowers
+			#cell: トイレに行く
+			#cell: Going to the toilet (women's speech).
+		#row
+			#cell: 手を洗う
+			#cell: てをあらう
+			#cell: Washing hands
+			#cell: トイレに行く
+			#cell: Going to the toilet.
+		#row
+			#cell: 大人の関係
+			#cell: おとなのかんけい
+			#cell: Adult relationship
+			#cell: #furigana{性的関係}{せいてきかんけい}
+			#cell: Sexual relationship.
+		#row
+			#cell: 夜の営み
+			#cell: よるのいとなみ
+			#cell: Nighttime activity
+			#cell: セックス
+			#cell: Sex between a couple.
+		#row
+			#cell: 一線を越える
+			#cell: いっせんをこえる
+			#cell: Crossing a line
+			#cell: セックスする
+			#cell: Having sex, often implying a relationship changed.
+		#row
+			#cell: できちゃった
+			#cell: —
+			#cell: It happened
+			#cell: #furigana{妊娠した}{にんしんした}
+			#cell: Unplanned pregnancy. できちゃった婚 = shotgun wedding.
+		#row
+			#cell: お腹に赤ちゃんがいる
+			#cell: おなかにあかちゃんがいる
+			#cell: There's a baby in the belly
+			#cell: #furigana{妊娠している}{にんしんしている}
+			#cell: Being pregnant (soft/indirect phrasing).
+		#row
+			#cell: あちらの世界
+			#cell: あちらのせかい
+			#cell: The world over there
+			#cell: #furigana{死後の世界}{しごのせかい}
+			#cell: Death / the afterlife.
+		#row
+			#cell: 眠る
+			#cell: ねむる
+			#cell: To sleep
+			#cell: #furigana{死ぬ}{しぬ}
+			#cell: To die. On gravestones: 永遠に眠る = to sleep forever.
+		#row
+			#cell: いなくなる
+			#cell: —
+			#cell: To be gone / disappear
+			#cell: 死ぬ / #furigana{自殺する}{じさつする}
+			#cell: To die or to commit suicide.
+		#row
+			#cell: お手洗い
+			#cell: おてあらい
+			#cell: Hand-washing place
+			#cell: #furigana{便所}{べんじょ}
+			#cell: Toilet / restroom.
+		#row
+			#cell: 化粧室
+			#cell: けしょうしつ
+			#cell: Powder room
+			#cell: #furigana{便所}{べんじょ}
+			#cell: Toilet (formal, especially for women).
+		#row
+			#cell: あれ
+			#cell: —
+			#cell: That thing
+			#cell: —
+			#cell: Anything taboo in context — sex, period, bodily functions. Relies entirely on context.
+		#row
+			#cell: 女の子の日
+			#cell: おんなのこのひ
+			#cell: Girl's day
+			#cell: #furigana{生理}{せいり}
+			#cell: Menstruation.
+		#row
+			#cell: 月のもの
+			#cell: つきのもの
+			#cell: Monthly thing
+			#cell: #furigana{生理}{せいり}
+			#cell: Menstruation.
+		#row
+			#cell: 飛ばす
+			#cell: とばす
+			#cell: To let fly
+			#cell: #furigana{屁をこく}{へをこく}
+			#cell: To fart (playful).
+		#row
+			#cell: ご不幸
+			#cell: ごふこう
+			#cell: Misfortune
+			#cell: #furigana{死}{し}
+			#cell: A death in the family. Used to avoid saying 死 directly.
+		#row
+			#cell: 身体を売る
+			#cell: からだをうる
+			#cell: To sell one's body
+			#cell: #furigana{売春}{ばいしゅん}
+			#cell: Prostitution.
+		#row
+			#cell: 夜の仕事
+			#cell: よるのしごと
+			#cell: Night work
+			#cell: #furigana{風俗}{ふうぞく} / 売春
+			#cell: Sex work / hostessing.
+		#row
+			#cell: パパ活
+			#cell: ぱぱかつ
+			#cell: Daddy activities
+			#cell: #furigana{援助交際}{えんじょこうさい}
+			#cell: Compensated dating / sugar daddy arrangement.
+		#row
+			#cell: お迎えが来る
+			#cell: おむかえがくる
+			#cell: Someone comes to pick you up
+			#cell: 死ぬ
+			#cell: Death, often framed gently for old age.
+		#row
+			#cell: 旅立つ
+			#cell: たびだつ
+			#cell: To depart on a journey
+			#cell: 死ぬ
+			#cell: To pass away.

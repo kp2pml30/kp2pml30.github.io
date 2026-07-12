@@ -14,7 +14,12 @@ trie = {
 }
 
 def default_meta
-	{ date: "???? ?? ??" }
+	{
+		date: "???? ?? ??",
+		date_created: "???? ?? ??",
+		date_edited: "???? ?? ??",
+		tags: [],
+	}
 end
 
 def render_blog(path)
@@ -54,9 +59,15 @@ def process_yamd(path)
 	doc = nil
 	if generated.exist?
 		doc = Nokogiri::HTML.parse(generated.read())
-		meta_tag = doc.at('meta[name="date"]')
-		if meta_tag
-			meta[:date] = meta_tag['content']
+		%w[date date-created date-edited].each do |name|
+			meta_tag = doc.at(%(meta[name="#{name}"]))
+			next unless meta_tag
+
+			meta[name.tr('-', '_').to_sym] = meta_tag['content']
+		end
+		tags_tag = doc.at('meta[name="tags"]')
+		if tags_tag
+			meta[:tags] = tags_tag['content'].split(',').map(&:strip).reject(&:empty?)
 		end
 	end
 	return generated, meta, doc
@@ -74,6 +85,7 @@ tree_root.glob('**/*').each { |p|
 			blog_items << {
 				title: title_tag ? title_tag.text.strip : p.basename.to_s,
 				date: meta[:date],
+				date_edited: meta[:date_edited],
 				path: p.relative_path_from(tree_root).to_s,
 			}
 		end
@@ -161,8 +173,9 @@ sitemap.urlset(xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9") {
 	blog_items.each { |item|
 		sitemap.url {
 			sitemap.loc "#{site_url}/view/#{item[:path]}"
-			if item[:date] != "???? ?? ??"
-				sitemap.lastmod item[:date].gsub(' ', '-')
+			lastmod = item[:date_edited] || item[:date]
+			if lastmod != "???? ?? ??"
+				sitemap.lastmod lastmod.gsub(' ', '-')
 			end
 		}
 	}

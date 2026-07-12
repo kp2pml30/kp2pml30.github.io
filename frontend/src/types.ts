@@ -6,6 +6,9 @@ export type FSItemDir = {
 
 export type FSItemFileMeta = {
 	date: string
+	date_created: string
+	date_edited: string
+	tags: string[]
 }
 
 export type FSItemFile = {

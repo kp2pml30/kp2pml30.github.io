@@ -1,0 +1,147 @@
+#use(jp/furigana)
+#use(std/table)
+#use(meta)
+#meta(created: "2026 07 12" edited: "2026 07 12" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
+
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+#(define (h3 . b) (apply elem 'h3 b))
+
+#h1{Tendency, Degree & State}
+
+Suffixes and patterns that describe tendencies, degrees, states of being, and how much of a quality something has.
+
+#h2{Tendency — "tend to"}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ～がち
+			#cell: ます stem / noun + がち
+			#cell: Tend to (negative tendency) — happens too often.
+			#cell: #furigana{遅れがち}{おくれがち}— Tends to be late.#linebreak#furigana{病気がち}{びょうきがち}— Prone to illness.
+		#row
+			#cell: ～っぽい
+			#cell: ます stem / noun / い-adj stem + っぽい
+			#cell: -ish / -like — gives the impression of. Often slightly negative.
+			#cell: #furigana{忘れっぽい}{わすれっぽい}— Forgetful.#linebreak#furigana{子供っぽい}{こどもっぽい}— Childish.#linebreak#furigana{白っぽい}{しろっぽい}— Whitish.
+		#row
+			#cell: ～気味
+			#cell: ます stem / noun + 気味
+			#cell: Slightly / a touch of — beginning of an undesirable state.
+			#cell: #furigana{風邪気味}{かぜぎみ}— Slight cold.#linebreak#furigana{太り気味}{ふとりぎみ}— Slightly overweight.
+
+#h2{Completion & Extent — "fully" / "too much"}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ～きる / ～きれる
+			#cell: ます stem + きる
+			#cell: Completely / to the end — do something fully.
+			#cell: #furigana{走りきった}{はしりきった}— Ran all the way.#linebreak#furigana{食べきれない}{たべきれない}— Can't eat it all.
+		#row
+			#cell: ～きれない
+			#cell: ます stem + きれない
+			#cell: Cannot finish / too much to fully do.
+			#cell: #furigana{数えきれない}{かぞえきれない}— Too many to count.
+		#row
+			#cell: ～すぎる
+			#cell: ます stem / adj stem + すぎる
+			#cell: Too much — excess.
+			#cell: #furigana{食べすぎた}{たべすぎた}— Ate too much.#linebreak#furigana{高すぎる}{たかすぎる}— Too expensive.
+		#row
+			#cell: ～かける / ～かけ
+			#cell: ます stem + かける
+			#cell: Half-done / about to start — incomplete action.
+			#cell: #furigana{読みかけの本}{よみかけのほん}— A half-read book.#linebreak#furigana{言いかけてやめた}{いいかけてやめた}— Started to say it but stopped.
+
+#h2{State — "covered in" / "full of"}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ～だらけ
+			#cell: Noun + だらけ
+			#cell: Full of / covered in — always negative.
+			#cell: #furigana{間違いだらけ}{まちがいだらけ}— Full of mistakes.#linebreak ゴミだらけ — Covered in garbage.
+		#row
+			#cell: ～まみれ
+			#cell: Noun + まみれ
+			#cell: Covered in / smeared with — physical coating, always negative.
+			#cell: #furigana{泥まみれ}{どろまみれ}— Covered in mud.#linebreak#furigana{血まみれ}{ちまみれ}— Covered in blood.
+		#row
+			#cell: ～ずくめ
+			#cell: Noun + ずくめ
+			#cell: All / nothing but — entirely composed of.
+			#cell: #furigana{黒ずくめ}{くろずくめ}— All in black.#linebreak いいことずくめ — Nothing but good things.
+
+#h3{だらけ vs まみれ vs ずくめ}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell:
+			#cell: だらけ
+			#cell: まみれ
+			#cell: ずくめ
+		#row
+			#cell: Type
+			#cell: Scattered throughout
+			#cell: Physically coated on surface
+			#cell: Entirely composed of
+		#row
+			#cell: Nuance
+			#cell: Negative (undesirable abundance)
+			#cell: Negative (physically dirty/messy)
+			#cell: Can be positive or negative
+		#row
+			#cell: Example
+			#cell: #furigana{傷だらけ}{きずだらけ}— Covered in scratches
+			#cell: #furigana{汗まみれ}{あせまみれ}— Drenched in sweat
+			#cell: 黒ずくめ — Dressed all in black
+
+#h2{Difficulty}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Attaches to
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ～やすい
+			#cell: ます stem + やすい
+			#cell: Easy to — tendency or ease.
+			#cell: わかりやすい — Easy to understand.#linebreak#furigana{壊れやすい}{こわれやすい}— Breaks easily / fragile.
+		#row
+			#cell: ～にくい
+			#cell: ます stem + にくい
+			#cell: Hard to / difficult to.
+			#cell: #furigana{読みにくい}{よみにくい}— Hard to read.#linebreak 食べにくい — Hard to eat.
+		#row
+			#cell: ～づらい
+			#cell: ます stem + づらい
+			#cell: Hard to — with psychological difficulty or discomfort.
+			#cell: #furigana{言いづらい}{いいづらい}— Hard to say (emotionally).#linebreak#furigana{話しづらい}{はなしづらい}— Hard to talk to.
+		#row
+			#cell: ～がたい
+			#cell: ます stem + がたい
+			#cell: Hard to — almost impossible, formal/literary.
+			#cell: #furigana{信じがたい}{しんじがたい}— Hard to believe.#linebreak#furigana{許しがたい}{ゆるしがたい}— Unforgivable.

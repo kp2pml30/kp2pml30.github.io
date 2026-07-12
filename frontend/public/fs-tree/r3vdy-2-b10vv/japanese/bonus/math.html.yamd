@@ -1,0 +1,284 @@
+#use(jp/furigana)
+#use(std/table)
+#use(meta)
+#meta(created: "2026 07 12" edited: "2026 07 12" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
+
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+#(define (h3 . b) (apply elem 'h3 b))
+
+#h1{Math Japanese Guide for English Users}
+
+English-first reference for Japanese mathematical vocabulary, including calculus and logic/type-theory terms.
+
+#h2{1. common words}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: English term
+			#cell: Japanese term
+			#cell: Meaning
+		#row
+			#cell: math
+			#cell: #furigana{数学}{すうがく}
+			#cell: Mathematics as a field or subject.
+		#row
+			#cell: number
+			#cell: #furigana{数}{すう}
+			#cell: A quantity or value.
+		#row
+			#cell: variable
+			#cell: #furigana{変数}{へんすう}
+			#cell: A symbol such as x, y, z.
+		#row
+			#cell: function
+			#cell: #furigana{関数}{かんすう}
+			#cell: Rule mapping inputs to outputs, written as f(x).
+		#row
+			#cell: equation
+			#cell: #furigana{方程式}{ほうていしき}
+			#cell: Equality statement with “=”.
+		#row
+			#cell: expression
+			#cell: #furigana{式}{しき}
+			#cell: A formula written as expression before simplification or transformation.
+		#row
+			#cell: sequence
+			#cell: #furigana{数列}{すうれつ}
+			#cell: Ordered list of terms.
+		#row
+			#cell: set
+			#cell: #furigana{集合}{しゅうごう}
+			#cell: A collection of elements.
+		#row
+			#cell: derivative
+			#cell: #furigana{微分}{びぶん}
+			#cell: Instantaneous rate of change.
+		#row
+			#cell: integral
+			#cell: #furigana{積分}{せきぶん}
+			#cell: Accumulated area/sum via limits.
+		#row
+			#cell: theorem
+			#cell: #furigana{定理}{ていり}
+			#cell: A proven statement under assumptions.
+		#row
+			#cell: proof
+			#cell: #furigana{証明}{しょうめい}
+			#cell: Logical sequence that demonstrates correctness.
+
+#h3{Problem-language words}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: English term
+			#cell: Japanese term
+			#cell: Typical usage
+		#row
+			#cell: problem
+			#cell: #furigana{問題}{もんだい}
+			#cell: #furigana{問}{と} in math statements.
+		#row
+			#cell: solution
+			#cell: #furigana{解}{かい}
+			#cell: #furigana{問題の解}{もんだいのかい}, #furigana{答え}{こたえ}
+		#row
+			#cell: given
+			#cell: #furigana{与えられた}{あたえられた}
+			#cell: Data already provided as a condition.
+		#row
+			#cell: given
+			#cell: #furigana{与えられる}{あたえられる}
+			#cell: The standard way to say a condition is already specified.
+
+#h2{2. operations}
+
+#h3{Frequency order. For division, the second column is English variants first, including spoken forms; third is Japanese.}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Operation
+			#cell: English variants
+			#cell: Japanese term
+			#cell: Example
+		#row
+			#cell: addition
+			#cell: add, plus, sum, increase
+			#cell: #furigana{加法}{かほう} / #furigana{足し算}{たしざん}
+			#cell: 3 + 4 = 7
+		#row
+			#cell: subtraction
+			#cell: subtract, minus, take away, difference
+			#cell: #furigana{減法}{げんほう} / #furigana{引き算}{ひきざん}
+			#cell: 7 - 3 = 4
+		#row
+			#cell: multiplication
+			#cell: multiply, times, product
+			#cell: #furigana{乗法}{じょうほう} / #furigana{掛け算}{かけざん}
+			#cell: 3 × 4 = 12
+		#row
+			#cell: division
+			#cell: divide, divided by, quotient, ratio, a/b, 2 over 3, two thirds
+			#cell: #furigana{除法}{じょほう} / #furigana{割り算}{わりざん}
+			#cell: 2 ÷ 3 = 2/3 = にぶんのさん
+		#row
+			#cell: exponent
+			#cell: power, raise to, squared, cubed, nth power
+			#cell: #furigana{べき乗}{べきじょう}
+			#cell: x^2, x^3, x^n
+		#row
+			#cell: equation solving
+			#cell: solve, solve for, isolate
+			#cell: #furigana{方程式を解く}{ほうていしきをとく}
+			#cell: Solve x + 2 = 5
+		#row
+			#cell: limit
+			#cell: limit, tends to, approaches
+			#cell: #furigana{極限}{きょくげん}
+			#cell: x → ∞
+		#row
+			#cell: derivative
+			#cell: derivative, differentiate, rate of change, slope
+			#cell: #furigana{微分}{びぶん}
+			#cell: d/dx f(x)
+		#row
+			#cell: integral
+			#cell: integrate, antiderivative, definite integral
+			#cell: #furigana{積分}{せきぶん}
+			#cell: ∫ f(x) dx
+		#row
+			#cell: summation
+			#cell: sum, summation, sum up
+			#cell: #furigana{総和}{そうわ}
+			#cell: Σ_{i=1}^{n} a_i
+
+#h2{3. math logic and type theory}
+
+#h3{Math logic}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: English term
+			#cell: Japanese term
+			#cell: Meaning
+		#row
+			#cell: proposition
+			#cell: #furigana{命題}{めいだい}
+			#cell: True/false statement.
+		#row
+			#cell: implication
+			#cell: #furigana{含意}{がんい}
+			#cell: “If A then B”, written A ⇒ B.
+		#row
+			#cell: equivalence
+			#cell: #furigana{同値}{どうち}
+			#cell: A iff B, written A ↔ B.
+		#row
+			#cell: conjunction
+			#cell: #furigana{論理積}{ろんりせき}
+			#cell: A and B (A ∧ B).
+		#row
+			#cell: disjunction
+			#cell: #furigana{論理和}{ろんりわ}
+			#cell: A or B (A ∨ B).
+		#row
+			#cell: negation
+			#cell: #furigana{否定}{ひてい}
+			#cell: Not A (¬A).
+		#row
+			#cell: universal quantifier
+			#cell: #furigana{全称量化子}{ぜんしょうりょうかしゅ}
+			#cell: For all x, ∀x.
+		#row
+			#cell: existential quantifier
+			#cell: #furigana{存在量化子}{そんざいりょうかしゅ}
+			#cell: There exists x, ∃x.
+
+#h3{Logic phrases}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: English phrase
+			#cell: Japanese phrase
+			#cell: Meaning
+		#row
+			#cell: if
+			#cell: #furigana{もし}{もし}
+			#cell: Introduces a condition.
+		#row
+			#cell: then
+			#cell: #furigana{ならば}{ならば}
+			#cell: Concludes from a condition.
+		#row
+			#cell: iff
+			#cell: #furigana{同値}{どうち} / #furigana{〜と同値}{とどうち}
+			#cell: if and only if.
+		#row
+			#cell: if and only if
+			#cell: #furigana{必要十分条件}{ひつようじゅうぶんじょうけん}
+			#cell: Strong two-way implication.
+		#row
+			#cell: because
+			#cell: #furigana{なぜなら}{なぜなら}
+			#cell: Used in proof explanation.
+		#row
+			#cell: therefore
+			#cell: #furigana{ゆえに}{ゆえに}
+			#cell: Concludes a derived result.
+		#row
+			#cell: let
+			#cell: #furigana{〜とする}{とする}
+			#cell: Introduce a temporary variable or assumption.
+		#row
+			#cell: suppose
+			#cell: #furigana{仮定する}{かていする}
+			#cell: Start a proof by assumption.
+#h3{Type theory}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: English term
+			#cell: Japanese term
+			#cell: Meaning
+		#row
+			#cell: type
+			#cell: #furigana{型}{かた}
+			#cell: Classification of values/expressions.
+		#row
+			#cell: term
+			#cell: #furigana{項}{こう}
+			#cell: A syntactic object with a type.
+		#row
+			#cell: type judgment
+			#cell: #furigana{型判断}{かたはんだん}
+			#cell: Typing relation, usually written Γ ⊢ t : T.
+		#row
+			#cell: typing
+			#cell: #furigana{型付け}{かたづけ}
+			#cell: Process of assigning a type.
+		#row
+			#cell: type checker
+			#cell: #furigana{型検査}{かたけんさ}
+			#cell: Program/checker that enforces typing rules.
+		#row
+			#cell: type inference
+			#cell: #furigana{型推論}{かたすいろん}
+			#cell: Inferring types without explicit annotations.
+		#row
+			#cell: dependent type
+			#cell: #furigana{依存型}{いぞんがた}
+			#cell: Types that can depend on values.
+		#row
+			#cell: function type
+			#cell: #furigana{関数型}{かんすうがた}
+			#cell: Function mappings from A to B, usually A → B.
+		#row
+			#cell: polymorphism
+			#cell: #furigana{多相性}{たそうせい}
+			#cell: One abstraction used for multiple types.

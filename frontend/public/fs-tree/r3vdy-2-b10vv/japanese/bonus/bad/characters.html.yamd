@@ -1,0 +1,104 @@
+#use(jp/furigana)
+#use(std/table)
+#use(meta)
+#meta(created: "2026 07 12" edited: "2026 07 12" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
+
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Rude Japanese Character Speech}
+
+Fiction often exaggerates pronouns, sentence endings, and contractions to make a character sound rough, arrogant, villainous, or old-fashioned. Many of these are recognizable in anime and games but unnatural or hostile in everyday speech.
+
+#h2{Rude speech patterns}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Pattern
+			#cell: Meaning
+			#cell: Example
+		#row
+			#cell: ～やがる
+			#cell: Expresses contempt for someone's action — "that bastard did..."
+			#cell: あいつ、#furigana{逃げやがった}{にげやがった} — That bastard ran away.
+		#row
+			#cell: ～くせに
+			#cell: Even though (accusatory) — "despite being..."
+			#cell: #furigana{何も知らないくせに}{なにもしらないくせに} — Even though you know nothing...
+		#row
+			#cell: てめえ / てめー
+			#cell: You (very aggressive)
+			#cell: てめー、何やってんだ — What the hell are you doing?
+		#row
+			#cell: おまえ / お前
+			#cell: You (rough, male speech)
+			#cell: #furigana{お前が悪い}{おまえがわるい} — It's your fault.
+		#row
+			#cell: きさま / 貴様
+			#cell: You (hostile, archaic-sounding)
+			#cell: Mostly in fiction/anime. Extremely rude in real life.
+		#row
+			#cell: ～じゃねーよ
+			#cell: Rough negative — "it's not..."
+			#cell: #furigana{知らねーよ}{しらねーよ} — I don't know (and I don't care).
+
+#h2{Character-marking words}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word / pattern
+			#cell: Reading
+			#cell: Character effect
+			#cell: Notes
+		#row
+			#cell: 俺
+			#cell: おれ
+			#cell: Rough/casual "I"
+			#cell: Common among men and masculine characters. Not automatically rude with friends.
+		#row
+			#cell: 俺様
+			#cell: おれさま
+			#cell: Arrogant "I"
+			#cell: Villainous or boastful self-reference.
+		#row
+			#cell: あいつ
+			#cell: —
+			#cell: That guy / them
+			#cell: Casual and often dismissive; can be neutral among friends.
+		#row
+			#cell: こいつ
+			#cell: —
+			#cell: This guy / this jerk
+			#cell: Very blunt when referring to a person in front of you.
+		#row
+			#cell: ～ぞ
+			#cell: —
+			#cell: Forceful assertion
+			#cell: Masculine/rough sentence ending. Common in fiction and casual male speech.
+		#row
+			#cell: ～ぜ
+			#cell: —
+			#cell: Cocky/casual assertion
+			#cell: Often gives an energetic, boyish, or delinquent tone.
+		#row
+			#cell: ～な
+			#cell: —
+			#cell: Negative command
+			#cell: #furigana{触るな}{さわるな} = don't touch. Blunt command form.
+		#row
+			#cell: ～ろ / ～ろよ
+			#cell: —
+			#cell: Command
+			#cell: #furigana{早くしろ}{はやくしろ} = hurry up. Can sound bossy or angry.
+		#row
+			#cell: ～やつ
+			#cell: —
+			#cell: Guy / thing
+			#cell: Casual classifier for people or things; insulting if the tone is hostile.
+		#row
+			#cell: 野郎
+			#cell: やろう
+			#cell: Bastard / guy
+			#cell: Rough word for a man. この野郎 is openly aggressive.

@@ -1,9 +1,10 @@
 #use(std/html)
 #use(std/code)
+#use(meta)
+#meta(created: "2025 07 01" edited: "2026 07 05" tags: '("kp2pml30" "gamedev" "programming" "design"))
+
 #(define (h1 . b) (apply elem 'h1 b))
 #(define (h2 . b) (apply elem 'h2 b))
-#html-block{<meta name="date" content="2025 07 01">}
-
 #h1{Godot Project Structure}
 
 It is my opinion, and is by no means "objective"

@@ -1,9 +1,10 @@
 #use(std/html)
 #use(std/math/asciimath)
+#use(meta)
+#meta(created: "2026 02 11" edited: "2026 07 05" tags: '("kp2pml30" "ai" "hot-take" "programming"))
+
 #(define (h1 . b) (apply elem 'h1 b))
 #(define (h2 . b) (apply elem 'h2 b))
-#html-block{<meta name="date" content="2026 02 11">}
-
 #h1{Hidden Cost Of AI Tools}
 
 At my work, we are pushed to use AI for anything. I understand the point and desire to speed up production. However, it's impossible to ignore the downsides

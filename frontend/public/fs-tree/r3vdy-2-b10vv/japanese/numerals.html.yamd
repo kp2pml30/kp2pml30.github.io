@@ -1,5 +1,8 @@
 #use(jp/furigana)
 #use(std/table)
+#use(meta)
+#meta(created: "2026 07 06" edited: "2026 07 06" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
+
 #(define (h1 . b) (apply elem 'h1 b))
 #(define (h2 . b) (apply elem 'h2 b))
 #(define (b . args) (apply elem 'b args))

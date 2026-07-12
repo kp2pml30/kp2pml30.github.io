@@ -1,9 +1,10 @@
 #use(std/html)
+#use(meta)
+#meta(created: "2024 01 15" edited: "2026 07 05" tags: '("r3vdy-2-b10vv" "gamedev" "hot-take"))
+
 #(define (h1 . b) (apply elem 'h1 b))
 #(define (h2 . b) (apply elem 'h2 b))
 #(define (h3 . b) (apply elem 'h3 b))
-#html-block{<meta name="date" content="2024 01 15">}
-
 #h1{Problem with Online Games}
 #h2{Classification}
 

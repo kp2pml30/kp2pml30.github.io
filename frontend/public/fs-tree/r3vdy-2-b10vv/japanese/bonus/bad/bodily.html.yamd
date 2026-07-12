@@ -1,0 +1,131 @@
+#use(jp/furigana)
+#use(std/table)
+#use(meta)
+#meta(created: "2026 07 12" edited: "2026 07 12" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
+
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Japanese Bodily & Taboo Body Language}
+
+Body-related words range from childish to extremely vulgar. Many are not "swears" by themselves, but they become inappropriate quickly in polite conversation.
+
+#h2{Body-related}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: ちんちん
+			#cell: —
+			#cell: Penis
+			#cell: Childish word, like "wee-wee". Not extremely vulgar.
+		#row
+			#cell: ちんこ / ちんぽ
+			#cell: —
+			#cell: Penis
+			#cell: Cruder than ちんちん.
+		#row
+			#cell: 玉
+			#cell: たま
+			#cell: Balls / testicles
+			#cell: Literally "ball". #furigana{金玉}{きんたま} is more explicit.
+		#row
+			#cell: おっぱい
+			#cell: —
+			#cell: Boobs
+			#cell: Childish/casual. Not extremely rude, but still too casual for polite contexts.
+		#row
+			#cell: 乳
+			#cell: ちち
+			#cell: Breasts / milk
+			#cell: Plain word, but can sound blunt depending on context. #furigana{胸}{むね} is safer.
+		#row
+			#cell: まんこ
+			#cell: —
+			#cell: Pussy / vagina
+			#cell: Very vulgar. Heavily censored in media.
+		#row
+			#cell: おまんこ
+			#cell: —
+			#cell: Pussy / vagina
+			#cell: Slightly softer with お prefix, but still very vulgar.
+		#row
+			#cell: 子宮
+			#cell: しきゅう
+			#cell: Womb / uterus
+			#cell: Medical term, but used vulgarly in certain contexts.
+		#row
+			#cell: ケツ
+			#cell: けつ
+			#cell: Ass
+			#cell: Vulgar for #furigana{お尻}{おしり}.
+		#row
+			#cell: 尻
+			#cell: しり
+			#cell: Butt
+			#cell: Plainer than ケツ. お尻 is polite/cute.
+
+#h2{Bodily functions}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: 屁
+			#cell: へ
+			#cell: Fart
+			#cell: おなら is the polite/childish version.
+		#row
+			#cell: 屁をこく
+			#cell: へをこく
+			#cell: To fart
+			#cell: Crude/casual verb phrase.
+		#row
+			#cell: うんこ / うんち
+			#cell: —
+			#cell: Poop
+			#cell: Childish. うんこ is slightly cruder.
+		#row
+			#cell: 小便
+			#cell: しょうべん
+			#cell: Piss
+			#cell: おしっこ is the childish/polite version.
+		#row
+			#cell: げろ / ゲロ
+			#cell: —
+			#cell: Puke / vomit
+			#cell: Casual/crude for #furigana{嘔吐}{おうと}.
+		#row
+			#cell: 吐く
+			#cell: はく
+			#cell: To throw up
+			#cell: Normal verb; roughness depends on context.
+		#row
+			#cell: 生理
+			#cell: せいり
+			#cell: Period / menstruation
+			#cell: Not vulgar itself, but often taboo in conversation. #furigana{生理中}{せいりちゅう} = on one's period.
+		#row
+			#cell: 月経
+			#cell: げっけい
+			#cell: Menstruation
+			#cell: Formal/medical term. Less common in casual speech.
+		#row
+			#cell: ナプキン
+			#cell: —
+			#cell: Sanitary pad
+			#cell: From English "napkin". Talking about it openly may be treated as embarrassing/taboo.
+		#row
+			#cell: 便所
+			#cell: べんじょ
+			#cell: Toilet / lavatory
+			#cell: Blunt and old-fashioned; トイレ or お手洗い is safer.

@@ -1,0 +1,186 @@
+#use(jp/furigana)
+#use(std/table)
+#use(meta)
+#meta(created: "2026 07 12" edited: "2026 07 12" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
+
+#(define (h1 . b) (apply elem 'h1 b))
+#(define (h2 . b) (apply elem 'h2 b))
+
+#h1{Japanese Slurs, Insults & Swear Words}
+
+Most entries here are better understood as insults or hostile language than as direct equivalents of English profanity. Avoid using them unless you understand the relationship, setting, and tone extremely well.
+
+#h2{Insults}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: 馬鹿
+			#cell: ばか
+			#cell: Idiot / stupid
+			#cell: Very common. Can be playful or genuinely insulting depending on tone.
+		#row
+			#cell: 阿呆
+			#cell: あほ
+			#cell: Idiot / fool
+			#cell: More common in Kansai. In Kansai ばか is harsher; in Tokyo あほ can sound harsher.
+		#row
+			#cell: 間抜け
+			#cell: まぬけ
+			#cell: Dimwit / blockhead
+			#cell: Implies someone is slow or clueless.
+		#row
+			#cell: ぼけ / ボケ
+			#cell: —
+			#cell: Idiot / airhead
+			#cell: Kansai slang. Part of the comedy duo dynamic ボケ＆ツッコミ.
+		#row
+			#cell: ブス
+			#cell: —
+			#cell: Ugly (woman)
+			#cell: Very rude insult about appearance.
+		#row
+			#cell: デブ
+			#cell: —
+			#cell: Fatso
+			#cell: Rude. Casual word for an overweight person.
+		#row
+			#cell: チビ
+			#cell: —
+			#cell: Shorty / runt
+			#cell: Can be teasing, but rude as an insult about height.
+		#row
+			#cell: うざい / うぜー
+			#cell: —
+			#cell: Annoying / obnoxious
+			#cell: Very common among young people.
+		#row
+			#cell: きもい / キモい
+			#cell: —
+			#cell: Gross / creepy
+			#cell: Short for #furigana{気持ち悪い}{きもちわるい}.
+		#row
+			#cell: ださい / ダサい
+			#cell: —
+			#cell: Lame / uncool
+			#cell: Mocking someone's style or behavior.
+		#row
+			#cell: 変態
+			#cell: へんたい
+			#cell: Pervert
+			#cell: Also shortened to エッチ / H（えっち）which is milder.
+		#row
+			#cell: 痴漢
+			#cell: ちかん
+			#cell: Groper / molester
+			#cell: Serious accusation, not casual.
+		#row
+			#cell: 社畜
+			#cell: しゃちく
+			#cell: Corporate slave
+			#cell: 社（company）+ 畜（livestock）. Self-deprecating or mocking overworked salarymen.
+		#row
+			#cell: ニート
+			#cell: —
+			#cell: NEET
+			#cell: From English. Used as an insult for someone not in education, employment, or training.
+		#row
+			#cell: 引きこもり
+			#cell: ひきこもり
+			#cell: Shut-in / recluse
+			#cell: Can describe a serious condition or be used casually as an insult.
+		#row
+			#cell: オタク / おたく
+			#cell: —
+			#cell: Nerd / otaku
+			#cell: Can be self-identifying or mildly insulting depending on context. キモオタ = gross otaku.
+		#row
+			#cell: 負け犬
+			#cell: まけいぬ
+			#cell: Loser
+			#cell: Literally "losing dog". Harsh insult.
+		#row
+			#cell: クズ
+			#cell: くず
+			#cell: Scum / trash (person)
+			#cell: #furigana{人間のクズ}{にんげんのくず} = scum of the earth.
+		#row
+			#cell: ゴミ
+			#cell: —
+			#cell: Garbage / trash (person)
+			#cell: Calling someone worthless.
+		#row
+			#cell: 役立たず
+			#cell: やくたたず
+			#cell: Useless / good-for-nothing
+			#cell: #furigana{穀潰し}{ごくつぶし} is harsher — "grain waster".
+		#row
+			#cell: 最低
+			#cell: さいてい
+			#cell: The worst / lowest
+			#cell: #furigana{最低な人}{さいていなひと} = the worst kind of person.
+
+#h2{Swear words & exclamations}
+
+#bordered
+	#table(header: 1)
+		#row
+			#cell: Word
+			#cell: Reading
+			#cell: Meaning
+			#cell: Notes
+		#row
+			#cell: くそ / 糞
+			#cell: くそ
+			#cell: Shit / damn
+			#cell: Very common swear. Also used as prefix: #furigana{くそ暑い}{くそあつい} = damn hot.
+		#row
+			#cell: 臭い
+			#cell: くさい
+			#cell: Stinky / smells bad
+			#cell: Not a swear itself, but rude to say to someone. くせー is rougher.
+		#row
+			#cell: 畜生
+			#cell: ちくしょう
+			#cell: Damn it!
+			#cell: Classic exclamation of frustration. Literally "beast".
+		#row
+			#cell: くたばれ
+			#cell: —
+			#cell: Drop dead!
+			#cell: Very harsh. Imperative of くたばる (to drop dead).
+		#row
+			#cell: ふざけるな
+			#cell: —
+			#cell: Don't mess with me! / Cut the crap!
+			#cell: ふざけんな is the casual contraction.
+		#row
+			#cell: うるさい / うるせー
+			#cell: —
+			#cell: Shut up! / Noisy!
+			#cell: #furigana{黙れ}{だまれ} is harsher — "shut your mouth".
+		#row
+			#cell: 死ね
+			#cell: しね
+			#cell: Die!
+			#cell: Imperative of 死ぬ. Very harsh insult.
+		#row
+			#cell: 消えろ
+			#cell: きえろ
+			#cell: Get lost! / Disappear!
+			#cell: Imperative of 消える.
+		#row
+			#cell: ざけんな
+			#cell: —
+			#cell: Don't screw around
+			#cell: Shorter, rougher contraction of ふざけるな.
+		#row
+			#cell: なめるな
+			#cell: —
+			#cell: Don't underestimate me
+			#cell: Literally "don't lick". Rough challenge phrase.
