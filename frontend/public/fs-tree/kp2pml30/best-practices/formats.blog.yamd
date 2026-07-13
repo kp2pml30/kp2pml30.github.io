@@ -1,0 +1,27 @@
+#use(std/table)
+#use(std/html)
+#use(meta)
+#meta(created: "2026 07 06" edited: "2026 07 12" tags: '("kp2pml30" "hot-take" "programming" "design"))
+
+#section{Best Formats}::
+
+#table(header: 1)
+
+	#row{Purpose}{Format}{Explanation}
+	#row{Human Config}{TOML}:
+		It avoids YAML's complexity and ambiguity while still supporting comments
+	#row{Code Config}{JSON}:
+		Every language and tool supports it, AI are native at it too
+	#row{Generic Digest}{Douglas Crockford's Base32}:
+		It is case-insensitive and can be used safely in paths and similar places.
+	#row{Hash}{SHA-3}:
+		Keccak is the pre-standard version, so SHA-3 is the clearer name to depend on. SHA-1 is legacy
+	#row{Compression for Cold Storage}{xz -9}:
+		It compresses much better than most practical alternatives
+	#row{Compression for realtime}{zstd}:
+		It has a good balance of speed, compression ratio, and usability
+	#row{Archive for Cold Storage}{tar}:
+		It is still the simplest choice when the archive will be compressed as a whole.
+		#tt{nar} would have been better, but no one supports it
+	#row{micro DB}{sqlite}:
+		Are comments really needed?

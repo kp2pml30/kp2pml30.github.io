@@ -11,7 +11,8 @@ Here under #tt{Any} root of objects hierarchy is meant
 #section{Why there should be no #tt{hashCode}, #tt{equals} in #tt{Any} (and entire #tt{Comparable} as a type)}:
 
 These methods look like a Java legacy, as they prohibit modifications, that make collections work different for different types.
-For instance, #tt{Map} can be implemented via #tt{Set}, if pair comparator compares only first elements (same with #tt{hashCode} and #tt{equals}).
+For instance, #tt{Map} can be implemented via #tt{Set},
+if pair comparator compares only first elements (same with #tt{hashCode} and #tt{equals}).
 Instead of all this methods, their users must accept a #tt{Comparator} and so on,
 where there may be a "default" that does language-specific things
 

@@ -8,6 +8,7 @@ import re
 import shlex
 import subprocess
 import sys
+import traceback
 from argparse import ArgumentParser, Namespace
 from collections import Counter
 from concurrent.futures import Future, ThreadPoolExecutor
@@ -221,45 +222,74 @@ def write_generated_text(path: Path, text: str, options: Options) -> None:
 	path.write_text(text)
 
 
-def render_blog(path: Path, options: Options) -> None:
-	target = path.with_suffix('')
-	if options.check_ignored:
-		warn_if_not_gitignored(target)
+# The renderer is the Racket yamd CLI, provided on PATH by the flake input
+# (git.kp2pml30.moe/ya/yamd). html is the default backend. Override the binary
+# with the YAMD env var, e.g. YAMD='nix run .#yamd --'.
+def yamd_argv() -> list[str]:
+	return shlex.split(os.environ.get('YAMD', 'yamd'))
 
-	# The renderer is the Racket yamd CLI, provided on PATH by the flake input
-	# (git.kp2pml30.moe/ya/yamd). It takes the input file positionally and
-	# writes an HTML fragment to -o (html is the default backend). Override the
-	# binary with the YAMD env var, e.g. YAMD='nix run .#yamd --'.
-	args = [
-		*shlex.split(os.environ.get('YAMD', 'yamd')),
-		str(path),
-		'-o',
-		str(target),
-	]
+
+def yamd_env() -> dict[str, str]:
 	# Project-local yamd plugins live as collections under frontend/yamd-lib
 	# (e.g. #use(jp/furigana) -> frontend/yamd-lib/jp/furigana.rkt). Put that
 	# dir on Racket's collection search path; the leading colon preserves
-	# Racket's defaults and the yamd CLI's own collection.
+	# Racket's defaults and the yamd CLI's own collection (which carries std/*).
 	env = os.environ.copy()
 	plugins = (FRONTEND_ROOT / 'yamd-lib').resolve()
 	env['PLTCOLLECTS'] = f':{plugins}'
+	return env
+
+
+def run_yamd(args: list[str], label: str) -> None:
 	result = subprocess.run(
-		args,
-		env=env,
+		[*yamd_argv(), *args],
+		env=yamd_env(),
 		text=True,
 		capture_output=True,
 		check=False,
 	)
 	if result.returncode != 0:
-		msg = f'run failed {result.stdout} {result.stderr} {args}'
+		msg = f'run failed {result.stdout} {result.stderr} {[*yamd_argv(), *args]}'
 		raise RuntimeError(msg)
 
 	with OUTPUT_LOCK:
-		print(f'{path} -> {target}')
+		print(label)
 		if result.stdout:
 			print(f'=== stdout ===\n{result.stdout}')
 		if result.stderr:
 			print(f'=== stderr ===\n{result.stderr}')
+
+
+def render_blog(path: Path, options: Options) -> None:
+	target = path.with_suffix('')
+	if options.check_ignored:
+		warn_if_not_gitignored(target)
+
+	# Single-file build: input positional, HTML fragment written to -o.
+	run_yamd([str(path), '-o', str(target)], f'{path} -> {target}')
+
+
+def render_docset(options: Options) -> None:
+	# The YAMD language docs are a doc-set (#toctree, #doc-ref, relative xrefs).
+	# In single mode yamd inlines the whole set into one HTML fragment, which we
+	# drop into the fs-tree as a single viewable page. The source root is handed
+	# to us by the flake wrapper via KP2PML30_YAMD_DOCS (a store path pinned
+	# alongside the yamd binary); skip when unset (e.g. running main.py outside
+	# the nix wrapper). The normal walk below then picks the page up like any
+	# other .html, so no blog-feed entry and no extra frontend wiring.
+	docs_root = os.environ.get('KP2PML30_YAMD_DOCS')
+	if not docs_root:
+		return
+
+	index = Path(docs_root) / 'index.yamd'
+	target = TREE_ROOT / 'kp2pml30' / 'projects' / 'yamd' / 'lang.html'
+	if options.check_ignored:
+		warn_if_not_gitignored(target)
+	target.parent.mkdir(parents=True, exist_ok=True)
+	run_yamd(
+		['--root', docs_root, '-o', str(target), str(index)],
+		f'{index} -> {target}',
+	)
 
 
 def process_yamd(
@@ -426,13 +456,29 @@ def write_tag_cloud(words: Counter[str], path: Path, options: Options) -> None:
 		print(f'word cloud written to {path}')
 
 
-def process_paths(paths: list[Path], options: Options) -> list[ProcessedFile]:
+def report_file_error(path: Path) -> None:
+	with OUTPUT_LOCK:
+		print(f'error: failed to process {path}', file=sys.stderr)
+		traceback.print_exc()
+
+
+def safe_process_file(path: Path, options: Options) -> ProcessedFile | None:
+	# A single bad file must not abort the whole run: report it and keep going.
+	# main() exits non-zero when any file returned None here.
+	try:
+		return process_file(path, options)
+	except Exception:
+		report_file_error(path)
+		return None
+
+
+def process_paths(paths: list[Path], options: Options) -> list[ProcessedFile | None]:
 	if len(paths) <= 1:
-		return [process_file(path, options) for path in paths]
+		return [safe_process_file(path, options) for path in paths]
 
 	with ThreadPoolExecutor(max_workers=min(options.jobs, len(paths))) as executor:
-		futures: list[Future[ProcessedFile]] = [
-			executor.submit(process_file, path, options) for path in paths
+		futures: list[Future[ProcessedFile | None]] = [
+			executor.submit(safe_process_file, path, options) for path in paths
 		]
 		return [future.result() for future in futures]
 
@@ -449,6 +495,9 @@ def main() -> None:
 	words: Counter[str] = Counter()
 	paths = []
 
+	# Emit the YAMD docs page before walking, so the glob picks it up.
+	render_docset(options)
+
 	for path in sorted(TREE_ROOT.glob('**/*')):
 		if not path.is_file():
 			continue
@@ -458,27 +507,36 @@ def main() -> None:
 			continue
 		paths.append(path)
 
+	had_error = False
 	for processed in process_paths(paths, options):
+		if processed is None:
+			had_error = True
+			continue
+
 		path = processed.path
 		meta = processed.meta
 		parser = processed.parser
 
-		if str(path).endswith('.blog') and parser is not None:
-			if meta['date'] is None:
-				msg = f'No date found for {path} {meta}'
-				raise RuntimeError(msg)
-			blog_items.append(
-				BlogItem(
-					title=parser.first_h1 or path.name,
-					date=meta['date'],
-					date_edited=meta['date_edited'],
-					path=path.relative_to(TREE_ROOT).as_posix(),
+		try:
+			if str(path).endswith('.blog') and parser is not None:
+				if meta['date'] is None:
+					msg = f'No date found for {path} {meta}'
+					raise RuntimeError(msg)
+				blog_items.append(
+					BlogItem(
+						title=parser.first_h1 or path.name,
+						date=meta['date'],
+						date_edited=meta['date_edited'],
+						path=path.relative_to(TREE_ROOT).as_posix(),
+					)
 				)
-			)
 
-		words.update(processed.words)
-		tags.update(meta.get('tags', []))
-		insert_file(trie, path, meta)
+			words.update(processed.words)
+			tags.update(meta.get('tags', []))
+			insert_file(trie, path, meta)
+		except Exception:
+			had_error = True
+			report_file_error(path)
 
 	trie = normalize_tree(trie)
 	write_generated_text(
@@ -511,6 +569,9 @@ def main() -> None:
 	tag_cloud_path = generated_dir / 'tag-cloud.svg'
 	tag_cloud_path.unlink(missing_ok=True)
 	write_tag_cloud(tags, tag_cloud_path, options)
+
+	if had_error:
+		sys.exit(1)
 
 
 if __name__ == '__main__':

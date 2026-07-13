@@ -15,25 +15,9 @@
 
 (provide meta)
 
-(define allowed-tags
-  '("kp2pml30"
-    "r3vdy-2-b10vv"
-    "gamedev"
-    "hot-take"
-    "langs"
-    "japanese"
-    "programming"
-    "ai"
-    "drawing"
-    "music"
-    "design"))
-
 (define (meta #:created created #:edited edited #:tags tags)
   (unless (and (list? tags) (andmap string? tags))
     (error 'meta "tags must be a list of strings, got ~e" tags))
-  (for ([tag (in-list tags)])
-    (unless (member tag allowed-tags)
-      (error 'meta "unknown tag ~e; allowed tags are ~e" tag allowed-tags)))
   (define tag-content (string-join tags ","))
   (raw 'html
        (string-append

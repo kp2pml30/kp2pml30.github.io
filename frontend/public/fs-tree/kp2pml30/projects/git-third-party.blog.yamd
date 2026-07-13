@@ -1,0 +1,52 @@
+#use(std/html)
+#use(std/code)
+#use(meta)
+#meta(created: "2026 07 13" edited: "2026 07 13" tags: '("kp2pml30" "programming"))
+
+#section{git-third-party}::
+
+A couple of years ago I wrote a small tool called #link("https://github.com/kp2pml30/git-third-party"){git-third-party}
+— a small zero-dependency alternative to git-submodules and git-subtree
+
+The problem is well known: you need a source level dependency. However, you find a bug in it, which you can't merge into upstream,
+or you find yourself needing to slightly alter it's behaviour for your needs
+
+#section{git-subtree issues}
+
+	I never used this tool, but I feel insecure about forwarding entire codebase into my repo
+
+	#list
+		#item: Licensing gets more complicated, as it is directory-wise now
+		#item: You get other's history into yours, or some strange squash commits
+		#item: Subtree is not a standalone repo
+
+#section{git-modules issues}
+
+	The only git-modules issue is that you need to fork the repo, pollute your user and all for nothing.
+	And then you need to properly mirror the upstream
+
+#section{The idea}
+
+	Store #strong{only} the delta. #tt{git-third-party} keeps just a config and your patches, applied
+	to a base commit from the remote. That directory is tracked; the actual checked-out working trees are not.
+
+	In the end you get a full git experience within that third-party repo
+
+	Patches are kept deterministic by stripping metadata like git version and commit hashes, so they don't churn between machines
+
+#section{Pros}
+
+	#list
+		#item: your work is fully auditable
+
+#section{Cons}
+
+	#list
+		#item: requires extra step for git-native tools: CI, nix (lib is bundled though!)
+		#item: does not support multi-user concurrent modifications well
+
+#section{Conclusion}
+
+	I heard people complaining about the same problem quite a couple of times, so feel free to use!
+	I would also appreciate sharing, because I truly believe that this tool is useful,
+	but it's impossible to stumble upon it in google

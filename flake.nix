@@ -67,6 +67,10 @@
           ];
           text = ''
             export KP2PML30_SITE_ROOT="''${KP2PML30_SITE_ROOT:-$PWD}"
+            # Root of the YAMD language doc-set, from the same flake input that
+            # provides the yamd binary (so docs and renderer stay in lock-step).
+            # main.py renders it into the fs-tree as a single inlined page.
+            export KP2PML30_YAMD_DOCS="''${KP2PML30_YAMD_DOCS:-${inputs.yamd}/docs/lang}"
             exec ${generatorPython}/bin/python3 ${./generator/main.py} "$@"
           '';
         };

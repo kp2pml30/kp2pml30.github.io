@@ -63,18 +63,6 @@ import CommentSection from '@/components/islands/CommentSection.vue'
 		</ol>
 	</div>
 
-	<hr class="hr-space" />
-
-	<h2>Blog Stats</h2>
-	<h3>Tag Cloud</h3>
-	<img
-		class="tag-cloud"
-		src="/a/generated/tag-cloud.svg"
-		alt="Tag cloud"
-		width="1200"
-		height="630"
-	/>
-
 	<div
 		style="display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; margin-top: 1em"
 	>
@@ -104,6 +92,28 @@ import CommentSection from '@/components/islands/CommentSection.vue'
 			><img class="banner-img" src="/a/88x31/tmarsh.gif" /></a
 		>
 	</div>
+
+	<hr class="hr-space" />
+
+	<h2>Blog Stats</h2>
+	<h3>Tag&amp;Word Clouds</h3>
+	<div class="cloud-grid">
+		<img
+			class="tag-cloud"
+			src="/a/generated/tag-cloud.svg"
+			alt="Tag cloud"
+			width="1200"
+			height="630"
+		/>
+		<img
+			class="tag-cloud"
+			src="/a/generated/word-cloud.svg"
+			alt="Word cloud"
+			width="1200"
+			height="630"
+		/>
+	</div>
+	<br />
 </BaseLayout>
 
 <style>
@@ -112,10 +122,23 @@ import CommentSection from '@/components/islands/CommentSection.vue'
 		image-rendering: pixelated;
 	}
 
+	.cloud-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+		align-items: start;
+	}
+
 	.tag-cloud {
 		display: block;
 		width: 100%;
 		height: auto;
-		margin: 0.5em auto 1em;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.cloud-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

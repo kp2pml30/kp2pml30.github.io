@@ -1,0 +1,43 @@
+#use(std/table)
+#use(std/html)
+#use(meta)
+#meta(created: "2026 07 13" edited: "2026 07 13" tags: '("kp2pml30" "hot-take" "design" "ui"))
+
+#section{Text Style}::
+
+#section{Titles}
+	Titles must be in Title Case
+
+#section{Text}
+#list
+	#item: Prefer source lines no longer than 128 columns, so that source is readable as well
+	#item: For unlinked terms and variables, such as #emph{iff} prefer italics
+	#item: Trailing dot seems rude, so neither paragraphs nor list items should end with it
+	#item: Start sentences with a Capital letter
+
+
+#section{Lists}
+	#list
+		#item
+			List items should start with capital letters,
+			though if it is a sub-list or less important information
+			it can start with lower letters. Nevertheless, all items in
+			a given list must be the same
+
+		#item: And again, no trailing periods
+
+		#item
+			Prefer to use numbered lists, as they are easier to grasp and reference. However,
+			if you wish to avoid specifying explicit order, use unnumbered lists. For example:
+
+			I like
+			#list(style: "*")
+				#item: Berries
+				#item: Fruits
+
+			Reads clearly as the writer loves both, while numbered alternative would seem like
+			the author prefers #emph{berries} over #emph{fruits}
+
+#section{Ease of Reading}
+
+	Try to number slides and pages, for ease of referencing them
