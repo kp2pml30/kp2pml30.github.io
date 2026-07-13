@@ -3,14 +3,12 @@
 #use(meta)
 #meta(created: "2026 07 06" edited: "2026 07 06" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 
-#h1{Grammar Patterns}
+#section{Grammar Patterns}::
 
 Intermediate and advanced grammar patterns for expressing expectations, decisions, obligations, and more.
 
-#h2{Expectation & Judgment}
+#section{Expectation & Judgment}:
 
 #bordered
 	#table(header: 1)
@@ -50,7 +48,7 @@ Intermediate and advanced grammar patterns for expressing expectations, decision
 			#cell: Can't afford to / mustn't — social or moral obligation prevents it.
 			#cell: #furigana{約束を破るわけにはいかない}{やくそくをやぶるわけにはいかない}— I can't break my promise.
 
-#h2{Decisions & Changes}
+#section{Decisions & Changes}:
 
 #bordered
 	#table(header: 1)
@@ -80,7 +78,7 @@ Intermediate and advanced grammar patterns for expressing expectations, decision
 			#cell: Come to / reach the point where — gradual change.
 			#cell: #furigana{日本語が話せるようになった}{にほんごがはなせるようになった}— I've become able to speak Japanese.
 
-#h2{Aspect & Timing}
+#section{Aspect & Timing}:
 
 #bordered
 	#table(header: 1)
@@ -110,7 +108,7 @@ Intermediate and advanced grammar patterns for expressing expectations, decision
 			#cell: Completion (done completely) or regret (unfortunately did).
 			#cell: #furigana{全部食べてしまった}{ぜんぶたべてしまった}— I ate it all / I accidentally ate it all.
 
-#h2{Obligation & Advice}
+#section{Obligation & Advice}:
 
 #bordered
 	#table(header: 1)
@@ -145,7 +143,7 @@ Intermediate and advanced grammar patterns for expressing expectations, decision
 			#cell: Had better / should — personal advice.
 			#cell: 早く寝たほうがいい — You'd better go to bed early.#linebreak#furigana{無理しないほうがいい}{むりしないほうがいい}— You'd better not push yourself.
 
-#h2{Ability & Possibility}
+#section{Ability & Possibility}:
 
 #bordered
 	#table(header: 1)
@@ -175,7 +173,7 @@ Intermediate and advanced grammar patterns for expressing expectations, decision
 			#cell: Might / could possibly (negative outcome) — warning.
 			#cell: #furigana{事故になりかねない}{じこになりかねない}— It could lead to an accident.
 
-#h2{Hearsay & Quotation}
+#section{Hearsay & Quotation}:
 
 #bordered
 	#table(header: 1)
@@ -215,7 +213,7 @@ Intermediate and advanced grammar patterns for expressing expectations, decision
 			#cell: It is considered / regarded as — formal/academic.
 			#cell: #furigana{健康にいいとされている}{けんこうにいいとされている}— It's considered good for health.
 
-#h2{ものだ & Related}
+#section{ものだ & Related}:
 
 #bordered
 	#table(header: 1)

@@ -3,14 +3,12 @@
 #use(meta)
 #meta(created: "2026 07 12" edited: "2026 07 12" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 
-#h1{Japanese Slurs, Insults & Swear Words}
+#section{Japanese Slurs, Insults & Swear Words}::
 
 Most entries here are better understood as insults or hostile language than as direct equivalents of English profanity. Avoid using them unless you understand the relationship, setting, and tone extremely well.
 
-#h2{Insults}
+#section{Insults}:
 
 #bordered
 	#table(header: 1)
@@ -125,7 +123,7 @@ Most entries here are better understood as insults or hostile language than as d
 			#cell: The worst / lowest
 			#cell: #furigana{最低な人}{さいていなひと} = the worst kind of person.
 
-#h2{Swear words & exclamations}
+#section{Swear words & exclamations}:
 
 #bordered
 	#table(header: 1)

@@ -2,11 +2,9 @@
 #use(meta)
 #meta(created: "2024 01 15" edited: "2026 07 05" tags: '("r3vdy-2-b10vv" "gamedev" "hot-take"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 #(define (h3 . b) (apply elem 'h3 b))
-#h1{Problem with Online Games}
-#h2{Classification}
+#section{Problem with Online Games}::
+#section{Classification}:
 
 Online games can be categorized based on a few properties:
 
@@ -73,9 +71,9 @@ Such games are usually punishing for dying, you will lose some enhancements (ins
 
 As for Minecraft, I never got social interactions with unknown people in there on public servers. You are usually brought into Minecraft by a community and not vice versa.
 
-#h2{Other problems}
+#section{Other problems}:
 All games, even cozy offline ones always want you to do work in every aspect of a game, nothing will happen on it's own. For instance, in Stardew Valley you need to make gifts if you want to enhance relationship with them. No one is chasing after you, world is passive and not interested in you being happy.
-#h2{Studying other cases}
+#section{Studying other cases}:
 #h3{Genshin Impact}
 Pros:
 #list
@@ -104,7 +102,7 @@ Creation of interactive content is limited by redstone, which requires massive a
 #h3{Haven}
 In this game players have each other for granted (or AI-controlled loved one if playing solo). It is hard to imagine game, where you get social interactions with NPC's or pleasing and comfy prerecorded dialogues, that don't require you to work towards them
 
-#h2{What should a perfect social online game have?}
+#section{What should a perfect social online game have?}:
 #list(style: "1")
 	#item: Be continuous
 	#item: Be fun oriented
@@ -142,7 +140,7 @@ In this game players have each other for granted (or AI-controlled loved one if 
 
 It is a bit frightening, that games closest to the described are Minecraft and probably Roblox
 
-#h2{Further research}
+#section{Further research}:
 Few games should be inspected in more detail:
 #list
 	#item: Warframe
@@ -150,7 +148,7 @@ Few games should be inspected in more detail:
 	#item: Minecraft (why it is not social in the end)
 	#item: Space engineers
 
-#h2{Related content}
+#section{Related content}:
 
 #list(style: "1")
 	#item: #link("https://www.youtube.com/watch?v=PN1pd3wCRxY"){Moon Channel: Why Aren't There Any Good MMORPGs? A Critique of Pure Power}

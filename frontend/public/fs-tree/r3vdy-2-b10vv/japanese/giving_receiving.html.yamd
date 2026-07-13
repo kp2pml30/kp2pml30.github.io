@@ -3,15 +3,13 @@
 #use(meta)
 #meta(created: "2026 07 06" edited: "2026 07 06" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 #(define (h3 . b) (apply elem 'h3 b))
 
-#h1{Giving & Receiving — あげる・もらう・くれる}
+#section{Giving & Receiving — あげる・もらう・くれる}::
 
 Japanese has different verbs for "give" and "receive" depending on the direction (who gives to whom) and the speaker's perspective.
 
-#h2{Basic verbs}
+#section{Basic verbs}:
 
 #bordered
 	#table(header: 1)
@@ -65,7 +63,7 @@ Japanese has different verbs for "give" and "receive" depending on the direction
 			#cell: Tanaka gave my brother sweets.
 			#cell: Third person → my family member (toward speaker's group).
 
-#h2{て form — doing favors}
+#section{て form — doing favors}:
 
 Combine て form with あげる/くれる/もらう to express doing (or having done) something as a favor.
 
@@ -109,7 +107,7 @@ Combine て form with あげる/くれる/もらう to express doing (or having 
 			#cell: On the receiver (I/someone)
 			#cell: Emphasizes that you arranged or benefited from the action. ～てもらえますか is a polite request.
 
-#h2{Keigo versions}
+#section{Keigo versions}:
 
 #bordered
 	#table(header: 1)
@@ -149,7 +147,7 @@ Combine て form with あげる/くれる/もらう to express doing (or having 
 			#cell: ～ていただく
 			#cell: #furigana{見ていただけますか}{みていただけますか}— Could you take a look? (polite request)
 
-#h2{Making requests with giving/receiving}
+#section{Making requests with giving/receiving}:
 
 #bordered
 	#table(header: 1)
@@ -182,7 +180,7 @@ Combine て form with あげる/くれる/もらう to express doing (or having 
 			#cell: Most polite
 			#cell: お時間をいただけないでしょうか — Might I have some of your time?
 
-#h2{Set phrases from giving/receiving}
+#section{Set phrases from giving/receiving}:
 
 #bordered
 	#table(header: 1)

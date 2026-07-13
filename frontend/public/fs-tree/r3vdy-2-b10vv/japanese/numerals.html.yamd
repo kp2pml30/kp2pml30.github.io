@@ -3,13 +3,11 @@
 #use(meta)
 #meta(created: "2026 07 06" edited: "2026 07 06" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 #(define (b . args) (apply elem 'b args))
 
-#h1{Numbers, Counters & Time}
+#section{Numbers, Counters & Time}::
 
-#h2{Basic numbers}
+#section{Basic numbers}:
 
 #bordered
 	#table(header: 1)
@@ -93,7 +91,7 @@ Native Japanese numbers (～つ) are used for general counting up to 10, when no
 			#cell: 100,000,000
 			#cell: いちおく
 
-#h2{Common counters}
+#section{Common counters}:
 
 Counters with irregular readings are marked in bold.
 
@@ -256,7 +254,7 @@ Counters with irregular readings are marked in bold.
 			#cell: きゅうかい
 			#cell: #b{じゅっかい}
 
-#h2{People}
+#section{People}:
 
 #bordered
 	#table(header: 1)
@@ -294,7 +292,7 @@ Counters with irregular readings are marked in bold.
 			#cell: 10人
 			#cell: じゅうにん
 
-#h2{Months (～月 / がつ)}
+#section{Months (～月 / がつ)}:
 
 #bordered
 	#table(header: 1)
@@ -351,7 +349,7 @@ Counters with irregular readings are marked in bold.
 			#cell: 12月
 			#cell: じゅうにがつ
 
-#h2{Duration in months (～か月 / かげつ)}
+#section{Duration in months (～か月 / かげつ)}:
 
 #bordered
 	#table(header: 1)
@@ -377,7 +375,7 @@ Counters with irregular readings are marked in bold.
 			#cell: 10か月
 			#cell: #b{じゅっかげつ}
 
-#h2{Days of the month (～日)}
+#section{Days of the month (～日)}:
 
 #bordered
 	#table(header: 1)
@@ -439,7 +437,7 @@ Counters with irregular readings are marked in bold.
 
 Days 11–31 follow regular pattern (じゅういちにち, じゅうににち...) except 14日, 20日, 24日.
 
-#h2{Days of the week}
+#section{Days of the week}:
 
 #bordered
 	#table(header: 1)
@@ -484,7 +482,7 @@ Days 11–31 follow regular pattern (じゅういちにち, じゅうににち..
 			#cell: にちようび
 			#cell: Sun
 
-#h2{Time — Hours (～時 / じ)}
+#section{Time — Hours (～時 / じ)}:
 
 #bordered
 	#table(header: 1)
@@ -526,7 +524,7 @@ Days 11–31 follow regular pattern (じゅういちにち, じゅうににち..
 
 #furigana{午前}{ごぜん}= AM, #furigana{午後}{ごご}= PM. 午前9時 = 9 AM.
 
-#h2{Time — Minutes (～分 / ふん・ぷん)}
+#section{Time — Minutes (～分 / ふん・ぷん)}:
 
 #bordered
 	#table(header: 1)
@@ -563,7 +561,7 @@ Days 11–31 follow regular pattern (じゅういちにち, じゅうににち..
 
 #furigana{半}{はん}= half. #furigana{3時半}{さんじはん}= 3:30.
 
-#h2{Duration — Hours & Minutes}
+#section{Duration — Hours & Minutes}:
 
 #bordered
 	#table(header: 1)
@@ -584,7 +582,7 @@ Days 11–31 follow regular pattern (じゅういちにち, じゅうににち..
 			#cell: ～#furigana{秒}{びょう}
 			#cell: 10秒 = じゅうびょう (10 seconds).
 
-#h2{Age (～歳 / さい)}
+#section{Age (～歳 / さい)}:
 
 #bordered
 	#table(header: 1)
@@ -606,7 +604,7 @@ Days 11–31 follow regular pattern (じゅういちにち, じゅうににち..
 
 Other ages are regular: にさい, さんさい, よんさい, ごさい, ろくさい, ななさい, きゅうさい...
 
-#h2{Ordinal numbers (～番目 / ばんめ)}
+#section{Ordinal numbers (～番目 / ばんめ)}:
 
 Add #furigana{番目}{ばんめ}to make ordinals: 1番目 = いちばんめ (first), 2番目 = にばんめ (second), etc.
 

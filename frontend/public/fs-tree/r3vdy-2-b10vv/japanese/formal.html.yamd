@@ -3,14 +3,12 @@
 #use(meta)
 #meta(created: "2026 07 06" edited: "2026 07 06" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 
-#h1{Formal & Written Expressions}
+#section{Formal & Written Expressions}::
 
 Formal grammar patterns common in news, academic writing, business documents, and JLPT N2/N1. These are rarely used in casual conversation.
 
-#h2{Regarding / About}
+#section{Regarding / About}:
 
 #bordered
 	#table(header: 1)
@@ -45,7 +43,7 @@ Formal grammar patterns common in news, academic writing, business documents, an
 			#cell: Toward / against / in contrast to.
 			#cell: #furigana{学生に対して厳しい}{がくせいにたいしてきびしい}— Strict toward students.
 
-#h2{Location / Context / Scope}
+#section{Location / Context / Scope}:
 
 #bordered
 	#table(header: 1)
@@ -80,7 +78,7 @@ Formal grammar patterns common in news, academic writing, business documents, an
 			#cell: With / by means of / as of (date).
 			#cell: #furigana{本日をもって終了する}{ほんじつをもってしゅうりょうする}— It ends as of today.
 
-#h2{Concession / Despite}
+#section{Concession / Despite}:
 
 #bordered
 	#table(header: 1)
@@ -110,7 +108,7 @@ Formal grammar patterns common in news, academic writing, business documents, an
 			#cell: Although — formal けど.
 			#cell: #furigana{買ったものの、使っていない}{かったものの、つかっていない}— I bought it, but haven't used it.
 
-#h2{Cause / Reason (formal)}
+#section{Cause / Reason (formal)}:
 
 #bordered
 	#table(header: 1)
@@ -140,7 +138,7 @@ Formal grammar patterns common in news, academic writing, business documents, an
 			#cell: Through / via / throughout.
 			#cell: インターネットを通じて#furigana{知り合った}{しりあった}— Met through the internet.
 
-#h2{Limit / Extent}
+#section{Limit / Extent}:
 
 #bordered
 	#table(header: 1)
@@ -175,7 +173,7 @@ Formal grammar patterns common in news, academic writing, business documents, an
 			#cell: Far from / not the time for — situation makes it impossible.
 			#cell: #furigana{遊ぶどころではない}{あそぶどころではない}— This is no time for playing around.
 
-#h2{Formal sentence endings}
+#section{Formal sentence endings}:
 
 #bordered
 	#table(header: 1)

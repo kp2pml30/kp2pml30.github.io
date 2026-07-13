@@ -3,14 +3,12 @@
 #use(meta)
 #meta(created: "2026 07 12" edited: "2026 07 12" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 
-#h1{Japanese Bodily & Taboo Body Language}
+#section{Japanese Bodily & Taboo Body Language}::
 
 Body-related words range from childish to extremely vulgar. Many are not "swears" by themselves, but they become inappropriate quickly in polite conversation.
 
-#h2{Body-related}
+#section{Body-related}:
 
 #bordered
 	#table(header: 1)
@@ -70,7 +68,7 @@ Body-related words range from childish to extremely vulgar. Many are not "swears
 			#cell: Butt
 			#cell: Plainer than ケツ. お尻 is polite/cute.
 
-#h2{Bodily functions}
+#section{Bodily functions}:
 
 #bordered
 	#table(header: 1)

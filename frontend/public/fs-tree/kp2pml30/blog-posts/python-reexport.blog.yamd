@@ -3,14 +3,12 @@
 #use(meta)
 #meta(created: "2025 09 01" edited: "2026 07 05" tags: '("kp2pml30" "programming" "langs"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
-#h1{How to do a re-export in python properly?}
+#section{How to do a re-export in python properly?}::
 
 I stumbled upon this problem while compiling numpy for wasm32-wasip1. Dynamic linking isn't supported out of the box there,
 so all modules must be statically linked into CPython. However, numpy uses relative imports, while native modules can't have dots in name
 
-#h2{V0 (naive)}
+#section{V0 (naive)}:
 
 #code(lang: "python")
 	from _native_module import *
@@ -20,7 +18,7 @@ Well, this obviously won't work because of... Cyclic imports!
 However, #link("https://peps.python.org/pep-0562/"){pep-0562} comes for rescue.
 It allows to override #tt{__getattr__} on module level, though usage is not that straight forward
 
-#h2{V1}
+#section{V1}:
 
 #code(lang: "python")
 	import _native_module as _imp
@@ -36,7 +34,7 @@ Or:
 
 Neither of them works, because of the cyclic import (again)
 
-#h2{V2 (correct)}
+#section{V2 (correct)}:
 
 #code(lang: "python")
 	def __getattr__(name):

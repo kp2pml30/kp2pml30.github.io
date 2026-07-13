@@ -3,15 +3,13 @@
 #use(meta)
 #meta(created: "2026 07 06" edited: "2026 07 06" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 #(define (h3 . b) (apply elem 'h3 b))
 
-#h1{Japanese Positive & Complimentary Language}
+#section{Japanese Positive & Complimentary Language}::
 
 Useful words and expressions for praising, encouraging, and being polite in Japanese.
 
-#h2{Complimenting people}
+#section{Complimenting people}:
 
 #bordered
 	#table(header: 1)
@@ -86,7 +84,7 @@ Useful words and expressions for praising, encouraging, and being polite in Japa
 			#cell: Admirable / great (for effort)
 			#cell: Used to praise someone for working hard or doing the right thing.
 
-#h2{Praising things & situations}
+#section{Praising things & situations}:
 
 #bordered
 	#table(header: 1)
@@ -141,7 +139,7 @@ Useful words and expressions for praising, encouraging, and being polite in Japa
 			#cell: Genius
 			#cell: Used as genuine or playful praise.
 
-#h2{Encouragement}
+#section{Encouragement}:
 
 #bordered
 	#table(header: 1)
@@ -186,7 +184,7 @@ Useful words and expressions for praising, encouraging, and being polite in Japa
 			#cell: Don't push yourself too hard
 			#cell: Caring, considerate.
 
-#h2{Gratitude & appreciation}
+#section{Gratitude & appreciation}:
 
 #bordered
 	#table(header: 1)
@@ -235,7 +233,7 @@ Useful words and expressions for praising, encouraging, and being polite in Japa
 			#cell: Thank you for your trouble
 			#cell: Only used to subordinates. Rude to superiors.
 
-#h2{Agreeing & affirming}
+#section{Agreeing & affirming}:
 
 #bordered
 	#table(header: 1)
@@ -268,7 +266,7 @@ Useful words and expressions for praising, encouraging, and being polite in Japa
 			#cell: No doubt about it / For sure
 			#cell: Emphatic agreement.
 
-#h2{さしすせそ — The Art of Flattering Responses}
+#section{さしすせそ — The Art of Flattering Responses}:
 
 A well-known mnemonic for conversational responses that make the other person feel good. Especially popular in dating/social advice.
 
@@ -305,7 +303,7 @@ A well-known mnemonic for conversational responses that make the other person fe
 			#cell: Really? / Is that so!
 			#cell: Showing genuine interest in what someone is saying.
 
-#h2{Affectionate expressions}
+#section{Affectionate expressions}:
 
 #bordered
 	#table(header: 1)
@@ -400,7 +398,7 @@ A well-known mnemonic for conversational responses that make the other person fe
 			#cell: Because...! (slightly childish/whiny)
 			#cell: だって#furigana{眠いもん}{ねむいもん}— Because I'm sleepy!
 
-#h2{Texting & internet slang}
+#section{Texting & internet slang}:
 
 #bordered
 	#table(header: 1)

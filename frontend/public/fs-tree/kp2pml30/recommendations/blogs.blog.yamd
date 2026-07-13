@@ -2,8 +2,7 @@
 #use(meta)
 #meta(created: "2025 03 30" edited: "2026 07 05" tags: '("kp2pml30" "programming"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#h1{Recommended blogs}
+#section{Recommended blogs}::
 #list
 	#item: #link("https://pointersgonewild.com/"){Maxime Chevalier-Boisvert}
 	#item: #link("https://www.crockford.com/"){Douglas Crockford}

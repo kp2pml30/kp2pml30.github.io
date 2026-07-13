@@ -3,14 +3,12 @@
 #use(meta)
 #meta(created: "2026 07 12" edited: "2026 07 12" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 
-#h1{Japanese Euphemisms}
+#section{Japanese Euphemisms}::
 
 Japanese often softens taboo topics with indirect phrases. These are useful to recognize because the literal wording may sound harmless while the implied topic is death, sex, toilets, menstruation, pregnancy, or sex work.
 
-#h2{Euphemisms}
+#section{Euphemisms}:
 
 #bordered
 	#table(header: 1)

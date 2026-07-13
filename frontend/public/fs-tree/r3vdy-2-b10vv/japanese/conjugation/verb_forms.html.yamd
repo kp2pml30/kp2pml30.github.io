@@ -3,17 +3,15 @@
 #use(meta)
 #meta(created: "2026 07 06" edited: "2026 07 06" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 
-#h1{Japanese Verb Conjugations}
+#section{Japanese Verb Conjugations}::
 
 Japanese verbs are divided into three groups:
 #strong{Group 1} (五段 godan / u-verbs),
 #strong{Group 2} (一段 ichidan / ru-verbs), and
 #strong{Group 3} (irregular: する and 来る).
 
-#h2{Conjugation Forms}
+#section{Conjugation Forms}:
 
 #bordered
 	#table(header: 1)
@@ -114,7 +112,7 @@ Japanese verbs are divided into three groups:
 			#cell: したい#linebreak#furigana{来たい}{きたい}
 			#cell: Expresses the speaker's want or desire to do something.
 
-#h2{Irregular Group 2 (一段) Verbs that End in ～い in ます Form}
+#section{Irregular Group 2 (一段) Verbs that End in ～い in ます Form}:
 
 Most Group 2 (ichidan) verbs end in ～え (e-sound) before ます, but some end in
 ～い (i-sound), making them look like Group 1 verbs. These must be memorized.

@@ -3,14 +3,12 @@
 #use(meta)
 #meta(created: "2026 07 06" edited: "2026 07 06" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 
-#h1{Sentence Connectors}
+#section{Sentence Connectors}::
 
 Japanese connects clauses using conjunctive particles and expressions. They attach to the end of the first clause.
 
-#h2{Reason / Cause}
+#section{Reason / Cause}:
 
 #bordered
 	#table(header: 1)
@@ -40,7 +38,7 @@ Japanese connects clauses using conjunctive particles and expressions. They atta
 			#cell: Cause/sequence — neutral connection. The first event leads to or causes the second.
 			#cell: #furigana{風邪をひいて}{かぜをひいて}、学校を#furigana{休んだ}{やすんだ}— I caught a cold and missed school.
 
-#h2{Contrast / But}
+#section{Contrast / But}:
 
 #bordered
 	#table(header: 1)
@@ -75,7 +73,7 @@ Japanese connects clauses using conjunctive particles and expressions. They atta
 			#cell: Even though — critical/accusatory. Implies someone is not acting as expected.
 			#cell: #furigana{知っている}{しっている}くせに、#furigana{教えない}{おしえない}— Even though you know, you won't tell me.
 
-#h2{Condition / If}
+#section{Condition / If}:
 
 #bordered
 	#table(header: 1)
@@ -110,7 +108,7 @@ Japanese connects clauses using conjunctive particles and expressions. They atta
 			#cell: When — a time/occasion when something happens. Dictionary form = action not yet done; た form = action already done.
 			#cell: #furigana{日本に行った}{にほんにいった}とき、#furigana{お寺を見た}{おてらをみた}— When I went to Japan, I saw temples.#linebreak 日本に行くとき、パスポートがいる — When (before) going to Japan, you need a passport.
 
-#h2{Sequence / And / Then}
+#section{Sequence / And / Then}:
 
 #bordered
 	#table(header: 1)
@@ -150,7 +148,7 @@ Japanese connects clauses using conjunctive particles and expressions. They atta
 			#cell: Doing things like ... and ... — non-exhaustive list of actions.
 			#cell: 週末は#furigana{映画を見たり}{えいがをみたり}、#furigana{買い物したり}{かいものしたり}する — On weekends I watch movies, go shopping, etc.
 
-#h2{Purpose / In order to}
+#section{Purpose / In order to}:
 
 #bordered
 	#table(header: 1)
@@ -175,7 +173,7 @@ Japanese connects clauses using conjunctive particles and expressions. They atta
 			#cell: For the purpose of — what something is used for.
 			#cell: この道具は#furigana{料理を作る}{りょうりをつくる}のに#furigana{使う}{つかう}— This tool is used for cooking.
 
-#h2{Addition / Moreover}
+#section{Addition / Moreover}:
 
 #bordered
 	#table(header: 1)
@@ -205,7 +203,7 @@ Japanese connects clauses using conjunctive particles and expressions. They atta
 			#cell: In addition to — adds to what was already said, often compounding.
 			#cell: 雨が#furigana{降った上に}{ふったうえに}、#furigana{風も強かった}{かぜもつよかった}— On top of the rain, the wind was strong too.
 
-#h2{Sentence-Initial Connectors}
+#section{Sentence-Initial Connectors}:
 
 #bordered
 	#table(header: 1)

@@ -3,16 +3,14 @@
 #use(meta)
 #meta(created: "2026 07 06" edited: "2026 07 06" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 #(define (h3 . b) (apply elem 'h3 b))
 
-#h1{Four Ways to Say "Seems Like"}
+#section{Four Ways to Say "Seems Like"}::
 
 Japanese has four main constructions for expressing appearance, conjecture, and hearsay.
 They look similar but differ in the source of information and how they attach to words.
 
-#h2{Overview}
+#section{Overview}:
 
 #bordered
 	#table(header: 1)
@@ -37,7 +35,7 @@ They look similar but differ in the source of information and how they attach to
 			#cell: Indirect evidence, general reputation
 			#cell: "Apparently..." — based on what you've gathered from various sources.
 
-#h2{1. ～そうだ — Appearance}
+#section{1. ～そうだ — Appearance}:
 
 Based on how something looks. You see it and judge. Attaches to the #strong{stem} (before い/だ).
 
@@ -98,7 +96,7 @@ Based on how something looks. You see it and judge. Attaches to the #strong{stem
 			#cell: Adverbial
 			#cell: おいしそうに#furigana{食べる}{たべる}
 
-#h2{2. ～そうだ — Hearsay}
+#section{2. ～そうだ — Hearsay}:
 
 Reporting what you heard or read. Attaches to the #strong{plain form} (dictionary/た/ない/etc.) directly.
 
@@ -137,7 +135,7 @@ Reporting what you heard or read. Attaches to the #strong{plain form} (dictionar
 
 Key difference from appearance そう: hearsay attaches to the #strong{complete} plain form (おいし#strong{い}そう), appearance attaches to the #strong{stem} (おいし#strong{∅}そう).
 
-#h2{3. ～ようだ / ～みたいだ — Conjecture from Evidence}
+#section{3. ～ようだ / ～みたいだ — Conjecture from Evidence}:
 
 A conclusion you draw from evidence or your own senses. ～みたいだ is the casual equivalent of ～ようだ.
 
@@ -199,7 +197,7 @@ A conclusion you draw from evidence or your own senses. ～みたいだ is the c
 			#cell: 子供のように#furigana{遊ぶ}{あそぶ}
 			#cell: 子供みたいに遊ぶ
 
-#h2{4. ～らしい — Apparently}
+#section{4. ～らしい — Apparently}:
 
 Based on indirect evidence — things you've heard, read, or gathered. Also used for "typical of" (～らしい as a quality).
 
@@ -260,7 +258,7 @@ When attached directly to a noun, ～らしい can also mean "typical of" or "be
 	#item: #furigana{春らしい}{はるらしい}— spring-like
 	#item: #furigana{学生らしい}{がくせいらしい}— befitting a student
 
-#h2{Comparison at a Glance}
+#section{Comparison at a Glance}:
 
 #bordered
 	#table(header: 1)

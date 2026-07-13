@@ -3,14 +3,12 @@
 #use(meta)
 #meta(created: "2026 07 06" edited: "2026 07 06" tags: '("r3vdy-2-b10vv" "langs" "japanese"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#(define (h2 . b) (apply elem 'h2 b))
 #(define (h3 . b) (apply elem 'h3 b))
 #(define (b . content) (apply elem 'b content))
 #(define (ul . content) (apply elem 'ul content))
 #(define (li . content) (apply elem 'li content))
 
-#h1{#furigana{敬語}{けいご} — Keigo (Polite Language)}
+#section{#furigana{敬語}{けいご} — Keigo (Polite Language)}::
 
 Japanese has three levels of keigo:
 #ul{
@@ -19,7 +17,7 @@ Japanese has three levels of keigo:
 	#li{#strong{#furigana{謙譲語}{けんじょうご}} — Humble language (lowers the speaker's own actions)}
 }
 
-#h2{#furigana{丁寧語}{ていねいご} — Polite Language}
+#section{#furigana{丁寧語}{ていねいご} — Polite Language}:
 
 Basic polite forms used in everyday formal speech.
 
@@ -114,7 +112,7 @@ Basic polite forms used in everyday formal speech.
 			#cell: #furigana{恐れ入ります}{おそれいります}
 			#cell: excuse me / I'm sorry
 
-#h2{お vs ご — When to Use Which Prefix}
+#section{お vs ご — When to Use Which Prefix}:
 
 Both お and ご are honorific prefixes, but they attach to different types of words.
 
@@ -143,7 +141,7 @@ Both お and ご are honorific prefixes, but they attach to different types of w
 
 For verb patterns: use #strong{お} + ます stem (お読みになる, お待ちする) for most verbs. Use #strong{ご} + 漢語 noun + する/になる (ご利用になる, ご連絡する) for する-verbs with 漢語 nouns.
 
-#h2{#furigana{尊敬語}{そんけいご} — Respectful Language}
+#section{#furigana{尊敬語}{そんけいご} — Respectful Language}:
 
 Used to elevate the actions of the listener or someone of higher status. Never used for your own actions. There are three ways to make a verb respectful, from least to most formal:
 
@@ -243,7 +241,7 @@ Special sonkeigo verbs replace the patterns above entirely — they are the most
 
 Note: いらっしゃる, おっしゃる, くださる, なさる conjugate irregularly in ます form: いらっしゃいます, おっしゃいます, くださいます, なさいます (～る→～います, not ～ります).
 
-#h2{#furigana{謙譲語}{けんじょうご} — Humble Language}
+#section{#furigana{謙譲語}{けんじょうご} — Humble Language}:
 
 Used to lower your own actions when speaking to or about someone of higher status. Only for #strong{your own} actions — never for the listener's.
 
@@ -330,7 +328,8 @@ Replace する with いたす for extra humility. Common in business and custome
 
 Special kenjougo verbs replace the patterns above entirely. See the #link("#summary"){summary table} below for the full list.
 
-#(elem 'h2 #:attrs '((id . "summary")) "Special Keigo Verbs — All Levels")
+#(elem 'a #:attrs '((id . "summary")) "")
+#section{Special Keigo Verbs — All Levels}:
 
 #bordered
 	#table(header: 1)

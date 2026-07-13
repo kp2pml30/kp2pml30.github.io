@@ -2,8 +2,7 @@
 #use(meta)
 #meta(created: "2025 03 30" edited: "2026 07 05" tags: '("kp2pml30" "gamedev" "design"))
 
-#(define (h1 . b) (apply elem 'h1 b))
-#h1{Best practices for game store pages}
+#section{Best practices for game store pages}::
 
 #list(style: "1")
 	#item: fancy thumbnail is a must
